@@ -1,0 +1,13 @@
+{
+  "courses": [
+    {
+      "id": "python-basics",
+      "title": "Python 基礎與 Vibecoding",
+      "days": [
+        { "day": 1, "title": "AI 提示詞基礎與變數", "generated": false },
+        { "day": 2, "title": "條件判斷與流程控制", "generated": false },
+        { "day": 3, "title": "迴圈與重複性工作", "generated": false }
+      ]
+    }
+  ]
+}
