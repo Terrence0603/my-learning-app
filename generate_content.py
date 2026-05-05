@@ -11,7 +11,7 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 model_primary = genai.GenerativeModel('gemini-2.5-flash')
-model_fallback = genai.GenerativeModel('gemini-1.5-flash')
+model_fallback = genai.GenerativeModel('gemini-2.5-flash-lite')
 
 def safe_generate(prompt):
     try:
@@ -20,7 +20,7 @@ def safe_generate(prompt):
     except Exception as e:
         error_msg = str(e).lower()
         if "quota" in error_msg or "429" in error_msg or "exhausted" in error_msg:
-            print("⚠️ 2.5 版本額度耗盡，啟動備援：自動切換至 gemini-1.5-flash 繼續執行！")
+            print("⚠️ 2.5 版本額度耗盡，啟動備援：自動切換至 gemini-2.5-flash-lite 繼續執行！")
             return model_fallback.generate_content(prompt)
         else:
             raise e
