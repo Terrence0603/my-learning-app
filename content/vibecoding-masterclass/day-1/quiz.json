@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 AI 提示詞中，下列哪一個符號最常用來表示需要 AI 納入額外的上下文資訊？",
+      "options": ["`", "<context>", "$$", "&&"],
+      "answerIndex": 1,
+      "explanation": "根據 Part 1 教材，`<context>` 標籤是專門用於指示 AI 納入或參考特定上下文資訊的符號。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "以下哪一項是正確使用 `<context>` 標籤的範例？",
+      "options": ["請根據 <context> 提供的背景資訊，寫一篇關於環保的文章。", "請根據背景資訊，寫一篇關於環保的文章。", "請根據 <context>寫一篇關於環保的文章。", "請根據背景<context>，寫一篇關於環保的文章。"],
+      "answerIndex": 0,
+      "explanation": "正確的 `<context>` 標籤使用方式是在標籤前後明確包含其所指代的內容，並引導 AI 根據這些內容進行回應。選項 A 完整地表達了這個意思。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "當我們在提示詞中使用 `<context>` 標籤時，其主要目的是什麼？",
+      "options": ["告訴 AI 這是需要強調的重點。", "要求 AI 執行一個指令。", "提供 AI 額外的背景資訊或數據，以便 AI 產生更精確或相關的回應。", "標記一段程式碼。"],
+      "answerIndex": 2,
+      "explanation": "如教材所述，`<context>` 標籤的目的是為 AI 提供額外的背景資訊、數據或條件，使其能更準確地理解和生成回應。"
+    }
+  ]
+}
