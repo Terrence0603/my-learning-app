@@ -1,15 +1,14 @@
 import os
 import json
+import time  # 引入時間模組
 import google.generativeai as genai
 
 # 1. 設定 Gemini API
-# 系統會從 GitHub Secrets 中讀取 GEMINI_API_KEY
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("找不到 GEMINI_API_KEY 環境變數")
 
 genai.configure(api_key=api_key)
-# 使用較新且速度快的 Flash 模型
 model = genai.GenerativeModel('gemini-2.5-flash')
 
 # 2. 讀取目前的目錄狀態
@@ -19,7 +18,7 @@ with open("index.json", "r", encoding="utf-8") as f:
 course = data["courses"][0]
 course_id = course["id"]
 
-# 3. 尋找下一個尚未生成的課程 (generated: false)
+# 3. 尋找下一個尚未生成的課程
 target_day = None
 for day in course["days"]:
     if not day.get("generated", False):
@@ -53,6 +52,12 @@ response_lesson = model.generate_content(prompt_lesson)
 with open(f"{folder_path}/lesson.md", "w", encoding="utf-8") as f:
     f.write(response_lesson.text)
 
+# ==========================================
+# 🛑 暫停 15 秒，避免觸發 Gemini API 的頻率限制
+print("等待 15 秒讓 AI 喘口氣...")
+time.sleep(15)
+# ==========================================
+
 # 6. 呼叫 AI 生成 JSON 格式的測驗題
 prompt_quiz = f"""
 根據你剛才撰寫的【{day_title}】教材，出一份包含 3 題單選題的測驗。
@@ -74,7 +79,7 @@ JSON 格式必須完全符合以下結構：
 print("正在生成測驗題...")
 response_quiz = model.generate_content(prompt_quiz)
 
-# 清理 AI 回傳可能夾帶的 Markdown 標籤，確保它是純 JSON
+# 清理 AI 回傳可能夾帶的 Markdown 標籤
 raw_json = response_quiz.text.strip()
 if raw_json.startswith("```json"):
     raw_json = raw_json[7:]
@@ -86,7 +91,6 @@ with open(f"{folder_path}/quiz.json", "w", encoding="utf-8") as f:
 
 # 7. 更新 index.json，把該天標記為已完成
 target_day["generated"] = True
-# 儲存對應的檔案路徑給前端使用
 target_day["path"] = folder_path
 
 with open("index.json", "w", encoding="utf-8") as f:
