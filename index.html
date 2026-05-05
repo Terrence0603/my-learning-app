@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 AI 學習中樞</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel" data-type="module">
+        // 1. 從 ESM CDN 載入 React 與 Icons
+        import React, { useState, useEffect } from "https://esm.sh/react@18";
+        import { createRoot } from "https://esm.sh/react-dom@18/client";
+        import * as lucideReact from "https://esm.sh/lucide-react@latest";
+
+        const {
+            Flame, BookOpen, CheckCircle2, ChevronRight, RotateCcw,
+            Home, Star, Trophy, Zap, Clock, Target, ArrowLeft,
+            Code2, Lightbulb, AlertCircle, CheckCheck, XCircle,
+            BarChart3, Brain, Sparkles, Play
+        } = lucideReact;
+
+        // 2. 這裡開始是 Claude 生成的假資料與設定
+        const MOCK_TODAY_LESSON = {
+            day: 13,
+            title: "Python 錯誤處理",
+            subtitle: "Exception Handling",
+            tag: "進階語法",
+            duration: "15 分鐘",
+            content: {
+                heading: "Day 13：Python 錯誤處理機制",
+                intro: "在程式執行過程中，錯誤是不可避免的。Python 提供了完整的例外處理（Exception Handling）機制，讓我們能優雅地捕捉並處理這些錯誤，而不是讓程式直接崩潰。",
+                sections: [
+                    {
+                        type: "text",
+                        content: "Python 使用 try/except 語法區塊來捕捉例外。當 try 區塊中的程式碼發生錯誤時，Python 會立即跳至對應的 except 區塊執行。"
+                    },
+                    {
+                        type: "code",
+                        label: "基本語法",
+                        code: `try:\n    number = int(input("請輸入一個數字: "))\n    result = 10 / number\n    print(f"結果是: {result}")\nexcept ValueError:\n    print("錯誤：請輸入有效的數字！")\nexcept ZeroDivisionError:\n    print("錯誤：除數不能為零！")\nexcept Exception as e:\n    print(f"發生未預期的錯誤：{e}")\nfinally:\n    print("程式執行完畢。")`
+                    },
+                    {
+                        type: "tip",
+                        label: "💡 重點提示",
+                        content: "finally 區塊無論如何都會執行，適合用來釋放資源（如關閉檔案、資料庫連線）。這是確保資源正確釋放的最佳實踐。"
+                    },
+                    {
+                        type: "text",
+                        content: "除了捕捉內建例外，你也可以自訂例外類別，繼承自 Exception，讓錯誤訊息更具語義性，方便在大型專案中進行錯誤追蹤。"
+                    },
+                    {
+                        type: "code",
+                        label: "自訂例外",
+                        code: `class InsufficientFundsError(Exception):\n    def __init__(self, amount, balance):\n        self.amount = amount\n        self.balance = balance\n        super().__init__(\n            f"餘額不足！嘗試提領 {amount}，但餘額僅 {balance}"\n        )\n\ndef withdraw(balance, amount):\n    if amount > balance:\n        raise InsufficientFundsError(amount, balance)\n    return balance - amount`
+                    },
+                    {
+                        type: "note",
+                        label: "📝 注意事項",
+                        content: "捕捉例外時，應盡量捕捉具體的例外類型，避免使用過於廣泛的 except Exception，以免遮蔽真正的程式錯誤。"
+                    }
+                ]
+            }
+        };
+
+        const MOCK_REVIEWS = [
+            { id: 1, day: 8, title: "Python 函數與作用域", tag: "函數", urgency: "high", daysAgo: 5 },
+            { id: 2, day: 10, title: "列表推導式 List Comprehension", tag: "資料結構", urgency: "medium", daysAgo: 3 },
+            { id: 3, day: 5, title: "字典與集合操作", tag: "資料結構", urgency: "low", daysAgo: 8 },
+        ];
+
+        const MOCK_QUIZ = [
+            {
+                id: 1,
+                question: "以下哪個 Python 關鍵字用於主動觸發（拋出）一個例外？",
+                options: ["throw", "raise", "except", "error"],
+                correct: 1,
+                explanation: "raise 是 Python 中用於主動拋出例外的關鍵字。throw 是 Java/JavaScript 的語法。except 用於捕捉例外，而 error 並非 Python 關鍵字。"
+            },
+            {
+                id: 2,
+                question: "關於 finally 區塊，下列哪個描述是正確的？",
+                options: ["只在發生例外時執行", "只在沒有例外時執行", "無論是否發生例外都會執行", "只在 except 捕捉成功時執行"],
+                correct: 2,
+                explanation: "finally 區塊是保證執行的程式碼，無論 try 區塊是否發生例外，finally 都會在最後執行。這使它非常適合用來清理資源。"
+            },
+            {
+                id: 3,
+                question: "若要自訂例外類別，應繼承自哪個基礎類別？",
+                options: ["Error", "BaseError", "Exception", "RuntimeError"],
+                correct: 2,
+                explanation: "在 Python 中，自訂例外類別通常繼承自 Exception（或其子類別）。Error 和 BaseError 不是標準 Python 類別，而 RuntimeError 雖可繼承，但語義上 Exception 更為通用。"
+            },
+            {
+                id: 4,
+                question: "以下程式碼執行後，輸出為何？\ntry:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print('A')\nfinally:\n    print('B')",
+                options: ["只印出 A", "只印出 B", "先印 A 再印 B", "不印任何東西"],
+                correct: 2,
+                explanation: "由於 1/0 觸發 ZeroDivisionError，except 區塊執行印出 'A'；之後 finally 區塊必定執行，印出 'B'。所以輸出為 A 然後 B。"
+            },
+            {
+                id: 5,
+                question: "下列哪種做法是捕捉例外的最佳實踐？",
+                options: ["使用 except: 捕捉所有錯誤", "捕捉具體的例外類型如 ValueError", "使用 except Exception 捕捉一切", "完全不使用 try/except"],
+                correct: 1,
+                explanation: "最佳實踐是捕捉具體的例外類型。過於廣泛的 except: 或 except Exception 會遮蔽程式錯誤，讓 debug 困難。針對預期可能發生的錯誤，捕捉具體類型能讓程式碼更清晰、更安全。"
+            }
+        ];
+
+        const urgencyConfig = {
+            high: { label: "今日必複習", color: "text-rose-600 bg-rose-50 border-rose-200" },
+            medium: { label: "建議複習", color: "text-amber-600 bg-amber-50 border-amber-200" },
+            low: { label: "鞏固記憶", color: "text-emerald-600 bg-emerald-50 border-emerald-200" },
+        };
+
+        // 3. 這裡開始是 Claude 生成的 React UI 元件
+        function Dashboard({ onStartLesson, onStartReview }) {
+            const streak = 13;
+            const totalDays = 30;
+            const progress = Math.round((streak / totalDays) * 100);
+
+            return (
+                <div className="max-w-2xl mx-auto px-4 pb-12">
+                    <div className="pt-8 pb-6">
+                        <div className="flex items-center justify-between mb-1">
+                            <span className="text-xs font-semibold tracking-widest text-indigo-400 uppercase">學習中樞</span>
+                            <span className="text-xs text-slate-400">2024年6月</span>
+                        </div>
+                        <h1 className="text-2xl font-bold text-slate-800 tracking-tight">早安，學習者 👋</h1>
+                    </div>
+
+                    <div className="relative mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-600 to-violet-600 p-5 shadow-lg shadow-indigo-200">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-8 translate-x-8" />
+                        <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/5 rounded-full translate-y-6 -translate-x-4" />
+                        <div className="relative flex items-center justify-between">
+                            <div>
+                                <div className="flex items-center gap-2 mb-1">
+                                    <Flame size={18} className="text-amber-300" />
+                                    <span className="text-white/80 text-sm font-medium">連續學習</span>
+                                </div>
+                                <div className="text-white font-bold text-4xl tracking-tight">{streak} <span className="text-2xl font-semibold text-white/70">天</span></div>
+                            </div>
+                            <div className="text-right">
+                                <div className="text-white/60 text-xs mb-2">目標進度 {progress}%</div>
+                                <div className="w-28 bg-white/20 rounded-full h-2 mb-1">
+                                    <div className="bg-amber-300 h-2 rounded-full transition-all duration-700" style={{ width: \`\${progress}%\` }} />
+                                </div>
+                                <div className="text-white/60 text-xs">{streak} / {totalDays} 天</div>
+                            </div>
+                        </div>
+                        <div className="relative flex gap-2 mt-4">
+                            {[...Array(7)].map((_, i) => (
+                                <div key={i} className={\`flex-1 h-1.5 rounded-full \${i < 6 ? "bg-amber-300" : "bg-white/25"}\`} />
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="mb-5">
+                        <div className="flex items-center gap-2 mb-3">
+                            <Sparkles size={14} className="text-indigo-500" />
+                            <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">今日新課程</span>
+                        </div>
+                        <div className="rounded-2xl border border-indigo-100 bg-white shadow-sm overflow-hidden group hover:shadow-md transition-shadow duration-200">
+                            <div className="bg-indigo-50 px-5 pt-5 pb-4 border-b border-indigo-100">
+                                <div className="flex items-start justify-between mb-3">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-semibold text-indigo-600 bg-indigo-100 px-2.5 py-1 rounded-full">Day {MOCK_TODAY_LESSON.day}</span>
+                                        <span className="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">{MOCK_TODAY_LESSON.tag}</span>
+                                    </div>
+                                    <div className="flex items-center gap-1 text-xs text-slate-400">
+                                        <Clock size={11} />
+                                        {MOCK_TODAY_LESSON.duration}
+                                    </div>
+                                </div>
+                                <h2 className="text-xl font-bold text-slate-800 leading-tight">{MOCK_TODAY_LESSON.title}</h2>
+                                <p className="text-sm text-slate-500 mt-1 font-mono">{MOCK_TODAY_LESSON.subtitle}</p>
+                            </div>
+                            <div className="px-5 py-4 flex items-center justify-between">
+                                <p className="text-xs text-slate-400 flex items-center gap-1.5">
+                                    <Target size={12} className="text-indigo-400" />
+                                    try/except · raise · 自訂例外
+                                </p>
+                                <button
+                                    onClick={onStartLesson}
+                                    className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors duration-150 shadow-sm"
+                                >
+                                    <Play size={14} /> 開始閱讀
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className="flex items-center gap-2 mb-3">
+                            <Brain size={14} className="text-violet-500" />
+                            <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">今日複習任務</span>
+                            <span className="ml-auto text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">{MOCK_REVIEWS.length} 項</span>
+                        </div>
+                        <div className="space-y-3">
+                            {MOCK_REVIEWS.map((item) => {
+                                const urg = urgencyConfig[item.urgency];
+                                return (
+                                    <div key={item.id} className="rounded-2xl border border-slate-100 bg-white shadow-sm p-4 hover:shadow-md transition-shadow duration-200">
+                                        <div className="flex items-start justify-between mb-3">
+                                            <div className="flex-1 min-w-0 mr-3">
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <span className={\`text-xs font-semibold px-2 py-0.5 rounded-full border \${urg.color}\`}>{urg.label}</span>
+                                                    <span className="text-xs text-slate-400">{item.daysAgo} 天前學習</span>
+                                                </div>
+                                                <p className="text-sm font-semibold text-slate-700 truncate">Day {item.day}：{item.title}</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex gap-2">
+                                            <button onClick={() => onStartReview("reading", item)} className="flex-1 flex items-center justify-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-3 py-2 rounded-xl transition-colors duration-150">
+                                                <BookOpen size={13} /> 閱讀複習
+                                            </button>
+                                            <button onClick={() => onStartReview("quiz", item)} className="flex-1 flex items-center justify-center gap-1.5 text-xs font-medium text-indigo-600 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 px-3 py-2 rounded-xl transition-colors duration-150">
+                                                <Target size={13} /> 測驗複習
+                                            </button>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-3 mt-6">
+                        {[
+                            { icon: BookOpen, label: "已完成課程", value: "12", color: "text-indigo-600 bg-indigo-50" },
+                            { icon: CheckCheck, label: "測驗通過", value: "89%", color: "text-emerald-600 bg-emerald-50" },
+                            { icon: Trophy, label: "獲得徽章", value: "5", color: "text-amber-600 bg-amber-50" },
+                        ].map(({ icon: Icon, label, value, color }) => (
+                            <div key={label} className="rounded-2xl bg-white border border-slate-100 shadow-sm p-3 text-center">
+                                <div className={\`w-8 h-8 rounded-xl mx-auto mb-2 flex items-center justify-center \${color}\`}>
+                                    <Icon size={15} />
+                                </div>
+                                <div className="text-lg font-bold text-slate-800">{value}</div>
+                                <div className="text-xs text-slate-400 mt-0.5">{label}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+
+        function ReadingMode({ onComplete, onBack }) {
+            const [understood, setUnderstood] = useState(false);
+            const { content } = MOCK_TODAY_LESSON;
+
+            return (
+                <div className="max-w-2xl mx-auto px-4 pb-16">
+                    <div className="sticky top-0 z-10 bg-slate-50/90 backdrop-blur-sm py-3 mb-6 flex items-center gap-3 border-b border-slate-100">
+                        <button onClick={onBack} className="flex items-center gap-1 text-slate-400 hover:text-slate-600 text-sm transition-colors">
+                            <ArrowLeft size={15} /> 返回
+                        </button>
+                        <div className="flex-1 text-center">
+                            <span className="text-xs font-semibold text-indigo-500 bg-indigo-50 px-3 py-1 rounded-full">
+                                Day {MOCK_TODAY_LESSON.day} · {MOCK_TODAY_LESSON.title}
+                            </span>
+                        </div>
+                        <div className="flex items-center gap-1 text-xs text-slate-400">
+                            <Clock size={11} /> {MOCK_TODAY_LESSON.duration}
+                        </div>
+                    </div>
+
+                    <article className="prose-content">
+                        <h1 className="text-2xl font-bold text-slate-800 leading-tight mb-3">{content.heading}</h1>
+                        <p className="text-base text-slate-600 leading-relaxed mb-6">{content.intro}</p>
+
+                        {content.sections.map((section, i) => {
+                            if (section.type === "text") return <p key={i} className="text-base text-slate-600 leading-relaxed mb-5">{section.content}</p>;
+                            if (section.type === "code") return (
+                                <div key={i} className="mb-5 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                                    <div className="flex items-center gap-2 bg-slate-800 px-4 py-2.5">
+                                        <Code2 size={13} className="text-slate-400" />
+                                        <span className="text-xs font-mono font-medium text-slate-300">{section.label}</span>
+                                        <div className="ml-auto flex gap-1.5">
+                                            <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+                                            <div className="w-2.5 h-2.5 rounded-full bg-amber-500/60" />
+                                            <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+                                        </div>
+                                    </div>
+                                    <pre className="bg-slate-900 p-4 overflow-x-auto">
+                                        <code className="text-sm font-mono text-slate-200 leading-relaxed">{section.code}</code>
+                                    </pre>
+                                </div>
+                            );
+                            if (section.type === "tip") return (
+                                <div key={i} className="mb-5 rounded-2xl bg-indigo-50 border border-indigo-100 p-4 flex gap-3">
+                                    <Lightbulb size={17} className="text-indigo-500 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                        <div className="text-xs font-bold text-indigo-600 mb-1">{section.label}</div>
+                                        <p className="text-sm text-indigo-700 leading-relaxed">{section.content}</p>
+                                    </div>
+                                </div>
+                            );
+                            if (section.type === "note") return (
+                                <div key={i} className="mb-5 rounded-2xl bg-amber-50 border border-amber-100 p-4 flex gap-3">
+                                    <AlertCircle size={17} className="text-amber-500 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                        <div className="text-xs font-bold text-amber-600 mb-1">{section.label}</div>
+                                        <p className="text-sm text-amber-700 leading-relaxed">{section.content}</p>
+                                    </div>
+                                </div>
+                            );
+                            return null;
+                        })}
+                    </article>
+
+                    <div className="mt-8 pt-6 border-t border-slate-200">
+                        {!understood ? (
+                            <button onClick={() => setUnderstood(true)} className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-bold text-sm py-4 rounded-2xl shadow-sm shadow-emerald-200 transition-colors duration-150">
+                                <CheckCircle2 size={18} /> 標記為已懂並繼續
+                            </button>
+                        ) : (
+                            <div className="text-center">
+                                <div className="flex items-center justify-center gap-2 text-emerald-600 font-semibold mb-4">
+                                    <CheckCircle2 size={18} /> 太棒了！你已掌握這個主題 🎉
+                                </div>
+                                <div className="flex gap-3">
+                                    <button onClick={onBack} className="flex-1 flex items-center justify-center gap-2 text-sm font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 py-3 rounded-2xl transition-colors">
+                                        <Home size={15} /> 返回首頁
+                                    </button>
+                                    <button onClick={onComplete} className="flex-1 flex items-center justify-center gap-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 py-3 rounded-2xl transition-colors">
+                                        進入測驗 <ChevronRight size={15} />
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        function QuizMode({ onBack }) {
+            const [current, setCurrent] = useState(0);
+            const [selected, setSelected] = useState(null);
+            const [submitted, setSubmitted] = useState(false);
+            const [answers, setAnswers] = useState([]);
+            const [finished, setFinished] = useState(false);
+
+            const q = MOCK_QUIZ[current];
+            const total = MOCK_QUIZ.length;
+            const isCorrect = submitted && selected === q.correct;
+
+            const handleSubmit = () => {
+                if (selected === null) return;
+                setSubmitted(true);
+                setAnswers(prev => [...prev, { id: q.id, correct: selected === q.correct }]);
+            };
+
+            const handleNext = () => {
+                if (current + 1 >= total) {
+                    setFinished(true);
+                } else {
+                    setCurrent(c => c + 1);
+                    setSelected(null);
+                    setSubmitted(false);
+                }
+            };
+
+            const score = answers.filter(a => a.correct).length;
+
+            if (finished) {
+                const pct = Math.round((score / total) * 100);
+                const msg = pct >= 80 ? "優秀！你已紮實掌握這個主題 🏆" : pct >= 60 ? "不錯！再鞏固一下細節 💪" : "繼續加油，多複習幾次就會更好 📚";
+                return (
+                    <div className="max-w-2xl mx-auto px-4 pb-12 pt-8 flex flex-col items-center text-center">
+                        <div className="w-24 h-24 rounded-full bg-indigo-50 border-4 border-indigo-200 flex items-center justify-center mb-5 shadow-inner">
+                            <Trophy size={38} className="text-indigo-500" />
+                        </div>
+                        <h2 className="text-2xl font-bold text-slate-800 mb-2">測驗完成！</h2>
+                        <p className="text-slate-500 mb-8">{msg}</p>
+                        <div className="flex items-center gap-6 mb-8">
+                            <div className="text-center"><div className="text-4xl font-black text-indigo-600">{pct}%</div><div className="text-xs text-slate-400 mt-1">得分率</div></div>
+                            <div className="w-px h-12 bg-slate-200" />
+                            <div className="text-center"><div className="text-4xl font-black text-emerald-600">{score}</div><div className="text-xs text-slate-400 mt-1">答對題數</div></div>
+                            <div className="w-px h-12 bg-slate-200" />
+                            <div className="text-center"><div className="text-4xl font-black text-slate-400">{total - score}</div><div className="text-xs text-slate-400 mt-1">答錯題數</div></div>
+                        </div>
+                        <div className="flex gap-2 mb-6 flex-wrap justify-center">
+                            {answers.map((a, i) => (
+                                <div key={i} className={\`w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold \${a.correct ? "bg-emerald-50 text-emerald-600 border border-emerald-200" : "bg-rose-50 text-rose-600 border border-rose-200"}\`}>{i + 1}</div>
+                            ))}
+                        </div>
+                        <button onClick={onBack} className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3.5 rounded-2xl shadow-sm transition-colors">
+                            <Home size={16} /> 返回首頁
+                        </button>
+                    </div>
+                );
+            }
+
+            return (
+                <div className="max-w-2xl mx-auto px-4 pb-12">
+                    <div className="sticky top-0 z-10 bg-slate-50/90 backdrop-blur-sm py-3 mb-6 flex items-center gap-3 border-b border-slate-100">
+                        <button onClick={onBack} className="flex items-center gap-1 text-slate-400 hover:text-slate-600 text-sm transition-colors">
+                            <ArrowLeft size={15} /> 返回
+                        </button>
+                        <div className="flex-1">
+                            <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+                                <div className="h-2 bg-indigo-500 rounded-full transition-all duration-500" style={{ width: \`\${((current) / total) * 100}%\` }} />
+                            </div>
+                        </div>
+                        <span className="text-xs font-semibold text-slate-500 whitespace-nowrap">{current + 1} / {total}</span>
+                    </div>
+
+                    <div className="flex items-center gap-2 mb-4">
+                        <Brain size={14} className="text-violet-500" />
+                        <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest">測驗複習 · 錯誤處理</span>
+                    </div>
+
+                    <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 mb-5">
+                        <div className="flex items-center gap-2 mb-3">
+                            <span className="text-xs font-bold text-indigo-500 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded-full">Q{current + 1}</span>
+                            <Zap size={12} className="text-amber-400" />
+                        </div>
+                        <p className="text-base font-semibold text-slate-800 leading-relaxed whitespace-pre-wrap">{q.question}</p>
+                    </div>
+
+                    <div className="space-y-2.5 mb-6">
+                        {q.options.map((opt, i) => {
+                            let cls = "border-slate-200 bg-white text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50";
+                            if (selected === i && !submitted) cls = "border-indigo-500 bg-indigo-50 text-indigo-800 shadow-sm shadow-indigo-100";
+                            if (submitted) {
+                                if (i === q.correct) cls = "border-emerald-400 bg-emerald-50 text-emerald-800";
+                                else if (i === selected && i !== q.correct) cls = "border-rose-400 bg-rose-50 text-rose-700";
