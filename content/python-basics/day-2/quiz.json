@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "下列哪個變數名稱是「無效」的？",
+      "options": ["myVariable", "_user_name", "1stNumber", "totalAmount"],
+      "answerIndex": 2,
+      "explanation": "在大多數程式語言中，變數名稱不能以數字開頭。選項 '1stNumber' 違反了這項規則。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在大多數程式語言中，當你對一個已存在的變數進行新的賦值時，例如先執行 `x = 10` 之後再執行 `x = 20`，變數 `x` 的最終值會是什麼？",
+      "options": ["10 和 20 都會被儲存", "值會變為 20", "會產生錯誤，因為變數不能重複賦值", "會自動建立一個新的變數 `x2` 來儲存 20"],
+      "answerIndex": 1,
+      "explanation": "變數的賦值操作會將新值儲存到該變數的記憶體位置，舊值會被新值覆蓋，所以 `x` 的值最終會是 20。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "假設在某個支援自動型別轉換的程式語言中執行以下操作：`result = 5 + 3.14`。請問 `result` 的資料型態最可能是什麼？",
+      "options": ["整數 (Integer)", "浮點數 (Float/Double)", "字串 (String)", "布林值 (Boolean)"],
+      "answerIndex": 1,
+      "explanation": "當整數 (5) 與浮點數 (3.14) 進行算術運算時，為了保留運算的精確度，大多數程式語言會將結果自動提升為精度更高的浮點數型態。"
+    }
+  ]
+}

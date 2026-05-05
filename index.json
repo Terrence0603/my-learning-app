@@ -4,9 +4,22 @@
       "id": "python-basics",
       "title": "我的 Python 零基礎之路",
       "days": [
-        { "day": 1, "title": "環境設定與第一個程式", "generated": true },
-        { "day": 2, "title": "變數與基本運算", "generated": false },
-        { "day": 3, "title": "打造自己的 BMI 計算機", "generated": false }
+        {
+          "day": 1,
+          "title": "環境設定與第一個程式",
+          "generated": true
+        },
+        {
+          "day": 2,
+          "title": "變數與基本運算",
+          "generated": true,
+          "path": "content/python-basics/day-2"
+        },
+        {
+          "day": 3,
+          "title": "打造自己的 BMI 計算機",
+          "generated": false
+        }
       ]
     }
   ]
