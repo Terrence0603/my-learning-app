@@ -2,24 +2,11 @@
   "courses": [
     {
       "id": "python-basics",
-      "title": "Python 基礎與 Vibecoding",
+      "title": "我的 Python 零基礎之路",
       "days": [
-        {
-          "day": 1,
-          "title": "AI 提示詞基礎與變數",
-          "generated": true,
-          "path": "content/python-basics/day-1"
-        },
-        {
-          "day": 2,
-          "title": "條件判斷與流程控制",
-          "generated": false
-        },
-        {
-          "day": 3,
-          "title": "迴圈與重複性工作",
-          "generated": false
-        }
+        { "day": 1, "title": "環境設定與第一個程式", "generated": true },
+        { "day": 2, "title": "變數與基本運算", "generated": false },
+        { "day": 3, "title": "打造自己的 BMI 計算機", "generated": false }
       ]
     }
   ]
