@@ -53,9 +53,9 @@ with open(f"{folder_path}/lesson.md", "w", encoding="utf-8") as f:
     f.write(response_lesson.text)
 
 # ==========================================
-# 🛑 暫停 15 秒，避免觸發 Gemini API 的頻率限制
-print("等待 15 秒讓 AI 喘口氣...")
-time.sleep(15)
+# 🛑 暫停 30 秒，避免觸發 Gemini API 的頻率限制
+print("等待 30 秒讓 AI 喘口氣...")
+time.sleep(30)
 # ==========================================
 
 # 6. 呼叫 AI 生成 JSON 格式的測驗題
