@@ -1,25 +1,21 @@
 {
   "courses": [
     {
-      "id": "python-basics",
-      "title": "我的 Python 零基礎之路",
+      "id": "vibecoding-masterclass",
+      "title": "3小時速成：Vibecoding x 專案迭代 x Python",
       "days": [
-        {
-          "day": 1,
-          "title": "環境設定與第一個程式",
-          "generated": true
-        },
-        {
-          "day": 2,
-          "title": "變數與基本運算",
-          "generated": true,
-          "path": "content/python-basics/day-2"
-        },
-        {
-          "day": 3,
-          "title": "打造自己的 BMI 計算機",
-          "generated": false
-        }
+        { "day": 1, "title": "Part 1: 看懂 AI 提示詞符號與 <context> 標籤", "generated": false },
+        { "day": 2, "title": "Part 1: 系統指令與角色設定", "generated": false },
+        { "day": 3, "title": "Part 1: 限制條件與迭代對話技巧", "generated": false },
+        { "day": 4, "title": "Part 2: 軟體生命週期 (Dev/QA/Prod 環境)", "generated": false },
+        { "day": 5, "title": "Part 2: 敏捷開發、MVP 與重構術語", "generated": false },
+        { "day": 6, "title": "Part 2: 版本控制概念 (Git、Commit、Branch)", "generated": false },
+        { "day": 7, "title": "Part 3: Python 變數與資料型態", "generated": false },
+        { "day": 8, "title": "Part 3: 運算與格式化輸出", "generated": false },
+        { "day": 9, "title": "Part 3: 邏輯判斷 (If/Else)", "generated": false },
+        { "day": 10, "title": "Part 3: 迴圈 (For/While)", "generated": false },
+        { "day": 11, "title": "Part 3: 函式 (Functions)", "generated": false },
+        { "day": 12, "title": "Part 3: 資料結構 (清單與字典)", "generated": false }
       ]
     }
   ]
