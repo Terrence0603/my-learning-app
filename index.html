@@ -5,463 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的 AI 學習中樞</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-<body>
+<body class="bg-slate-50">
     <div id="root"></div>
 
     <script type="text/babel">
-        // 1. 從全域變數中取出 React 功能
         const { useState, useEffect } = React;
 
-        // 2. 建立零依賴的 Emoji 圖示產生器 (完全解決外部模組衝突)
-        const createIcon = (emoji) => ({ size = 16, className = "" }) => (
-            <span style={{ fontSize: size, lineHeight: 1 }} className={`inline-flex items-center justify-center ${className}`}>
-                {emoji}
-            </span>
-        );
-
-        // 替換原本的 Lucide 圖示
-        const Flame = createIcon("🔥");
-        const BookOpen = createIcon("📖");
-        const CheckCircle2 = createIcon("✅");
-        const ChevronRight = createIcon("▶️");
-        const Home = createIcon("🏠");
-        const Trophy = createIcon("🏆");
-        const Zap = createIcon("⚡");
-        const Clock = createIcon("⏱️");
-        const Target = createIcon("🎯");
-        const ArrowLeft = createIcon("◀️");
-        const Code2 = createIcon("💻");
-        const Lightbulb = createIcon("💡");
-        const AlertCircle = createIcon("⚠️");
-        const CheckCheck = createIcon("💯");
-        const XCircle = createIcon("❌");
-        const Brain = createIcon("🧠");
-        const Sparkles = createIcon("✨");
-        const Play = createIcon("▶️");
-
-        // 3. 假資料設定
-        const MOCK_TODAY_LESSON = {
-            day: 13,
-            title: "Python 錯誤處理",
-            subtitle: "Exception Handling",
-            tag: "進階語法",
-            duration: "15 分鐘",
-            content: {
-                heading: "Day 13：Python 錯誤處理機制",
-                intro: "在程式執行過程中，錯誤是不可避免的。Python 提供了完整的例外處理（Exception Handling）機制，讓我們能優雅地捕捉並處理這些錯誤，而不是讓程式直接崩潰。",
-                sections: [
-                    {
-                        type: "text",
-                        content: "Python 使用 try/except 語法區塊來捕捉例外。當 try 區塊中的程式碼發生錯誤時，Python 會立即跳至對應的 except 區塊執行。"
-                    },
-                    {
-                        type: "code",
-                        label: "基本語法",
-                        code: `try:\n    number = int(input("請輸入一個數字: "))\n    result = 10 / number\n    print(f"結果是: {result}")\nexcept ValueError:\n    print("錯誤：請輸入有效的數字！")\nexcept ZeroDivisionError:\n    print("錯誤：除數不能為零！")\nexcept Exception as e:\n    print(f"發生未預期的錯誤：{e}")\nfinally:\n    print("程式執行完畢。")`
-                    },
-                    {
-                        type: "tip",
-                        label: "💡 重點提示",
-                        content: "finally 區塊無論如何都會執行，適合用來釋放資源（如關閉檔案、資料庫連線）。這是確保資源正確釋放的最佳實踐。"
-                    },
-                    {
-                        type: "text",
-                        content: "除了捕捉內建例外，你也可以自訂例外類別，繼承自 Exception，讓錯誤訊息更具語義性，方便在大型專案中進行錯誤追蹤。"
-                    },
-                    {
-                        type: "code",
-                        label: "自訂例外",
-                        code: `class InsufficientFundsError(Exception):\n    def __init__(self, amount, balance):\n        self.amount = amount\n        self.balance = balance\n        super().__init__(\n            f"餘額不足！嘗試提領 {amount}，但餘額僅 {balance}"\n        )\n\ndef withdraw(balance, amount):\n    if amount > balance:\n        raise InsufficientFundsError(amount, balance)\n    return balance - amount`
-                    },
-                    {
-                        type: "note",
-                        label: "📝 注意事項",
-                        content: "捕捉例外時，應盡量捕捉具體的例外類型，避免使用過於廣泛的 except Exception，以免遮蔽真正的程式錯誤。"
-                    }
-                ]
-            }
-        };
-
-        const MOCK_REVIEWS = [
-            { id: 1, day: 8, title: "Python 函數與作用域", tag: "函數", urgency: "high", daysAgo: 5 },
-            { id: 2, day: 10, title: "列表推導式 List Comprehension", tag: "資料結構", urgency: "medium", daysAgo: 3 },
-            { id: 3, day: 5, title: "字典與集合操作", tag: "資料結構", urgency: "low", daysAgo: 8 },
-        ];
-
-        const MOCK_QUIZ = [
-            {
-                id: 1,
-                question: "以下哪個 Python 關鍵字用於主動觸發（拋出）一個例外？",
-                options: ["throw", "raise", "except", "error"],
-                correct: 1,
-                explanation: "raise 是 Python 中用於主動拋出例外的關鍵字。throw 是 Java/JavaScript 的語法。except 用於捕捉例外，而 error 並非 Python 關鍵字。"
-            },
-            {
-                id: 2,
-                question: "關於 finally 區塊，下列哪個描述是正確的？",
-                options: ["只在發生例外時執行", "只在沒有例外時執行", "無論是否發生例外都會執行", "只在 except 捕捉成功時執行"],
-                correct: 2,
-                explanation: "finally 區塊是保證執行的程式碼，無論 try 區塊是否發生例外，finally 都會在最後執行。這使它非常適合用來清理資源。"
-            },
-            {
-                id: 3,
-                question: "若要自訂例外類別，應繼承自哪個基礎類別？",
-                options: ["Error", "BaseError", "Exception", "RuntimeError"],
-                correct: 2,
-                explanation: "在 Python 中，自訂例外類別通常繼承自 Exception（或其子類別）。Error 和 BaseError 不是標準 Python 類別，而 RuntimeError 雖可繼承，但語義上 Exception 更為通用。"
-            },
-            {
-                id: 4,
-                question: "以下程式碼執行後，輸出為何？\ntry:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print('A')\nfinally:\n    print('B')",
-                options: ["只印出 A", "只印出 B", "先印 A 再印 B", "不印任何東西"],
-                correct: 2,
-                explanation: "由於 1/0 觸發 ZeroDivisionError，except 區塊執行印出 'A'；之後 finally 區塊必定執行，印出 'B'。所以輸出為 A 然後 B。"
-            },
-            {
-                id: 5,
-                question: "下列哪種做法是捕捉例外的最佳實踐？",
-                options: ["使用 except: 捕捉所有錯誤", "捕捉具體的例外類型如 ValueError", "使用 except Exception 捕捉一切", "完全不使用 try/except"],
-                correct: 1,
-                explanation: "最佳實踐是捕捉具體的例外類型。過於廣泛的 except: 或 except Exception 會遮蔽程式錯誤，讓 debug 困難。針對預期可能發生的錯誤，捕捉具體類型能讓程式碼更清晰、更安全。"
-            }
-        ];
-
-        const urgencyConfig = {
-            high: { label: "今日必複習", color: "text-rose-600 bg-rose-50 border-rose-200" },
-            medium: { label: "建議複習", color: "text-amber-600 bg-amber-50 border-amber-200" },
-            low: { label: "鞏固記憶", color: "text-emerald-600 bg-emerald-50 border-emerald-200" },
-        };
-
-        // 4. React 元件
-        function Dashboard({ onStartLesson, onStartReview }) {
-            const streak = 13;
-            const totalDays = 30;
-            const progress = Math.round((streak / totalDays) * 100);
-
-            return (
-                <div className="max-w-2xl mx-auto px-4 pb-12">
-                    <div className="pt-8 pb-6">
-                        <div className="flex items-center justify-between mb-1">
-                            <span className="text-xs font-semibold tracking-widest text-indigo-400 uppercase">學習中樞</span>
-                            <span className="text-xs text-slate-400">2024年6月</span>
-                        </div>
-                        <h1 className="text-2xl font-bold text-slate-800 tracking-tight">早安，學習者 👋</h1>
-                    </div>
-
-                    <div className="relative mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-600 to-violet-600 p-5 shadow-lg shadow-indigo-200">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-8 translate-x-8" />
-                        <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/5 rounded-full translate-y-6 -translate-x-4" />
-                        <div className="relative flex items-center justify-between">
-                            <div>
-                                <div className="flex items-center gap-2 mb-1">
-                                    <Flame size={18} />
-                                    <span className="text-white/80 text-sm font-medium">連續學習</span>
-                                </div>
-                                <div className="text-white font-bold text-4xl tracking-tight">{streak} <span className="text-2xl font-semibold text-white/70">天</span></div>
-                            </div>
-                            <div className="text-right">
-                                <div className="text-white/60 text-xs mb-2">目標進度 {progress}%</div>
-                                <div className="w-28 bg-white/20 rounded-full h-2 mb-1">
-                                    <div className="bg-amber-300 h-2 rounded-full transition-all duration-700" style={{ width: `${progress}%` }} />
-                                </div>
-                                <div className="text-white/60 text-xs">{streak} / {totalDays} 天</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="mb-5">
-                        <div className="flex items-center gap-2 mb-3">
-                            <Sparkles size={14} className="opacity-80" />
-                            <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">今日新課程</span>
-                        </div>
-                        <div className="rounded-2xl border border-indigo-100 bg-white shadow-sm overflow-hidden group hover:shadow-md transition-shadow duration-200">
-                            <div className="bg-indigo-50 px-5 pt-5 pb-4 border-b border-indigo-100">
-                                <div className="flex items-start justify-between mb-3">
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-xs font-semibold text-indigo-600 bg-indigo-100 px-2.5 py-1 rounded-full">Day {MOCK_TODAY_LESSON.day}</span>
-                                        <span className="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">{MOCK_TODAY_LESSON.tag}</span>
-                                    </div>
-                                    <div className="flex items-center gap-1 text-xs text-slate-400">
-                                        <Clock size={11} /> {MOCK_TODAY_LESSON.duration}
-                                    </div>
-                                </div>
-                                <h2 className="text-xl font-bold text-slate-800 leading-tight">{MOCK_TODAY_LESSON.title}</h2>
-                                <p className="text-sm text-slate-500 mt-1 font-mono">{MOCK_TODAY_LESSON.subtitle}</p>
-                            </div>
-                            <div className="px-5 py-4 flex items-center justify-between">
-                                <p className="text-xs text-slate-400 flex items-center gap-1.5">
-                                    <Target size={12} /> try/except · raise · 自訂例外
-                                </p>
-                                <button onClick={onStartLesson} className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors shadow-sm">
-                                    <Play size={14} /> 開始閱讀
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="flex items-center gap-2 mb-3">
-                            <Brain size={14} />
-                            <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">今日複習任務</span>
-                            <span className="ml-auto text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">{MOCK_REVIEWS.length} 項</span>
-                        </div>
-                        <div className="space-y-3">
-                            {MOCK_REVIEWS.map((item) => {
-                                const urg = urgencyConfig[item.urgency];
-                                return (
-                                    <div key={item.id} className="rounded-2xl border border-slate-100 bg-white shadow-sm p-4 hover:shadow-md transition-shadow">
-                                        <div className="flex items-start justify-between mb-3">
-                                            <div className="flex-1 min-w-0 mr-3">
-                                                <div className="flex items-center gap-2 mb-1">
-                                                    <span className={`text-xs font-semibold px-2 py-0.5 rounded-full border ${urg.color}`}>{urg.label}</span>
-                                                    <span className="text-xs text-slate-400">{item.daysAgo} 天前學習</span>
-                                                </div>
-                                                <p className="text-sm font-semibold text-slate-700 truncate">Day {item.day}：{item.title}</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <button onClick={() => onStartReview("reading", item)} className="flex-1 flex items-center justify-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-50 hover:bg-slate-100 border border-slate-200 px-3 py-2 rounded-xl transition-colors">
-                                                <BookOpen size={13} /> 閱讀複習
-                                            </button>
-                                            <button onClick={() => onStartReview("quiz", item)} className="flex-1 flex items-center justify-center gap-1.5 text-xs font-medium text-indigo-600 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 px-3 py-2 rounded-xl transition-colors">
-                                                <Target size={13} /> 測驗複習
-                                            </button>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-3 mt-6">
-                        {[
-                            { icon: BookOpen, label: "已完成", value: "12", color: "bg-indigo-50" },
-                            { icon: CheckCheck, label: "測驗通過", value: "89%", color: "bg-emerald-50" },
-                            { icon: Trophy, label: "徽章", value: "5", color: "bg-amber-50" },
-                        ].map(({ icon: Icon, label, value, color }, idx) => (
-                            <div key={idx} className="rounded-2xl bg-white border border-slate-100 shadow-sm p-3 text-center">
-                                <div className={`w-8 h-8 rounded-xl mx-auto mb-2 flex items-center justify-center ${color}`}>
-                                    <Icon size={16} />
-                                </div>
-                                <div className="text-lg font-bold text-slate-800">{value}</div>
-                                <div className="text-xs text-slate-400 mt-0.5">{label}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            );
-        }
-
-        function ReadingMode({ onComplete, onBack }) {
-            const [understood, setUnderstood] = useState(false);
-            const { content } = MOCK_TODAY_LESSON;
-
-            return (
-                <div className="max-w-2xl mx-auto px-4 pb-16">
-                    <div className="sticky top-0 z-10 bg-slate-50/90 backdrop-blur-sm py-3 mb-6 flex items-center gap-3 border-b border-slate-100">
-                        <button onClick={onBack} className="flex items-center gap-1 text-slate-400 hover:text-slate-600 text-sm transition-colors">
-                            <ArrowLeft size={15} /> 返回
-                        </button>
-                        <div className="flex-1 text-center">
-                            <span className="text-xs font-semibold text-indigo-500 bg-indigo-50 px-3 py-1 rounded-full">
-                                Day {MOCK_TODAY_LESSON.day} · {MOCK_TODAY_LESSON.title}
-                            </span>
-                        </div>
-                    </div>
-
-                    <article className="prose-content">
-                        <h1 className="text-2xl font-bold text-slate-800 leading-tight mb-3">{content.heading}</h1>
-                        <p className="text-base text-slate-600 leading-relaxed mb-6">{content.intro}</p>
-
-                        {content.sections.map((section, i) => {
-                            if (section.type === "text") return <p key={i} className="text-base text-slate-600 leading-relaxed mb-5">{section.content}</p>;
-                            if (section.type === "code") return (
-                                <div key={i} className="mb-5 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-                                    <div className="flex items-center gap-2 bg-slate-800 px-4 py-2.5">
-                                        <Code2 size={13} />
-                                        <span className="text-xs font-mono font-medium text-slate-300 ml-1">{section.label}</span>
-                                    </div>
-                                    <pre className="bg-slate-900 p-4 overflow-x-auto">
-                                        <code className="text-sm font-mono text-slate-200 leading-relaxed">{section.code}</code>
-                                    </pre>
-                                </div>
-                            );
-                            if (section.type === "tip") return (
-                                <div key={i} className="mb-5 rounded-2xl bg-indigo-50 border border-indigo-100 p-4 flex gap-3">
-                                    <Lightbulb size={17} className="mt-0.5" />
-                                    <div>
-                                        <div className="text-xs font-bold text-indigo-600 mb-1">{section.label}</div>
-                                        <p className="text-sm text-indigo-700 leading-relaxed">{section.content}</p>
-                                    </div>
-                                </div>
-                            );
-                            if (section.type === "note") return (
-                                <div key={i} className="mb-5 rounded-2xl bg-amber-50 border border-amber-100 p-4 flex gap-3">
-                                    <AlertCircle size={17} className="mt-0.5" />
-                                    <div>
-                                        <div className="text-xs font-bold text-amber-600 mb-1">{section.label}</div>
-                                        <p className="text-sm text-amber-700 leading-relaxed">{section.content}</p>
-                                    </div>
-                                </div>
-                            );
-                            return null;
-                        })}
-                    </article>
-
-                    <div className="mt-8 pt-6 border-t border-slate-200">
-                        {!understood ? (
-                            <button onClick={() => setUnderstood(true)} className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-4 rounded-2xl transition-colors">
-                                <CheckCircle2 size={18} /> 標記為已懂並繼續
-                            </button>
-                        ) : (
-                            <div className="text-center">
-                                <div className="flex gap-3">
-                                    <button onClick={onBack} className="flex-1 flex items-center justify-center gap-2 text-sm font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 py-3 rounded-2xl transition-colors">
-                                        <Home size={15} /> 首頁
-                                    </button>
-                                    <button onClick={onComplete} className="flex-1 flex items-center justify-center gap-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 py-3 rounded-2xl transition-colors">
-                                        測驗 <ChevronRight size={15} />
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            );
-        }
-
-        function QuizMode({ onBack }) {
-            const [current, setCurrent] = useState(0);
-            const [selected, setSelected] = useState(null);
-            const [submitted, setSubmitted] = useState(false);
-            const [answers, setAnswers] = useState([]);
-            const [finished, setFinished] = useState(false);
-
-            const q = MOCK_QUIZ[current];
-            const total = MOCK_QUIZ.length;
-            const isCorrect = submitted && selected === q.correct;
-
-            const handleSubmit = () => {
-                if (selected === null) return;
-                setSubmitted(true);
-                setAnswers(prev => [...prev, { id: q.id, correct: selected === q.correct }]);
-            };
-
-            const handleNext = () => {
-                if (current + 1 >= total) {
-                    setFinished(true);
-                } else {
-                    setCurrent(c => c + 1);
-                    setSelected(null);
-                    setSubmitted(false);
-                }
-            };
-
-            if (finished) {
-                const score = answers.filter(a => a.correct).length;
-                return (
-                    <div className="max-w-2xl mx-auto px-4 pb-12 pt-8 flex flex-col items-center text-center">
-                        <Trophy size={48} className="mb-4" />
-                        <h2 className="text-2xl font-bold text-slate-800 mb-2">測驗完成！</h2>
-                        <div className="text-4xl font-black text-indigo-600 mb-8">{Math.round((score / total) * 100)}%</div>
-                        <button onClick={onBack} className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3.5 rounded-2xl transition-colors">
-                            <Home size={16} /> 返回首頁
-                        </button>
-                    </div>
-                );
-            }
-
-            return (
-                <div className="max-w-2xl mx-auto px-4 pb-12">
-                    <div className="sticky top-0 z-10 bg-slate-50/90 backdrop-blur-sm py-3 mb-6 flex items-center gap-3 border-b border-slate-100">
-                        <button onClick={onBack} className="flex items-center gap-1 text-slate-400 hover:text-slate-600 text-sm">
-                            <ArrowLeft size={15} /> 返回
-                        </button>
-                        <div className="flex-1">
-                            <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
-                                <div className="h-2 bg-indigo-500 rounded-full transition-all duration-500" style={{ width: `${((current) / total) * 100}%` }} />
-                            </div>
-                        </div>
-                        <span className="text-xs font-semibold text-slate-500">{current + 1} / {total}</span>
-                    </div>
-
-                    <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 mb-5">
-                        <p className="text-base font-semibold text-slate-800 leading-relaxed whitespace-pre-wrap">{q.question}</p>
-                    </div>
-
-                    <div className="space-y-2.5 mb-6">
-                        {q.options.map((opt, i) => {
-                            let cls = "border-slate-200 bg-white text-slate-700";
-                            if (selected === i && !submitted) cls = "border-indigo-500 bg-indigo-50 text-indigo-800";
-                            if (submitted) {
-                                if (i === q.correct) cls = "border-emerald-400 bg-emerald-50 text-emerald-800";
-                                else if (i === selected && i !== q.correct) cls = "border-rose-400 bg-rose-50 text-rose-700";
-                            }
-                            return (
-                                <button key={i} disabled={submitted} onClick={() => !submitted && setSelected(i)} className={`w-full text-left flex items-center gap-3 border rounded-2xl px-4 py-3.5 text-sm font-medium transition-all ${cls}`}>
-                                    <span className="w-6 h-6 rounded-lg flex-shrink-0 flex items-center justify-center text-xs font-bold border bg-white">{String.fromCharCode(65 + i)}</span>
-                                    {opt}
-                                    {submitted && i === q.correct && <CheckCircle2 size={15} className="ml-auto" />}
-                                    {submitted && i === selected && i !== q.correct && <XCircle size={15} className="ml-auto" />}
-                                </button>
-                            );
-                        })}
-                    </div>
-
-                    {submitted && (
-                        <div className={`rounded-2xl border p-4 mb-6 ${isCorrect ? "bg-emerald-50 border-emerald-100" : "bg-rose-50 border-rose-100"}`}>
-                            <p className="text-sm leading-relaxed">{q.explanation}</p>
-                        </div>
-                    )}
-
-                    {!submitted ? (
-                        <button onClick={handleSubmit} disabled={selected === null} className={`w-full py-4 rounded-2xl font-bold text-sm transition-colors ${selected !== null ? "bg-indigo-600 text-white" : "bg-slate-100 text-slate-400"}`}>確認答案</button>
-                    ) : (
-                        <button onClick={handleNext} className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-4 rounded-2xl font-bold text-sm transition-colors">
-                            {current + 1 >= total ? "查看結果" : "下一題"} <ChevronRight size={16} />
-                        </button>
-                    )}
-                </div>
-            );
-        }
+        // --- 小工具：Emoji 圖示 ---
+        const Icon = ({e}) => <span className="mr-2">{e}</span>;
 
         function App() {
             const [screen, setScreen] = useState("dashboard");
+            const [catalog, setCatalog] = useState(null);
+            const [currentLesson, setCurrentLesson] = useState(null);
+            const [currentQuiz, setCurrentQuiz] = useState(null);
+            const [completedDays, setCompletedDays] = useState(
+                JSON.parse(localStorage.getItem("completedDays") || "[]")
+            );
+
+            // 1. 初始載入：從 GitHub 抓取目錄 (index.json)
+            useEffect(() => {
+                fetch("./index.json")
+                    .then(res => res.json())
+                    .then(data => setCatalog(data.courses[0]));
+            }, []);
+
+            // 2. 當點擊開始時，抓取該天的 lesson.md 和 quiz.json
+            const startDay = async (day) => {
+                const path = `./content/python-basics/day-${day.day}`;
+                try {
+                    const [lessonRes, quizRes] = await Promise.all([
+                        fetch(`${path}/lesson.md`).then(res => res.text()),
+                        fetch(`${path}/quiz.json`).then(res => res.json())
+                    ]);
+                    setCurrentLesson({ ...day, htmlContent: marked.parse(lessonRes) });
+                    setCurrentQuiz(quizRes.questions);
+                    setScreen("reading");
+                } catch (e) {
+                    alert("內容尚未生成，請先去 GitHub Actions 執行生成腳本喔！");
+                }
+            };
+
+            const markAsComplete = () => {
+                const newCompleted = [...new Set([...completedDays, currentLesson.day])];
+                setCompletedDays(newCompleted);
+                localStorage.setItem("completedDays", JSON.stringify(newCompleted));
+                setScreen("quiz");
+            };
+
+            if (!catalog) return <div className="p-10 text-center">載入中...</div>;
+
+            // 找出今天該學哪一天 (第一個還沒完成的天數)
+            const nextDay = catalog.days.find(d => !completedDays.includes(d.day)) || catalog.days[0];
+            const progress = Math.round((completedDays.length / catalog.days.length) * 100);
 
             return (
-                <div className="min-h-screen bg-slate-50 font-sans antialiased">
-                    <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
-                        <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                                <div className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center shadow-sm">
-                                    <Code2 size={14} className="text-white" />
+                <div className="min-h-screen">
+                    {/* 導覽列 */}
+                    <nav className="sticky top-0 bg-white/80 backdrop-blur-md border-b p-4 flex justify-between items-center z-20">
+                        <span className="font-bold text-indigo-600">🚀 {catalog.title}</span>
+                        <button onClick={() => setScreen("dashboard")} className="text-sm text-slate-500">🏠 首頁</button>
+                    </nav>
+
+                    {/* 畫面切換 */}
+                    {screen === "dashboard" && (
+                        <div className="max-w-2xl mx-auto p-4">
+                            <div className="bg-indigo-600 rounded-2xl p-6 text-white mb-6 shadow-lg">
+                                <div className="text-sm opacity-80 mb-1">學習進度 {progress}%</div>
+                                <div className="text-3xl font-bold mb-4">{completedDays.length} / {catalog.days.length} 天</div>
+                                <div className="w-full bg-white/20 h-2 rounded-full">
+                                    <div className="bg-white h-2 rounded-full transition-all" style={{width: `${progress}%`}}></div>
                                 </div>
-                                <span className="text-sm font-bold text-slate-800 tracking-tight">CodePath</span>
                             </div>
-                            <div className="flex items-center gap-4">
-                                <button onClick={() => setScreen("dashboard")} className={`flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-xl transition-colors ${screen === "dashboard" ? "text-indigo-600 bg-indigo-50" : "text-slate-400"}`}><Home size={13} /> 首頁</button>
-                                <button onClick={() => setScreen("reading")} className={`flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-xl transition-colors ${screen === "reading" ? "text-indigo-600 bg-indigo-50" : "text-slate-400"}`}><BookOpen size={13} /> 閱讀</button>
-                                <button onClick={() => setScreen("quiz")} className={`flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-xl transition-colors ${screen === "quiz" ? "text-indigo-600 bg-indigo-50" : "text-slate-400"}`}><Target size={13} /> 測驗</button>
+
+                            <h2 className="font-bold mb-4 text-slate-700">今日推薦任務</h2>
+                            <div className="bg-white border rounded-2xl p-5 mb-8 shadow-sm">
+                                <div className="flex justify-between items-start mb-3">
+                                    <span className="bg-indigo-100 text-indigo-600 text-xs px-2 py-1 rounded">Day {nextDay.day}</span>
+                                </div>
+                                <h3 className="text-xl font-bold mb-4">{nextDay.title}</h3>
+                                <button onClick={() => startDay(nextDay)} className="w-full bg-indigo-600 text-white py-3 rounded-xl font-bold">開始學習</button>
+                            </div>
+
+                            <h2 className="font-bold mb-4 text-slate-700">全部課程</h2>
+                            <div className="space-y-3">
+                                {catalog.days.map(d => (
+                                    <div key={d.day} className="bg-white border p-4 rounded-xl flex justify-between items-center opacity-90">
+                                        <span className={completedDays.includes(d.day) ? "line-through text-slate-400" : ""}>
+                                            Day {d.day}: {d.title}
+                                        </span>
+                                        {completedDays.includes(d.day) ? "✅" : <button onClick={() => startDay(d)} className="text-indigo-600 text-sm font-bold">進入</button>}
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        {screen === "dashboard" && <Dashboard onStartLesson={() => setScreen("reading")} onStartReview={(type) => setScreen(type === "quiz" ? "quiz" : "reading")} />}
-                        {screen === "reading" && <ReadingMode onBack={() => setScreen("dashboard")} onComplete={() => setScreen("quiz")} />}
-                        {screen === "quiz" && <QuizMode onBack={() => setScreen("dashboard")} />}
-                    </div>
+                    )}
+
+                    {screen === "reading" && currentLesson && (
+                        <div className="max-w-2xl mx-auto p-4 pb-20">
+                            <button onClick={() => setScreen("dashboard")} className="mb-4 text-slate-400 text-sm">◀ 返回</button>
+                            <div className="prose bg-white p-6 rounded-2xl border shadow-sm prose-indigo">
+                                <div dangerouslySetInnerHTML={{ __html: currentLesson.htmlContent }} />
+                            </div>
+                            <button onClick={markAsComplete} className="w-full mt-6 bg-emerald-600 text-white py-4 rounded-2xl font-bold shadow-lg">我讀完了，進入測驗 ✅</button>
+                        </div>
+                    )}
+
+                    {screen === "quiz" && currentQuiz && (
+                        <div className="max-w-2xl mx-auto p-4">
+                            <div className="bg-white p-6 rounded-2xl border text-center">
+                                <div className="text-5xl mb-4">🎯</div>
+                                <h2 className="text-2xl font-bold mb-4">測驗時間</h2>
+                                <p className="text-slate-500 mb-6">AI 為你準備了 {currentQuiz.length} 題測驗，準備好了嗎？</p>
+                                <div className="space-y-4">
+                                    {currentQuiz.map((q, i) => (
+                                        <div key={i} className="text-left p-4 border rounded-xl">
+                                            <p className="font-bold mb-2">{i+1}. {q.question}</p>
+                                            <div className="grid grid-cols-1 gap-2">
+                                                {q.options.map((opt, idx) => (
+                                                    <button key={idx} onClick={() => alert(idx === q.answerIndex ? "正確！" + q.explanation : "再想想看喔！")} className="text-left p-3 bg-slate-50 rounded-lg text-sm hover:bg-slate-100">{opt}</button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <button onClick={() => setScreen("dashboard")} className="mt-8 text-indigo-600 font-bold">完成複習，返回首頁</button>
+                            </div>
+                        </div>
+                    )}
                 </div>
             );
         }
 
-        // 5. 啟動 React 應用程式
         const root = ReactDOM.createRoot(document.getElementById("root"));
         root.render(<App />);
     </script>
