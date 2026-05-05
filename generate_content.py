@@ -1,6 +1,6 @@
 import os
 import json
-import time  # 引入時間模組
+import time
 import google.generativeai as genai
 
 # 1. 設定 Gemini API
@@ -9,7 +9,27 @@ if not api_key:
     raise ValueError("找不到 GEMINI_API_KEY 環境變數")
 
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-2.5-flash')
+
+# 準備好兩個版本的模型
+model_primary = genai.GenerativeModel('gemini-2.5-flash')
+model_fallback = genai.GenerativeModel('gemini-1.5-flash')
+
+# ==========================================
+# 🌟 建立一個有「備援機制 (Fallback)」的智慧生成函式
+# ==========================================
+def safe_generate(prompt):
+    try:
+        print("➡️ 嘗試呼叫 gemini-2.5-flash 模型...")
+        return model_primary.generate_content(prompt)
+    except Exception as e:
+        error_msg = str(e).lower()
+        # 如果捕捉到「額度不足 (quota)」或「頻率限制 (429/exhausted)」的錯誤
+        if "quota" in error_msg or "429" in error_msg or "exhausted" in error_msg:
+            print("⚠️ 2.5 版本額度耗盡，啟動備援：自動切換至 gemini-1.5-flash 繼續執行！")
+            return model_fallback.generate_content(prompt)
+        else:
+            # 如果是其他未知的錯誤，就直接報錯
+            raise e
 
 # 2. 讀取目前的目錄狀態
 with open("index.json", "r", encoding="utf-8") as f:
@@ -31,7 +51,7 @@ if not target_day:
 
 day_num = target_day["day"]
 day_title = target_day["title"]
-print(f"開始生成 Day {day_num}: {day_title} 的內容...")
+print(f"\n🚀 開始生成 Day {day_num}: {day_title} 的內容...")
 
 # 4. 準備資料夾路徑
 folder_path = f"content/{course_id}/day-{day_num}"
@@ -47,14 +67,15 @@ prompt_lesson = f"""
 3. 必須包含具體的 Python 程式碼範例。
 4. 使用 Markdown 格式。
 """
-print("正在生成教材文章...")
-response_lesson = model.generate_content(prompt_lesson)
+print("\n正在生成教材文章...")
+# 這裡改用我們自己寫的 safe_generate 函式
+response_lesson = safe_generate(prompt_lesson) 
 with open(f"{folder_path}/lesson.md", "w", encoding="utf-8") as f:
     f.write(response_lesson.text)
 
 # ==========================================
-# 🛑 暫停 30 秒，避免觸發 Gemini API 的頻率限制
-print("等待 30 秒讓 AI 喘口氣...")
+# 🛑 暫停 30 秒，避免觸發每分鐘頻率限制
+print("\n等待 30 秒讓 AI 喘口氣...")
 time.sleep(30)
 # ==========================================
 
@@ -76,8 +97,9 @@ JSON 格式必須完全符合以下結構：
   ]
 }}
 """
-print("正在生成測驗題...")
-response_quiz = model.generate_content(prompt_quiz)
+print("\n正在生成測驗題...")
+# 這裡也改用我們自己寫的 safe_generate 函式
+response_quiz = safe_generate(prompt_quiz)
 
 # 清理 AI 回傳可能夾帶的 Markdown 標籤
 raw_json = response_quiz.text.strip()
@@ -96,4 +118,4 @@ target_day["path"] = folder_path
 with open("index.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f"✅ Day {day_num} 內容生成完畢並已更新目錄！")
+print(f"\n✅ Day {day_num} 內容生成完畢並已更新目錄！")
