@@ -13,7 +13,8 @@
         {
           "day": 2,
           "title": "Part 1: 系統指令與角色設定",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-2"
         },
         {
           "day": 3,
