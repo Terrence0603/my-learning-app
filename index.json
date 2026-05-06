@@ -19,7 +19,8 @@
         {
           "day": 3,
           "title": "Part 1: 限制條件與迭代對話技巧",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-3"
         },
         {
           "day": 4,
