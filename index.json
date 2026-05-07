@@ -25,7 +25,8 @@
         {
           "day": 4,
           "title": "Part 2: 軟體生命週期 (Dev/QA/Prod 環境)",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-4"
         },
         {
           "day": 5,
