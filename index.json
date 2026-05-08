@@ -31,7 +31,8 @@
         {
           "day": 5,
           "title": "Part 2: 敏捷開發、MVP 與重構術語",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-5"
         },
         {
           "day": 6,
