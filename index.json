@@ -37,7 +37,8 @@
         {
           "day": 6,
           "title": "Part 2: 版本控制概念 (Git、Commit、Branch)",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-6"
         },
         {
           "day": 7,
