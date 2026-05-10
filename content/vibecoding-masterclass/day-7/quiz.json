@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 Python 中，下列哪個變數名稱是『無效』的？",
+      "options": ["my_variable", "total_amount", "user-name", "_count"],
+      "answerIndex": 2,
+      "explanation": "Python 變數名稱不能包含特殊符號，例如連字號（-）。變數名稱可以包含字母、數字和底線，但不能以數字開頭。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "執行以下 Python 程式碼後，變數 `value` 的資料型態是什麼？\n`value = 100`",
+      "options": ["str", "float", "int", "bool"],
+      "answerIndex": 2,
+      "explanation": "沒有小數點的整數數字會被 Python 預設為 `int`（整數）型態。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "以下程式碼執行後，變數 `result` 的『值』和『資料型態』分別是什麼？\n`x = \"50\"\nresult = int(x)`",
+      "options": ["值: \"50\", 型態: str", "值: 50, 型態: int", "值: 50.0, 型態: float", "值: \"50\", 型態: int"],
+      "answerIndex": 1,
+      "explanation": "`int()` 函數用於將其他型態（在此例為字串 `\"50\"`）轉換為整數。因此，`result` 的值會是整數 `50`，其型態為 `int`。"
+    }
+  ]}

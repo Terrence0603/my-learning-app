@@ -43,7 +43,8 @@
         {
           "day": 7,
           "title": "Part 3: Python 變數與資料型態",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-7"
         },
         {
           "day": 8,
