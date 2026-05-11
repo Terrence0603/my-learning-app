@@ -1,0 +1,31 @@
+[
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "請計算以下 Python 程式碼的最終結果：\n```python\na = 10\nb = 3\nresult = a // b + a % b * 2\n```",
+    "options": ["5", "6", "7", "8"],
+    "answerIndex": 0,
+    "explanation": "首先，`a // b` (整數除法) 會得到 `10 // 3 = 3`。\n接著，`a % b` (取餘數) 會得到 `10 % 3 = 1`。\n然後，根據運算優先順序，乘法 `1 * 2` 會先執行，結果是 `2`。\n最後，將結果相加：`3 + 2 = 5`。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "執行以下 Python 程式碼後，變數 `output` 的內容是什麼？\n```python\nitem = \"T-shirt\"\nprice = 49.567\noutput = f\"您購買的 {item} 總價為 {price:.2f} 元。\"\n```",
+    "options": [
+      "您購買的 T-shirt 總價為 49.567 元。",
+      "您購買的 T-shirt 總價為 49.57 元。",
+      "您購買的 T-shirt 總價為 49.56 元。",
+      "您購買的 T-shirt 總價為 50.00 元。"
+    ],
+    "answerIndex": 1,
+    "explanation": "f-string 中的 `{price:.2f}` 表示將 `price` 變數格式化為浮點數，並精確到小數點後兩位。`49.567` 經過四捨五入到小數點後兩位會變成 `49.57`。因此，輸出的字串會是 `您購買的 T-shirt 總價為 49.57 元。`"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "請判斷以下 Python 運算式的最終布林值為何？\n```python\nx = 10\ny = 5\nresult = (x > y and y >= 5) or not (x == 10 and y < 1)\n```",
+    "options": ["True", "False", "None", "會產生錯誤"],
+    "answerIndex": 0,
+    "explanation": "我們逐步分析：\n1.  `(x > y and y >= 5)`：\n    *   `x > y` 是 `10 > 5`，結果為 `True`。\n    *   `y >= 5` 是 `5 >= 5`，結果為 `True`。\n    *   `True and True` 的結果為 `True`。\n2.  `not (x == 10 and y < 1)`：\n    *   `x == 10` 是 `10 == 10`，結果為 `True`。\n    *   `y < 1` 是 `5 < 1`，結果為 `False`。\n    *   `True and False` 的結果為 `False`。\n    *   `not False` 的結果為 `True`。\n3.  最後，`True or True` 的結果為 `True`。"
+  }
+]
