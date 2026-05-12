@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "假設有一個變數 `score`，其值為 75。請判斷以下程式碼片段的執行結果：\n\n```\nscore = 75\nif score >= 60:\n    print(\"及格\")\nelse:\n    print(\"不及格\")\n```",
+      "options": ["及格", "不及格", "無輸出", "程式碼錯誤"],
+      "answerIndex": 0,
+      "explanation": "變數 `score` 的值是 75。條件 `score >= 60` (即 75 >= 60) 為真，因此會執行 `if` 區塊內的程式碼，印出 \"及格\"。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "假設有一個變數 `temperature`，其值為 28。請判斷以下程式碼片段的執行結果：\n\n```\ntemperature = 28\nif temperature < 10:\n    print(\"寒冷\")\nelif temperature < 20:\n    print(\"涼爽\")\nelif temperature < 30:\n    print(\"溫暖\")\nelse:\n    print(\"炎熱\")\n```",
+      "options": ["寒冷", "涼爽", "溫暖", "炎熱"],
+      "answerIndex": 2,
+      "explanation": "`temperature` 的值為 28。第一個條件 `temperature < 10` 為假。第二個條件 `temperature < 20` 為假。第三個條件 `temperature < 30` (即 28 < 30) 為真，因此會執行此 `elif` 區塊，印出 \"溫暖\"，並跳過後續的判斷。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "假設有兩個變數 `is_logged_in` 為 `true` (已登入) 和 `has_premium` 為 `false` (非會員)。請判斷以下程式碼片段的執行結果：\n\n```\nis_logged_in = true\nhas_premium = false\n\nif is_logged_in and has_premium:\n    print(\"顯示付費內容\")\nelse:\n    print(\"顯示一般內容\")\n```",
+      "options": ["顯示付費內容", "顯示一般內容", "程式碼錯誤", "無輸出"],
+      "answerIndex": 1,
+      "explanation": "條件判斷 `is_logged_in and has_premium` 中，`is_logged_in` 為 `true` 但 `has_premium` 為 `false`。由於 `true and false` 的結果為 `false`，因此會執行 `else` 區塊內的程式碼，印出 \"顯示一般內容\"。"
+    }
+  ]
+}
