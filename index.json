@@ -61,7 +61,8 @@
         {
           "day": 10,
           "title": "Part 3: 迴圈 (For/While)",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-10"
         },
         {
           "day": 11,
