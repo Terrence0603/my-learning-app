@@ -67,7 +67,8 @@
         {
           "day": 11,
           "title": "Part 3: 函式 (Functions)",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-11"
         },
         {
           "day": 12,
