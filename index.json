@@ -73,7 +73,8 @@
         {
           "day": 12,
           "title": "Part 3: 資料結構 (清單與字典)",
-          "generated": false
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-12"
         }
       ]
     }
