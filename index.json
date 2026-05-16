@@ -75,6 +75,12 @@
           "title": "Part 3: 資料結構 (清單與字典)",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-12"
+        },
+        {
+          "day": 13,
+          "title": "檔案讀寫",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-13"
         }
       ]
     }

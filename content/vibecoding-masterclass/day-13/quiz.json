@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 Python 中，若要開啟一個檔案以寫入資料，且希望每次執行都「覆蓋掉」檔案中既有的所有內容，應該使用哪種檔案開啟模式？",
+      "options": ["'r' (讀取模式)", "'a' (附加模式)", "'w' (寫入模式)", "'x' (獨佔寫入模式)"],
+      "answerIndex": 2,
+      "explanation": "模式 'w' 會在檔案不存在時建立新檔案；若檔案已存在，則會清空檔案內容再開始寫入，達到覆蓋的效果。模式 'a' 則是在檔案末尾追加內容。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "假設有一個名為 `data.txt` 的檔案，內容為多行文字。如果想一次性讀取該檔案的所有內容並將其作為一個單一字串返回，應該使用檔案物件的哪個方法？",
+      "options": ["`readline()`", "`readlines()`", "`read()`", "`read_all_content()`"],
+      "answerIndex": 2,
+      "explanation": "`read()` 方法會讀取整個檔案的內容並作為一個單一字串返回。`readline()` 讀取一行，`readlines()` 讀取所有行並以列表形式返回。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 Python 中處理檔案時，為了確保檔案在使用完畢後能被正確關閉，即使在操作過程中發生錯誤也能自動處理，最推薦使用的語法結構是？",
+      "options": ["使用 `try...except...finally` 區塊並在 `finally` 中呼叫 `file.close()`", "直接在檔案操作結束後呼叫 `file.close()`", "使用 `with open(...) as file:` 語法", "不需關閉檔案，Python 會自動處理"],
+      "answerIndex": 2,
+      "explanation": "`with open(...) as file:` 語法是一個上下文管理器，它會自動處理檔案的開啟和關閉。無論操作是否成功或發生異常，都能確保檔案被安全關閉，避免資源洩漏，是處理檔案 I/O 的最佳實踐。"
+    }
+  ]
+}
