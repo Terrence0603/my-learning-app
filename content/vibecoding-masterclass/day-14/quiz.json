@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "Python 中使用 `try` 和 `except` 區塊的主要目的是什麼？",
+      "options": [
+        "A. 定義一個新的函式。",
+        "B. 建立用於迭代的迴圈。",
+        "C. 優雅地處理程式運行時錯誤，防止程式崩潰。",
+        "D. 宣告全域變數。"
+      ],
+      "answerIndex": 2,
+      "explanation": "`try` 和 `except` 區塊的設計目的就是為了捕獲和處理在 `try` 區塊中可能發生的錯誤或例外，從而讓程式能夠在遇到問題時繼續執行或以預期的方式結束，而不是直接崩潰。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "請看以下程式碼片段：\n```python\ntry:\n    result = 10 / 0\nexcept ValueError:\n    print(\"發生數值錯誤！\")\nexcept ZeroDivisionError:\n    print(\"不能除以零！\")\n```\n當這段程式碼執行時，會印出什麼？",
+      "options": [
+        "A. \"發生數值錯誤！\"",
+        "B. \"不能除以零！\"",
+        "C. 什麼都不會印，程式會崩潰。",
+        "D. 同時印出 A 和 B。"
+      ],
+      "answerIndex": 1,
+      "explanation": "`10 / 0` 會引發 `ZeroDivisionError` 錯誤。程式碼中有明確的 `except ZeroDivisionError` 區塊來捕獲這個錯誤，因此會執行該區塊內的程式碼，印出 \"不能除以零！\"。`ValueError` 不會被觸發。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 `try-except-else-finally` 結構中，`else` 區塊會在什麼時候執行？",
+      "options": [
+        "A. 總是會執行，無論是否有例外發生。",
+        "B. 只有當 `try` 區塊中發生例外時。",
+        "C. 只有當 `try` 區塊中沒有發生例外時。",
+        "D. 只有當 `except` 區塊成功捕獲到例外時。"
+      ],
+      "answerIndex": 2,
+      "explanation": "`else` 區塊是可選的，它只在 `try` 區塊中的程式碼成功執行，且**沒有**任何例外被拋出時才會執行。它常用於放置那些只有在 `try` 區塊成功後才需要執行的程式碼。"
+    }
+  ]
+}
