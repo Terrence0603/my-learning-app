@@ -87,6 +87,12 @@
           "title": "例外處理 (Try/Except)",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-14"
+        },
+        {
+          "day": 15,
+          "title": "了解 API 與 JSON 格式",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-15"
         }
       ]
     }
