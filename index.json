@@ -93,6 +93,12 @@
           "title": "了解 API 與 JSON 格式",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-15"
+        },
+        {
+          "day": 16,
+          "title": "使用 Requests 函式庫串接 API",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-16"
         }
       ]
     }

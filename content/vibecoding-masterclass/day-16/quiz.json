@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 Python 中，若要使用 Requests 函式庫發送 HTTP GET 請求來從伺服器取得資源，最常用的方法是哪一個？",
+      "options": ["requests.send_get()", "requests.fetch()", "requests.get()", "requests.receive()"],
+      "answerIndex": 2,
+      "explanation": "`requests.get()` 是 Requests 函式庫中專門用於發送 HTTP GET 請求的方法，用於從伺服器取得資源，是最直接且常用的方式。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "假設您已經成功發送一個 GET 請求，並且預期伺服器回傳 JSON 格式的資料。要將回傳的 JSON 內容轉換為 Python 字典或列表，您會使用 Response 物件的哪一個方法？",
+      "options": ["response.text", "response.content", "response.json()", "response.decode_json()"],
+      "answerIndex": 2,
+      "explanation": "`response.json()` 方法會自動解析 HTTP 回應的 JSON 內容，並將其轉換為對應的 Python 字典 (dict) 或列表 (list) 物件，是處理 JSON 回應的首選方式。`response.text` 則回傳原始的字串內容。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "當您需要透過 POST 請求發送 JSON 格式的資料到 API 時，應該將資料放在 `requests.post()` 方法的哪一個參數中？",
+      "options": ["params", "data", "json", "files"],
+      "answerIndex": 2,
+      "explanation": "對於發送 JSON 格式的請求體 (request body)，Requests 函式庫提供了 `json` 參數。它會自動將 Python 字典轉換為 JSON 字串，並設定 `Content-Type` 標頭為 `application/json`。`params` 用於 URL 查詢參數，`data` 通常用於表單編碼數據，而 `files` 用於上傳檔案。"
+    }
+  ]}
