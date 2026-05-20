@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在處理現代 API 回傳資料時，最常見且推薦的資料格式是哪一種？",
+      "options": ["XML", "CSV", "JSON", "Plain Text"],
+      "answerIndex": 2,
+      "explanation": "JSON (JavaScript Object Notation) 因其輕量、易於閱讀和撰寫，以及與多數程式語言的良好兼容性，已成為現代 API 資料交換的主流格式。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "假設你收到以下 JSON 回傳資料：{\"status\": \"success\", \"data\": {\"user\": {\"id\": 123, \"name\": \"Alice\"}}}。若要取得 `Alice` 這個名字，正確的存取路徑（以點號表示）是？",
+      "options": ["data.name", "data.user.name", "user.name", "status.data.user.name"],
+      "answerIndex": 1,
+      "explanation": "根據 JSON 結構，`name` 欄位位於 `data` 物件內的 `user` 物件中，因此需要依序存取。選項中 `data.user.name` 符合此路徑。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在嘗試解析 API 回傳的資料內容（如 JSON 字串）之前，最關鍵的第一步通常是檢查什麼？",
+      "options": ["回傳資料的總大小", "回傳的 HTTP 狀態碼", "回傳資料是否包含特定關鍵字", "回傳資料是否為空字串"],
+      "answerIndex": 1,
+      "explanation": "檢查 HTTP 狀態碼（例如 200 OK 表示成功，4xx 或 5xx 表示錯誤）是判斷 API 請求是否成功的基本且關鍵的第一步，它決定了後續是否需要解析資料或處理錯誤。"
+    }
+  ]
+}

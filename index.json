@@ -99,6 +99,12 @@
           "title": "使用 Requests 函式庫串接 API",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-16"
+        },
+        {
+          "day": 17,
+          "title": "處理 API 回傳資料",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-17"
         }
       ]
     }
