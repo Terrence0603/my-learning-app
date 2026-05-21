@@ -1,0 +1,41 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "根據教材內容，選擇 SQLite 作為儲存 API 資料的資料庫，其主要優勢為何？",
+    "options": [
+      "支援高度並行的多使用者存取，適合大型企業級應用。",
+      "它是一個輕量級、無需獨立伺服器、資料儲存在單一檔案中的資料庫。",
+      "提供豐富的進階資料分析功能，例如機器學習整合。",
+      "具備自動擴展能力，可無縫處理PB級的資料量。"
+    ],
+    "answerIndex": 1,
+    "explanation": "SQLite 的主要優勢在於其輕量、伺服器less、將資料儲存在單一檔案中的特性，非常適合作為本地應用程式的資料儲存解決方案，這與教材中強調的點一致。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "在 Python 中使用 `sqlite3` 模組，以下哪一段程式碼片段能正確地連接到資料庫並建立一個名為 `api_responses` 的表格？",
+    "options": [
+      "db = sqlite3.Database('api_data.db'); db.create_table('api_responses', ...)",
+      "conn = sqlite3.connect('api_data.db'); cursor = conn.cursor(); cursor.execute('CREATE TABLE api_responses (id INTEGER PRIMARY KEY, endpoint TEXT, data TEXT, timestamp TEXT)')",
+      "sqlite3.open('api_data.db'); execute('CREATE TABLE api_responses ...')",
+      "with sqlite3.Connection('api_data.db') as db: db.execute('CREATE TABLE api_responses ...')"
+    ],
+    "answerIndex": 1,
+    "explanation": "正確的流程是使用 `sqlite3.connect()` 建立資料庫連線，然後透過連線物件建立 `cursor`，最後使用 `cursor.execute()` 執行 SQL 命令來建立表格。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "在執行資料修改操作（如 INSERT, UPDATE, DELETE）之後，為了確保資料持久化並妥善管理資源，教材中推薦使用哪種方式？",
+    "options": [
+      "在每次 `cursor.execute()` 後立即呼叫 `conn.close()`。",
+      "僅呼叫 `cursor.close()`，資料會自動提交。",
+      "使用 `conn.commit()` 提交變更，然後使用 `conn.close()` 關閉連線。",
+      "使用 `with sqlite3.connect('...') as conn:` 語法，由 Python 自動處理提交和關閉。"
+    ],
+    "answerIndex": 3,
+    "explanation": "教材中強調，使用 `with sqlite3.connect(...) as conn:` 語法是管理資料庫連線和事務的最佳實踐。它能夠在區塊結束時自動提交（如果沒有發生錯誤）或回滾事務（如果發生錯誤），並確保連線被正確關閉，避免資源洩漏。"
+  }
+]}

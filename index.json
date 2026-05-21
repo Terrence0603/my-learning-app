@@ -105,6 +105,12 @@
           "title": "處理 API 回傳資料",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-17"
+        },
+        {
+          "day": 18,
+          "title": "使用 SQLite 儲存 API 資料",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-18"
         }
       ]
     }
