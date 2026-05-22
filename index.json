@@ -111,6 +111,12 @@
           "title": "使用 SQLite 儲存 API 資料",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-18"
+        },
+        {
+          "day": 19,
+          "title": "建立完整的 API 資料擷取與管理流程",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-19"
         }
       ]
     }
