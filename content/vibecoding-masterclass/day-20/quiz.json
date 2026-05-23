@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "自動化排程更新 API 資料的主要目的不包含下列何者？",
+      "options": ["減少人工操作的重複性勞動", "確保資料的即時性和準確性", "提高系統的資訊安全層級", "在預設時間自動執行資料同步"],
+      "answerIndex": 2,
+      "explanation": "自動化排程更新 API 資料主要旨在提升效率、確保資料的即時性與準確性，並自動化重複性工作。雖然妥善處理 API 資料會間接影響安全性，但其核心目的並非直接「提高系統的資訊安全層級」。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 Linux 系統中，實現自動化排程執行腳本以更新 API 資料最常用的內建工具是什麼？",
+      "options": ["systemd", "crontab", "nohup", "at"],
+      "answerIndex": 1,
+      "explanation": "在 Linux 系統中，`crontab` 是用於排程週期性任務（如自動執行更新 API 資料的腳本）的標準且最廣泛使用的內建工具。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在自動化排程更新 API 資料的過程中，若 API 回傳了 HTTP 狀態碼 `500 Internal Server Error`，下列哪一項是推薦的處理策略？",
+      "options": ["立即終止排程，等待管理員手動修復。", "忽略錯誤，繼續執行後續步驟。", "記錄錯誤日誌，並考慮實作重試機制。", "自動切換到備用 API 端點。"],
+      "answerIndex": 2,
+      "explanation": "當 API 回傳 `500 Internal Server Error` 時，這通常表示伺服器端發生了暫時性問題。推薦的策略是記錄詳細的錯誤日誌以便後續分析，並實作重試機制，因為有些伺服器錯誤可能是暫時性的，稍後重試可能會成功。立即終止或忽略錯誤都不是最佳實踐。"
+    }
+  ]}
