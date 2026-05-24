@@ -123,6 +123,12 @@
           "title": "自動化排程 API 資料更新",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-20"
+        },
+        {
+          "day": 21,
+          "title": "使用 Pandas 整理與分析 API 資料",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-21"
         }
       ]
     }

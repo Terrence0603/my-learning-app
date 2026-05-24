@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "當從 API 接收到 JSON 格式的資料（通常為 Python 字典或字典列表）後，哪個 Pandas 功能最適合用來將其轉換為 DataFrame？",
+      "options": [
+        "pd.read_csv()",
+        "pd.DataFrame() 構造函數",
+        "pd.read_excel()",
+        "pd.Series() 構造函數"
+      ],
+      "answerIndex": 1,
+      "explanation": "`pd.DataFrame()` 構造函數可以直接接受 Python 字典或字典列表作為輸入，這是從 API 獲取 JSON 資料後轉換成 DataFrame 最常見且直接的方式。`pd.read_json()` 則通常用於讀取 JSON 檔案或 JSON 格式的字串。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在處理從 API 獲取的資料時，哪個 Pandas DataFrame 方法最適合用來快速查看每列的資料型態 (dtype) 和非空值 (non-null) 數量，以了解資料結構和潛在的遺失值問題？",
+      "options": [
+        "df.head()",
+        "df.describe()",
+        "df.info()",
+        "df.shape"
+      ],
+      "answerIndex": 2,
+      "explanation": "`df.info()` 提供了一個精簡而全面的 DataFrame 摘要，包含每列的資料型態、非空值數量以及記憶體使用情況，對於初步資料探索和檢查遺失值非常有用。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "假設你從一個 API 獲取了產品資料，其中包含 'category'（類別）和 'price'（價格）欄位。如果你想計算每個不同 'category' 的平均 'price'，哪種 Pandas 操作序列是最佳且最常用的方法？",
+      "options": [
+        "df.filter(items=['category', 'price']).mean()",
+        "df.groupby('category')['price'].mean()",
+        "df.pivot_table(index='category', values='price', aggfunc='sum')",
+        "df.sort_values(by='category').agg({'price': 'mean'})"
+      ],
+      "answerIndex": 1,
+      "explanation": "`df.groupby('category')` 會根據 'category' 欄位將 DataFrame 分組，然後 `['price'].mean()` 會在每個分組內計算 'price' 欄位的平均值，這是執行此類聚合分析的標準且高效的方式。選項 3 的 `aggfunc` 是 `sum` 而非 `mean`，不符合題目要求；選項 4 的 `sort_values` 主要用於排序，而非直接聚合。"
+    }
+  ]
+}
