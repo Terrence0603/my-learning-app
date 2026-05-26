@@ -135,6 +135,12 @@
           "title": "視覺化 API 資料分析結果",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-22"
+        },
+        {
+          "day": 23,
+          "title": "建立互動式數據儀表板",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-23"
         }
       ]
     }
