@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在部署互動式數據儀表板時，哪項技術常被用於將應用程式及其所有依賴項打包成一個獨立的、可移植的單元，以確保在不同環境中運行一致？",
+      "options": ["Git", "Docker", "SQL", "JSON"],
+      "answerIndex": 1,
+      "explanation": "Docker 透過容器化技術，將應用程式及其所有依賴項（如程式碼、運行時、系統工具、函式庫和設定）打包成一個獨立的單元，確保在開發、測試和生產環境中都能一致運行。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "當將Python為主的數據儀表板（例如使用Streamlit）部署到雲端伺服器時，通常建議使用哪個檔案來管理所有Python套件依賴，以便部署環境能夠正確安裝？",
+      "options": ["app.py", "config.json", "requirements.txt", ".env"],
+      "answerIndex": 2,
+      "explanation": "`requirements.txt` 檔案列出了專案所需的所有Python套件及其確切版本，使得部署環境可以準確安裝所有必要的依賴，避免版本衝突問題。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為了在部署時安全地管理敏感資訊（例如API金鑰或資料庫憑證），最推薦的方法是什麼？",
+      "options": ["直接將其硬編碼在 `app.py` 中", "將其儲存在公開的程式碼倉庫中", "使用環境變數", "透過電子郵件發送給伺服器"],
+      "answerIndex": 2,
+      "explanation": "使用環境變數是管理敏感資訊的最佳實踐。它允許將設定值從程式碼中分離出來，避免將敏感資料直接暴露在版本控制或公開程式碼中，提高了安全性並使得設定管理更靈活。"
+    }
+  ]
+}

@@ -141,6 +141,12 @@
           "title": "建立互動式數據儀表板",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-23"
+        },
+        {
+          "day": 24,
+          "title": "部署你的互動式數據儀表板",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-24"
         }
       ]
     }
