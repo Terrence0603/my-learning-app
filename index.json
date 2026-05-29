@@ -153,6 +153,12 @@
           "title": "數據儀表板的監控與效能最佳化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-25"
+        },
+        {
+          "day": 26,
+          "title": "導入機器學習模型進行數據預測",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-26"
         }
       ]
     }
