@@ -159,6 +159,12 @@
           "title": "導入機器學習模型進行數據預測",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-26"
+        },
+        {
+          "day": 27,
+          "title": "機器學習模型效能評估與優化",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-27"
         }
       ]
     }
