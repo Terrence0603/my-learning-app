@@ -165,6 +165,12 @@
           "title": "機器學習模型效能評估與優化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-27"
+        },
+        {
+          "day": 28,
+          "title": "部署機器學習預測 API",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-28"
         }
       ]
     }
