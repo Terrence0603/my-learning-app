@@ -1,0 +1,41 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "將預測API整合到互動式儀表板中最主要的目的或好處是什麼？",
+    "options": [
+      "提供即時的、基於用戶輸入的預測結果。",
+      "將機器學習模型的訓練過程可視化。",
+      "自動化模型的部署流程。",
+      "提高資料庫的查詢效率。"
+    ],
+    "answerIndex": 0,
+    "explanation": "整合預測API至互動式儀表板的核心目的是讓用戶能夠即時輸入資料並獲得模型產生的預測結果，從而增強互動性與提供即時洞察力。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "在一個典型的「預測API與互動式儀表板整合」架構中，哪個組件主要負責接收使用者輸入，並向部署的機器學習模型發送請求以獲取預測結果？",
+    "options": [
+      "預測API伺服器 (Prediction API Server)",
+      "資料庫伺服器 (Database Server)",
+      "互動式儀表板前端 (Interactive Dashboard Frontend)",
+      "模型訓練環境 (Model Training Environment)"
+    ],
+    "answerIndex": 2,
+    "explanation": "互動式儀表板前端是使用者介面，它接收使用者的操作和輸入，然後將這些輸入整理並透過網路請求發送給預測API，再接收API回傳的預測結果進行展示。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "當使用Python開發一個互動式儀表板（例如使用Streamlit或Dash），並需要呼叫一個基於HTTP/REST的預測API來獲取結果時，哪個Python函式庫最常被用於發送這些HTTP請求？",
+    "options": [
+      "pandas",
+      "numpy",
+      "requests",
+      "scikit-learn"
+    ],
+    "answerIndex": 2,
+    "explanation": "`requests`函式庫是Python中用於發送HTTP請求（如GET、POST）的標準且廣泛使用的函式庫，非常適合用於呼叫RESTful API。其他選項則分別用於資料處理、數值運算和機器學習。"
+  }
+]}

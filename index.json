@@ -171,6 +171,12 @@
           "title": "部署機器學習預測 API",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-28"
+        },
+        {
+          "day": 29,
+          "title": "實戰：整合預測API至互動式儀表板",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-29"
         }
       ]
     }
