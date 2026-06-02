@@ -177,6 +177,12 @@
           "title": "實戰：整合預測API至互動式儀表板",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-29"
+        },
+        {
+          "day": 30,
+          "title": "生產環境下模型監控與數據漂移偵測",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-30"
         }
       ]
     }

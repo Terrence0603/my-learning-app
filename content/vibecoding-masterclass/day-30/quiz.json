@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在生產環境下，模型監控最主要的目的為何？",
+      "options": [
+        "確保模型預測結果的穩定性與準確性",
+        "降低模型的運算成本",
+        "增加模型的訓練速度",
+        "改善模型的用戶介面"
+      ],
+      "answerIndex": 0,
+      "explanation": "模型監控的核心目的在於持續追蹤模型在真實世界中的表現，確保其預測結果與預期相符，並能及時發現任何性能下降或問題，以維護其穩定性與準確性。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "關於數據漂移 (Data Drift)，下列敘述何者最正確？",
+      "options": [
+        "數據漂移只發生在模型的訓練階段，與生產環境無關。",
+        "數據漂移是指模型輸入數據的統計特性隨時間發生變化。",
+        "數據漂移總是導致模型性能立即大幅提升。",
+        "數據漂移與模型架構的改變是同義詞。"
+      ],
+      "answerIndex": 1,
+      "explanation": "數據漂移指的是模型在生產環境中接收到的輸入數據，其統計特性（如分佈、平均值、標準差等）與模型訓練時所使用的數據產生顯著差異。這是導致模型性能下降的常見原因。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在監控分類模型於生產環境中的性能時，下列哪一組指標是最常用且重要的？",
+      "options": [
+        "Precision (精確率), Recall (召回率), F1-score, Accuracy (準確率)",
+        "RMSE (均方根誤差), MAE (平均絕對誤差), R-squared (決定係數)",
+        "Latency (延遲), Throughput (吞吐量), CPU Usage (CPU使用率)",
+        "Data volume (數據量), Storage cost (儲存成本), Network bandwidth (網路頻寬)"
+      ],
+      "answerIndex": 0,
+      "explanation": "Precision、Recall、F1-score 和 Accuracy 是評估分類模型預測能力的核心指標，它們直接反映了模型在正確分類和避免錯誤分類方面的表現。其他選項是回歸模型的指標、系統資源指標或基礎設施指標。"
+    }
+  ]
+}
