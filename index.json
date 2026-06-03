@@ -183,6 +183,12 @@
           "title": "生產環境下模型監控與數據漂移偵測",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-30"
+        },
+        {
+          "day": 31,
+          "title": "實戰：建立自動化 MLOps 模型更新流程",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-31"
         }
       ]
     }
