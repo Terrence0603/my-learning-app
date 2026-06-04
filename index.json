@@ -189,6 +189,12 @@
           "title": "實戰：建立自動化 MLOps 模型更新流程",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-31"
+        },
+        {
+          "day": 32,
+          "title": "模型版本管理與迭代部署策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-32"
         }
       ]
     }
