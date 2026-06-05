@@ -195,6 +195,12 @@
           "title": "模型版本管理與迭代部署策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-32"
+        },
+        {
+          "day": 33,
+          "title": "實戰：多版本模型 A/B 測試與灰度發布",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-33"
         }
       ]
     }
