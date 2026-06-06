@@ -201,6 +201,12 @@
           "title": "實戰：多版本模型 A/B 測試與灰度發布",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-33"
+        },
+        {
+          "day": 34,
+          "title": "實戰：MLOps 基礎設施的擴展性與成本效益設計",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-34"
         }
       ]
     }
