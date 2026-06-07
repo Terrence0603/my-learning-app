@@ -207,6 +207,12 @@
           "title": "實戰：MLOps 基礎設施的擴展性與成本效益設計",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-34"
+        },
+        {
+          "day": 35,
+          "title": "實戰：MLOps 環境下的安全部署與隱私保護",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-35"
         }
       ]
     }
