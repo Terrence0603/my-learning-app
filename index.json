@@ -213,6 +213,12 @@
           "title": "實戰：MLOps 環境下的安全部署與隱私保護",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-35"
+        },
+        {
+          "day": 36,
+          "title": "實戰：MLOps 模型效能監控與異常預警系統",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-36"
         }
       ]
     }
