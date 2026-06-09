@@ -219,6 +219,12 @@
           "title": "實戰：MLOps 模型效能監控與異常預警系統",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-36"
+        },
+        {
+          "day": 37,
+          "title": "實戰：MLOps 自動化再訓練與持續部署策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-37"
         }
       ]
     }
