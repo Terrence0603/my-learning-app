@@ -225,6 +225,12 @@
           "title": "實戰：MLOps 自動化再訓練與持續部署策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-37"
+        },
+        {
+          "day": 38,
+          "title": "實戰：MLOps 實驗追蹤與模型版本管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-38"
         }
       ]
     }
