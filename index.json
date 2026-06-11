@@ -231,6 +231,12 @@
           "title": "實戰：MLOps 實驗追蹤與模型版本管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-38"
+        },
+        {
+          "day": 39,
+          "title": "實戰：MLOps 模型灰度發布與 A/B 測試",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-39"
         }
       ]
     }
