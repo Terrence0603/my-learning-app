@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps中，當模型預測的目標變數 (Y) 的統計特性，或輸入特徵 (X) 與目標變數 (Y) 之間的關係隨著時間發生變化時，這屬於哪種類型的漂移？",
+      "options": ["概念漂移 (Concept Drift)", "資料漂移 (Data Drift)", "模型效能漂移 (Model Performance Drift)", "基礎設施漂移 (Infrastructure Drift)"],
+      "answerIndex": 0,
+      "explanation": "概念漂移是指輸入與輸出之間關係 P(Y|X) 的變化，使得模型對現實世界的理解變得過時。資料漂移則是指輸入資料分佈 P(X) 的變化，而模型效能漂移通常是前兩者導致的結果。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "對於監測連續型數值特徵的資料漂移，比較生產環境資料與訓練資料的分佈差異，下列哪種統計檢定方法最常用來評估兩個樣本是否來自同一分佈？",
+      "options": ["卡方檢定 (Chi-squared test)", "Kolmogorov-Smirnov (KS) 檢定", "學生t檢定 (Student's t-test)", "變異數分析 (ANOVA)"],
+      "answerIndex": 1,
+      "explanation": "Kolmogorov-Smirnov (KS) 檢定用於比較兩個連續分佈函數的差異，非常適合檢測數值特徵的資料漂移。卡方檢定主要用於類別型資料，而t檢定和ANOVA主要用於比較平均值。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "當MLOps系統偵測到並確認了會顯著影響模型效能的資料漂移時，最直接且常見的應對策略是什麼？",
+      "options": ["立即將模型回滾到上一個版本，不進行額外操作。", "警示相關人員並安排使用新的、有代表性的資料重新訓練模型。", "手動調整生產環境中模型的內部參數以適應新資料。", "增加模型的預測閾值以過濾不確定的預測。"],
+      "answerIndex": 1,
+      "explanation": "當資料漂移確認影響模型效能時，模型已不再能準確反映當前資料的分佈。最有效的解決方案是使用最新、最具代表性的資料集對模型進行再訓練，以使其重新適應新的資料環境。其他選項不是治本之策，或是非標準的操作。"
+    }
+  ]
+}

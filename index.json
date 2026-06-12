@@ -237,6 +237,12 @@
           "title": "實戰：MLOps 模型灰度發布與 A/B 測試",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-39"
+        },
+        {
+          "day": 40,
+          "title": "實戰：MLOps 模型與資料漂移偵測與應對",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-40"
         }
       ]
     }
