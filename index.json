@@ -243,6 +243,12 @@
           "title": "實戰：MLOps 模型與資料漂移偵測與應對",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-40"
+        },
+        {
+          "day": 41,
+          "title": "實戰：MLOps 模型容器化與生產部署",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-41"
         }
       ]
     }
