@@ -249,6 +249,12 @@
           "title": "實戰：MLOps 模型容器化與生產部署",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-41"
+        },
+        {
+          "day": 42,
+          "title": "實戰：MLOps 監控系統建置與警報策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-42"
         }
       ]
     }
