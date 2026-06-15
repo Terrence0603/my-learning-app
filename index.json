@@ -255,6 +255,12 @@
           "title": "實戰：MLOps 監控系統建置與警報策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-42"
+        },
+        {
+          "day": 43,
+          "title": "實戰：MLOps CI/CD 自動化管線建置",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-43"
         }
       ]
     }
