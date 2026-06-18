@@ -273,6 +273,12 @@
           "title": "實戰：MLOps 安全性與合規性",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-45"
+        },
+        {
+          "day": 46,
+          "title": "實戰：MLOps 模型可解釋性與可信賴AI",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-46"
         }
       ]
     }
