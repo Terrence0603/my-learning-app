@@ -279,6 +279,12 @@
           "title": "實戰：MLOps 模型可解釋性與可信賴AI",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-46"
+        },
+        {
+          "day": 47,
+          "title": "實戰：MLOps 專案案例研究與架構設計",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-47"
         }
       ]
     }
