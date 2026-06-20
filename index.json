@@ -285,6 +285,12 @@
           "title": "實戰：MLOps 專案案例研究與架構設計",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-47"
+        },
+        {
+          "day": 48,
+          "title": "MLOps 模型監控與持續學習策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-48"
         }
       ]
     }
