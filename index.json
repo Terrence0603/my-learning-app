@@ -297,6 +297,12 @@
           "title": "實戰：MLOps CI/CD 與自動化部署",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-49"
+        },
+        {
+          "day": 50,
+          "title": "實戰：MLOps 生產級擴展與效能調優",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-50"
         }
       ]
     }

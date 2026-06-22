@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 生產環境中，若要提升模型服務的吞吐量並確保高可用性，下列哪種擴展策略通常被優先考慮，尤其是面對不可預測的流量峰值時？",
+      "options": ["垂直擴展 (Vertical Scaling)", "水平擴展 (Horizontal Scaling)", "手動擴展 (Manual Scaling)", "縮減擴展 (Shrink Scaling)"],
+      "answerIndex": 1,
+      "explanation": "水平擴展允許透過增加更多的機器或容器來分散負載，提高系統的吞吐量和彈性，非常適合處理突發流量，並避免單點故障。垂直擴展有硬體限制且無法提供高可用性。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "為了降低 ML 模型在邊緣設備或對延遲要求極高的場景中的推理延遲，下列哪種效能調優技術最常用於縮小模型大小並加速計算？",
+      "options": ["A/B 測試", "灰度發布", "模型量化 (Model Quantization)", "資料增強 (Data Augmentation)"],
+      "answerIndex": 2,
+      "explanation": "模型量化是將模型權重從浮點數轉換為低位元整數的技術，能顯著減小模型大小並加速推理，尤其適用於資源受限或延遲敏感的環境。A/B 測試和灰度發布是部署策略，資料增強是訓練階段的技術。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 MLOps 的生產環境中，為了有效監控模型服務的健康狀況和運行效能，除了系統資源使用率 (CPU, 記憶體) 外，下列哪一組指標是監控機器學習模型特定效能的關鍵？",
+      "options": ["使用者介面響應時間、資料庫連接數", "模型推理延遲 (Inference Latency)、吞吐量 (Throughput)、錯誤率 (Error Rate)", "磁碟 I/O、網路頻寬佔用", "程式碼行數、版本控制提交頻率"],
+      "answerIndex": 1,
+      "explanation": "模型推理延遲、吞吐量和錯誤率直接反映了模型服務提供預測的即時性、處理請求的能力以及結果的可靠性，是評估 ML 模型生產效能的核心指標。其他選項是通用系統指標或開發指標。"
+    }
+  ]}
