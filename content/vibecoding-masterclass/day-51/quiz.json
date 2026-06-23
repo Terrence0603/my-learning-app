@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 安全性與隱私保護中，哪一種技術透過向聚合數據中添加統計噪音，以防止識別出單個數據點，從而增強個人數據的隱私性？",
+      "options": ["差分隱私 (Differential Privacy)", "聯邦學習 (Federated Learning)", "同態加密 (Homomorphic Encryption)", "基於角色的訪問控制 (RBAC)"],
+      "answerIndex": 0,
+      "explanation": "差分隱私 (Differential Privacy) 的核心思想是透過在數據查詢結果中引入隨機噪音，使得即使攻擊者擁有所有其他數據點的信息，也無法判斷特定個體的數據是否存在於數據集中，從而提供強大的隱私保證。聯邦學習主要解決模型在不共享原始數據的情況下進行訓練，同態加密允許在加密數據上進行計算，而 RBAC 則是一種訪問控制機制。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "當攻擊者故意向機器學習模型的訓練數據中注入錯誤或惡意的數據，導致模型在訓練後行為異常或性能下降時，這種攻擊被稱為什麼？",
+      "options": ["模型反轉攻擊 (Model Inversion Attack)", "數據投毒攻擊 (Data Poisoning Attack)", "成員推斷攻擊 (Membership Inference Attack)", "對抗性逃逸攻擊 (Adversarial Evasion Attack)"],
+      "answerIndex": 1,
+      "explanation": "數據投毒攻擊 (Data Poisoning Attack) 專指攻擊者在模型訓練階段，透過污染訓練數據來惡意操縱模型行為。模型反轉攻擊試圖從模型輸出重建輸入數據，成員推斷攻擊旨在判斷特定數據點是否在訓練集中，而對抗性逃逸攻擊則是在模型部署後，透過微小擾動使模型做出錯誤判斷。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "MLOps 安全性的一個關鍵原則是將安全性考慮因素整合到機器學習系統的每個階段，從設計、開發、訓練、部署到監控，而不是事後彌補。這個原則通常被稱為？",
+      "options": ["零信任架構 (Zero Trust Architecture)", "不可變基礎設施 (Immutable Infrastructure)", "安全設計 (Security by Design)", "持續監控 (Continuous Monitoring)"],
+      "answerIndex": 2,
+      "explanation": "安全設計 (Security by Design) 強調將安全性作為系統設計和開發的內在組成部分，從一開始就考慮並實施安全措施，而非後期附加。零信任架構是一種訪問控制策略，不可變基礎設施側重於環境的一致性和穩定性，而持續監控則是部署後的安全運營活動。"
+    }
+  ]}

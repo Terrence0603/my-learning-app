@@ -303,6 +303,12 @@
           "title": "實戰：MLOps 生產級擴展與效能調優",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-50"
+        },
+        {
+          "day": 51,
+          "title": "實戰：MLOps 安全性與隱私保護",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-51"
         }
       ]
     }
