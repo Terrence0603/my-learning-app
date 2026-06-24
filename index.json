@@ -309,6 +309,12 @@
           "title": "實戰：MLOps 安全性與隱私保護",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-51"
+        },
+        {
+          "day": 52,
+          "title": "實戰：MLOps 在生成式 AI 模型生命週期管理中的實踐",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-52"
         }
       ]
     }
