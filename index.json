@@ -315,6 +315,12 @@
           "title": "實戰：MLOps 在生成式 AI 模型生命週期管理中的實踐",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-52"
+        },
+        {
+          "day": 53,
+          "title": "實戰：MLOps 負責任 AI 評估與緩解策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-53"
         }
       ]
     }
