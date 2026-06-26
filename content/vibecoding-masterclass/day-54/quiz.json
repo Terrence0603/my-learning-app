@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "MLOps 中持續監控的主要目的是什麼？",
+      "options": [
+        "確保模型在生產環境中的預期效能和穩定性。",
+        "減少模型訓練時間。",
+        "加速新模型的部署速度。",
+        "降低模型開發成本。"
+      ],
+      "answerIndex": 0,
+      "explanation": "持續監控的核心在於及早發現模型效能下降、資料漂移或系統問題，以確保模型能夠持續提供準確、可靠的預測，並維持業務價值。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 的模型監控中，以下哪項「不」是常見的「漂移 (Drift)」類型？",
+      "options": [
+        "概念漂移 (Concept Drift)",
+        "資料漂移 (Data Drift)",
+        "模型漂移 (Model Drift)",
+        "程式碼漂移 (Code Drift)"
+      ],
+      "answerIndex": 3,
+      "explanation": "概念漂移、資料漂移和模型漂移都是與模型在生產環境中效能相關的常見問題，需要透過監控來識別。程式碼漂移通常指的是軟體開發中的程式碼庫變化，而非 MLOps 監控模型效能時關注的特定漂移類型。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "監控與可觀測性 (Observability) 領域中，常用來描述系統狀態的三大支柱 (Pillars) 是什麼？",
+      "options": [
+        "CPU、記憶體、硬碟",
+        "日誌 (Logs)、指標 (Metrics)、追蹤 (Traces)",
+        "訓練、驗證、測試",
+        "精準度、召回率、F1 分數"
+      ],
+      "answerIndex": 1,
+      "explanation": "日誌、指標和追蹤是可觀測性領域公認的三大支柱，它們從不同角度提供系統運行的詳細資訊，幫助開發者和維運人員理解系統行為和診斷問題。"
+    }
+  ]
+}

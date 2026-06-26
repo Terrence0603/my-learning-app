@@ -321,6 +321,12 @@
           "title": "實戰：MLOps 負責任 AI 評估與緩解策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-53"
+        },
+        {
+          "day": 54,
+          "title": "實戰：MLOps 持續監控與可觀測性",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-54"
         }
       ]
     }
