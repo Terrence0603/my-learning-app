@@ -327,6 +327,12 @@
           "title": "實戰：MLOps 持續監控與可觀測性",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-54"
+        },
+        {
+          "day": 55,
+          "title": "實戰：MLOps 自動化部署與模型版本管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-55"
         }
       ]
     }
