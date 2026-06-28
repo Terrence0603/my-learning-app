@@ -333,6 +333,12 @@
           "title": "實戰：MLOps 自動化部署與模型版本管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-55"
+        },
+        {
+          "day": 56,
+          "title": "實戰：MLOps 持續訓練與模型重部署",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-56"
         }
       ]
     }
