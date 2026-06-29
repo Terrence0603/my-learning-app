@@ -339,6 +339,12 @@
           "title": "實戰：MLOps 持續訓練與模型重部署",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-56"
+        },
+        {
+          "day": 57,
+          "title": "實戰：建構端到端 MLOps 自動化管線",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-57"
         }
       ]
     }
