@@ -345,6 +345,12 @@
           "title": "實戰：建構端到端 MLOps 自動化管線",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-57"
+        },
+        {
+          "day": 58,
+          "title": "實戰：MLOps 管線穩定性與效能調優",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-58"
         }
       ]
     }
