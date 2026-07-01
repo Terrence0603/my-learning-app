@@ -351,6 +351,12 @@
           "title": "實戰：MLOps 管線穩定性與效能調優",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-58"
+        },
+        {
+          "day": 59,
+          "title": "實戰：MLOps 模型的 A/B 測試與漸進式部署",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-59"
         }
       ]
     }
