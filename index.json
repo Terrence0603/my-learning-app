@@ -363,6 +363,12 @@
           "title": "實戰：MLOps 模型監控與異常偵測",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-60"
+        },
+        {
+          "day": 61,
+          "title": "實戰：MLOps 彈性架構與高可用性設計",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-61"
         }
       ]
     }
