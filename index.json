@@ -369,6 +369,12 @@
           "title": "實戰：MLOps 彈性架構與高可用性設計",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-61"
+        },
+        {
+          "day": 62,
+          "title": "實戰：MLOps 安全性與數據治理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-62"
         }
       ]
     }
