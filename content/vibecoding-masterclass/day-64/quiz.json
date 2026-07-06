@@ -1,0 +1,41 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "MLOps 自動化管道的核心目標是什麼？",
+      "options": [
+        "提升模型預測的準確度，減少人工干預。",
+        "縮短模型從開發到部署的週期，並確保其在生產環境中的穩定性與可維護性。",
+        "自動化資料收集與清洗流程，確保資料品質。",
+        "建立一個方便的數據分析儀表板，即時監控業務指標。"
+      ],
+      "answerIndex": 1,
+      "explanation": "MLOps 自動化管道最主要的目的在於提升 ML 模型開發與部署的效率，確保模型能快速、可靠地從開發階段進入生產環境，並維持其穩定運行，因此 B 選項最能代表其核心目標。提升準確度 (A) 是模型開發的目標，資料處理 (C) 和儀表板 (D) 則是管道中的部分環節或輔助工具，而非核心目標。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 自動化管道中，以下哪個階段對於確保模型能在生產環境中持續穩定運行，並適應數據漂移（data drift）至關重要？",
+      "options": [
+        "特徵工程（Feature Engineering）",
+        "模型訓練與調優（Model Training & Tuning）",
+        "模型監控與再訓練（Model Monitoring & Retraining）",
+        "模型部署（Model Deployment）"
+      ],
+      "answerIndex": 2,
+      "explanation": "模型監控與再訓練階段是 MLOps 管道中確保模型長期穩定運行的關鍵。它負責追蹤模型在生產環境中的性能表現、偵測數據或概念漂移，並在必要時觸發模型的自動或半自動再訓練，以確保模型能持續提供準確的預測。其他選項雖然重要，但主要關注模型本身的構建或首次交付，而非長期運行的穩定性與適應性。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為了實現 MLOps 管道中的模型版本控制、實驗追蹤（experiment tracking）與模型註冊（model registry），通常會使用哪一種工具？",
+      "options": [
+        "Docker",
+        "Jenkins / GitLab CI",
+        "MLflow",
+        "Kubernetes"
+      ],
+      "answerIndex": 2,
+      "explanation": "MLflow 是一個專為機器學習生命週期設計的開源平台，提供實驗追蹤（MLflow Tracking）、模型專案包裝（MLflow Projects）以及模型註冊與版本管理（MLflow Model Registry）等功能，完美符合題目的需求。Docker 用於容器化，Jenkins/GitLab CI 用於 CI/CD 自動化，Kubernetes 用於容器編排，這些工具雖然在 MLOps 管道中也有其作用，但它們的核心功能並非模型版本控制、實驗追蹤與註冊。"
+    }
+  ]}
