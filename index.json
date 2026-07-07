@@ -387,6 +387,12 @@
           "title": "實戰：打造 MLOps 自動化管道",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-64"
+        },
+        {
+          "day": 65,
+          "title": "實戰：MLOps 模型部署策略與版本管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-65"
         }
       ]
     }

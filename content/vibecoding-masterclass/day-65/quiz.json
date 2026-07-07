@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "以下哪種 MLOps 模型部署策略透過將新模型版本逐步推出給一小部分使用者，並在擴展至所有使用者之前進行即時監控，以便在出現問題時快速回滾？",
+      "options": [
+        "藍綠部署 (Blue/Green Deployment)",
+        "金絲雀部署 (Canary Deployment)",
+        "影子部署 (Shadow Deployment)",
+        "A/B 測試 (A/B Testing)"
+      ],
+      "answerIndex": 1,
+      "explanation": "金絲雀部署 (Canary Deployment) 的核心思想是將新模型版本首先部署到一小部分使用者流量上，進行即時性能和穩定性監控。如果一切正常，再逐步擴大流量，降低了新版本帶來的風險。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 中，除了模型本身，也對訓練程式碼、訓練資料和組態檔進行精確版本管理的主要目的是什麼？",
+      "options": [
+        "降低模型儲存成本。",
+        "加快模型在生產環境中的推斷速度。",
+        "確保過去的實驗和部署能夠完全重現 (Reproducibility)。",
+        "自動生成用於合規性審計的文檔。"
+      ],
+      "answerIndex": 2,
+      "explanation": "版本管理所有相關組件（程式碼、資料、組態、模型）的關鍵好處在於實現「可重現性」。這對於調試、追蹤問題、進行稽核以及持續改進模型至關重要，因為它允許團隊精確重現任何過去的模型訓練環境或生產狀態。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "一個專門用於儲存、管理和編目訓練好的機器學習模型的核心儲存庫，通常包含版本、性能指標和譜系等元資料，通常被稱為什麼？",
+      "options": [
+        "特徵儲存 (Feature Store)",
+        "資料湖 (Data Lake)",
+        "模型註冊中心 (Model Registry)",
+        "程式碼儲存庫 (Code Repository)"
+      ],
+      "answerIndex": 2,
+      "explanation": "模型註冊中心 (Model Registry 或 Model Store) 是 MLOps 管道中的關鍵組件，它提供了一個集中化的平台來管理機器學習模型的生命週期，包括版本控制、儲存、元資料追蹤以及促進模型的部署和推廣。"
+    }
+  ]
+}
