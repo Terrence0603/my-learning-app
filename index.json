@@ -393,6 +393,12 @@
           "title": "實戰：MLOps 模型部署策略與版本管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-65"
+        },
+        {
+          "day": 66,
+          "title": "實戰：MLOps 模型監控與性能評估",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-66"
         }
       ]
     }
