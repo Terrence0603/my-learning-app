@@ -399,6 +399,12 @@
           "title": "實戰：MLOps 模型監控與性能評估",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-66"
+        },
+        {
+          "day": 67,
+          "title": "實戰：MLOps 模型再訓練與迭代更新",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-67"
         }
       ]
     }
