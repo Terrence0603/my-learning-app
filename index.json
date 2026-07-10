@@ -405,6 +405,12 @@
           "title": "實戰：MLOps 模型再訓練與迭代更新",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-67"
+        },
+        {
+          "day": 68,
+          "title": "實戰：MLOps 系統安全性與合規性",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-68"
         }
       ]
     }
