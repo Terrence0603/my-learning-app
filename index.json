@@ -411,6 +411,12 @@
           "title": "實戰：MLOps 系統安全性與合規性",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-68"
+        },
+        {
+          "day": 69,
+          "title": "實戰：MLOps 成本優化與資源管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-69"
         }
       ]
     }
