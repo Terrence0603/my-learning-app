@@ -417,6 +417,12 @@
           "title": "實戰：MLOps 成本優化與資源管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-69"
+        },
+        {
+          "day": 70,
+          "title": "實戰：建構端到端 MLOps 自動化管線",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-70"
         }
       ]
     }

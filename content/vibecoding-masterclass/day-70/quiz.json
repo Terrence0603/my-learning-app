@@ -1,0 +1,27 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在構建端到端 MLOps 自動化管線時，持續整合 (CI) 和持續交付/部署 (CD) 的核心目標是什麼？",
+      "options": ["確保模型從開發到部署的整個生命週期都保持手動介入，以提高靈活性。", "將數據收集、模型訓練、評估和部署的流程自動化，以實現快速、可靠的模型迭代與發布。", "僅專注於自動化模型訓練過程，而忽略數據準備和部署環節。", "主要用於追蹤模型性能，而非自動化部署。"],
+      "answerIndex": 1,
+      "explanation": "MLOps 的 CI/CD 旨在自動化整個 ML 模型生命週期，從數據準備、模型訓練、評估到部署，以提高效率、可靠性和加速模型迭代與發布。這能顯著減少手動錯誤並提升開發速度。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在一個典型的 MLOps 自動化管線中，哪一個工具或服務通常用於管理模型的版本、元數據和生命週期，並作為模型部署前的中央儲存庫？",
+      "options": ["GitHub Actions", "Kubernetes", "MLflow Model Registry", "Jupyter Notebook"],
+      "answerIndex": 2,
+      "explanation": "MLflow Model Registry 專為管理 ML 模型的完整生命週期而設計，包括版本控制、階段轉換（如 staging 到 production）和追蹤元數據，使其成為模型部署前的核心儲存庫。GitHub Actions 是 CI/CD 工具，Kubernetes 是容器編排工具，Jupyter Notebook 是開發環境。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "端到端 MLOps 自動化管線在解決傳統 ML 開發流程中的哪一項常見挑戰方面最具效益？",
+      "options": ["過度依賴單一數據源的問題。", "模型從實驗室到生產環境的部署速度緩慢且不一致。", "開發人員無法直接接觸到生產數據。", "機器學習模型本身預測精度的限制。"],
+      "answerIndex": 1,
+      "explanation": "MLOps 自動化管線的核心價值之一是標準化和加速 ML 模型從實驗驗證到生產部署的過程，解決了手動流程中常見的速度慢、錯誤多和缺乏一致性的問題。它不直接解決數據源多樣性或模型本身精度問題。"
+    }
+  ]
+}
