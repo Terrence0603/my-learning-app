@@ -429,6 +429,12 @@
           "title": "實戰：優化 MLOps 自動化管線的運行效能與穩定性",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-71"
+        },
+        {
+          "day": 72,
+          "title": "實戰：MLOps 自動化管線的監控與預警機制",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-72"
         }
       ]
     }
