@@ -435,6 +435,12 @@
           "title": "實戰：MLOps 自動化管線的監控與預警機制",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-72"
+        },
+        {
+          "day": 73,
+          "title": "實戰：MLOps 模型版本管理與持續迭代部署",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-73"
         }
       ]
     }
