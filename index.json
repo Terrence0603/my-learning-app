@@ -441,6 +441,12 @@
           "title": "實戰：MLOps 模型版本管理與持續迭代部署",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-73"
+        },
+        {
+          "day": 74,
+          "title": "實戰：MLOps 模型效能劣化偵測與自動再訓練",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-74"
         }
       ]
     }
