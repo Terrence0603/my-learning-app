@@ -447,6 +447,12 @@
           "title": "實戰：MLOps 模型效能劣化偵測與自動再訓練",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-74"
+        },
+        {
+          "day": 75,
+          "title": "實戰：MLOps 模型灰度發布與線上驗證",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-75"
         }
       ]
     }
