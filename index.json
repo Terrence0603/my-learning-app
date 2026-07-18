@@ -453,6 +453,12 @@
           "title": "實戰：MLOps 模型灰度發布與線上驗證",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-75"
+        },
+        {
+          "day": 76,
+          "title": "實戰：MLOps 規模化部署與資源優化策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-76"
         }
       ]
     }
