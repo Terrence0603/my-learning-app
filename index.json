@@ -465,6 +465,12 @@
           "title": "實戰：MLOps 系統高可用性與災難復原策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-77"
+        },
+        {
+          "day": 78,
+          "title": "實戰：MLOps 系統安全性與合規性策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-78"
         }
       ]
     }
