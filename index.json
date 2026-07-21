@@ -471,6 +471,12 @@
           "title": "實戰：MLOps 系統安全性與合規性策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-78"
+        },
+        {
+          "day": 79,
+          "title": "實戰：MLOps 端到端監控與可觀測性",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-79"
         }
       ]
     }
