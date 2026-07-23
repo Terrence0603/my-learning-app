@@ -483,6 +483,12 @@
           "title": "實戰：MLOps 監控回饋與模型自動化再訓練",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-80"
+        },
+        {
+          "day": 81,
+          "title": "實戰：模型版本管理與模型註冊中心",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-81"
         }
       ]
     }
