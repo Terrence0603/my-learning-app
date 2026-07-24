@@ -489,6 +489,12 @@
           "title": "實戰：模型版本管理與模型註冊中心",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-81"
+        },
+        {
+          "day": 82,
+          "title": "實戰：模型 A/B 測試與金絲雀部署",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-82"
         }
       ]
     }
