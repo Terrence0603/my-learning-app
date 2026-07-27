@@ -507,6 +507,12 @@
           "title": "實戰：MLOps 規模化部署與高可用架構",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-84"
+        },
+        {
+          "day": 85,
+          "title": "實戰：MLOps 安全性與合規性",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-85"
         }
       ]
     }
