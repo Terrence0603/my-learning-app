@@ -513,6 +513,12 @@
           "title": "實戰：MLOps 安全性與合規性",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-85"
+        },
+        {
+          "day": 86,
+          "title": "實戰：MLOps 模型監控與可觀測性",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-86"
         }
       ]
     }
