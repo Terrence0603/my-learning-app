@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在模型漂移偵測中，『概念漂移 (Concept Drift)』和『資料漂移 (Data Drift)』之間最主要的區別是什麼？",
+      "options": [
+        "概念漂移是指輸入資料分佈的變化，而資料漂移是指模型預測分佈的變化。",
+        "概念漂移是指輸入資料與輸出標籤之間關係的變化，而資料漂移是指輸入資料分佈的變化。",
+        "概念漂移只會影響分類模型，而資料漂移只會影響迴歸模型。",
+        "概念漂移總是突然發生，而資料漂移總是漸進發生。"
+      ],
+      "answerIndex": 1,
+      "explanation": "概念漂移是指資料的輸入特徵(X)與目標變數(Y)之間潛在關係的改變，這意味著舊的模型規則不再適用。而資料漂移則是指模型輸入資料分佈本身的變化，即使X與Y的關係不變，模型性能也可能下降。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "以下哪項統計量是偵測數值型特徵資料漂移的常用方法，透過比較兩個時間點的特徵分佈來判斷是否有顯著差異？",
+      "options": [
+        "均方根誤差 (Root Mean Squared Error, RMSE)",
+        "ROC曲線下面積 (Area Under the Receiver Operating Characteristic Curve, AUC-ROC)",
+        "PSI (Population Stability Index)",
+        "F1-Score"
+      ],
+      "answerIndex": 2,
+      "explanation": "PSI (Population Stability Index) 是一種常用的統計指標，用於衡量兩個資料集（通常是訓練資料與生產資料）之間分佈的差異，特別適用於偵測數值型或類別型特徵的資料漂移。RMSE、AUC-ROC和F1-Score都是衡量模型性能的指標，而不是直接用於偵測資料分佈變化的統計量。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 MLOps 流程中，由模型漂移偵測觸發的『自動化再訓練 (Automated Retraining)』機制，其主要目的是什麼？",
+      "options": [
+        "減少模型推論時所需的計算資源，以降低營運成本。",
+        "自動生成新的資料集，用於模型性能的基準測試。",
+        "確保模型能夠持續適應新的資料模式，並在沒有持續人工介入的情況下保持性能。",
+        "僅在資料科學家需要時提供潛在模型問題的警報。"
+      ],
+      "answerIndex": 2,
+      "explanation": "自動化再訓練的主要目的是在模型偵測到漂移後，能自動地使用最新的資料重新訓練模型，並部署表現更佳的新模型，從而確保模型在不斷變化的生產環境中能持續維持其預測性能，而無需頻繁的人工干預。"
+    }
+  ]
+}
