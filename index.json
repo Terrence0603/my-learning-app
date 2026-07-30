@@ -525,6 +525,12 @@
           "title": "實戰：MLOps 模型漂移偵測與自動化再訓練",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-87"
+        },
+        {
+          "day": 88,
+          "title": "實戰：MLOps 模型A/B測試與Canary部署",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-88"
         }
       ]
     }
