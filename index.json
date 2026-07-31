@@ -531,6 +531,12 @@
           "title": "實戰：MLOps 模型A/B測試與Canary部署",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-88"
+        },
+        {
+          "day": 89,
+          "title": "實戰：MLOps 負責任 AI 與模型可解釋性",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-89"
         }
       ]
     }

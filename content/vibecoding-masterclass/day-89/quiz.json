@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "下列哪一項不是負責任 AI (Responsible AI) 的核心原則之一？",
+      "options": ["公平性 (Fairness)", "透明度 (Transparency)", "成本效益 (Cost-effectiveness)", "隱私保護 (Privacy Protection)"],
+      "answerIndex": 2,
+      "explanation": "負責任 AI 的核心原則通常包括公平性、透明度、可靠性與安全性、隱私保護、責任歸屬等。成本效益雖然是商業考量，但並非負責任 AI 的直接原則。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在模型可解釋性 (XAI) 方法中，哪一種工具是透過在單一預測點附近建立局部擾動，並使用一個簡單、可解釋的模型來近似該複雜模型，從而解釋該單一預測的？",
+      "options": ["SHAP (SHapley Additive exPlanations)", "LIME (Local Interpretable Model-agnostic Explanations)", "Partial Dependence Plots (PDP)", "全局特徵重要性 (Global Feature Importance)"],
+      "answerIndex": 1,
+      "explanation": "LIME 專注於解釋單一的局部預測，其方法是透過局部擾動數據並訓練一個簡單模型來逼近複雜模型在該局部區域的行為。SHAP 則基於 Shapley values 計算特徵對預測的貢獻。PDP 和全局特徵重要性通常提供模型的全局解釋。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 MLOps 生命週期中，何時最適合持續監控模型在實際運行環境中可能出現的公平性偏差，以確保模型的長期負責任性？",
+      "options": ["數據準備階段", "模型訓練階段", "模型部署與監控階段", "模型設計與架構選擇階段"],
+      "answerIndex": 2,
+      "explanation": "數據準備階段主要進行偏見檢測與緩解；模型訓練階段則評估公平性指標並應用算法層面的偏見緩解技術。然而，模型在實際運行環境中可能會因數據漂移、新的社會偏見等問題產生新的偏差，因此持續的公平性監控是其在部署後負責任運行的關鍵環節。"
+    }
+  ]
+}
