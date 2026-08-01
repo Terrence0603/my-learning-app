@@ -537,6 +537,12 @@
           "title": "實戰：MLOps 負責任 AI 與模型可解釋性",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-89"
+        },
+        {
+          "day": 90,
+          "title": "實戰：建構端到端 MLOps 持續整合與交付管線",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-90"
         }
       ]
     }

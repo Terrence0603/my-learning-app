@@ -1,0 +1,41 @@
+[
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "MLOps CI/CD 管線最主要目的是什麼？",
+    "options": [
+      "減少模型訓練所需的計算資源。",
+      "確保 ML 模型從開發到部署的整個生命週期具備自動化、可重複性與可靠性。",
+      "僅用於版本控制機器學習模型和資料集。",
+      "主要用來即時監控生產環境中模型的效能。"
+    ],
+    "answerIndex": 1,
+    "explanation": "MLOps CI/CD 管線的核心價值在於實現機器學習模型生命週期的全面自動化、確保每次部署的可重複性，並提升整個流程的可靠性，從而加速模型的迭代與部署。選項A是潛在的副作用但非主要目的；選項C是其中一部分功能；選項D雖然重要，但只是整個管線的一個環節。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "在 MLOps CI/CD 管線中，MLflow 通常用於哪個環節以提升模型的管理與可重複性？",
+    "options": [
+      "進行大規模的資料前處理。",
+      "部署模型到 Kubernetes 叢集。",
+      "追蹤實驗、記錄模型參數與指標、管理模型版本。",
+      "建立 CI/CD 管線的視覺化儀表板。"
+    ],
+    "answerIndex": 2,
+    "explanation": "MLflow 的核心功能包括 MLflow Tracking (追蹤實驗、記錄參數與指標)、MLflow Models (管理模型版本) 和 MLflow Projects (封裝可重複執行的程式碼)。這些功能直接服務於提升模型的管理與可重複性。選項A通常涉及其他資料處理工具；選項B是部署階段的工作；選項D雖然 MLflow 有使用者介面，但其主要目的並非作為通用的 CI/CD 儀表板。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "為了確保機器學習模型在不同部署環境下的一致性與可重複執行性，MLOps CI/CD 管線中通常會採用哪種技術來打包模型及其運行環境？",
+    "options": [
+      "Git LFS (Large File Storage)。",
+      "Apache Kafka。",
+      "Docker 容器化技術。",
+      "Prometheus。"
+    ],
+    "answerIndex": 2,
+    "explanation": "Docker 容器化技術允許將模型、其所需的依賴庫和運行環境一起打包成一個獨立、可移植的單元（Docker Image），確保模型在開發、測試和生產環境中都能以相同且一致的方式運行，從而解決環境依賴性問題。選項A用於大檔案版本控制；選項B是訊息佇列系統；選項D是監控工具。"
+  }
+]
