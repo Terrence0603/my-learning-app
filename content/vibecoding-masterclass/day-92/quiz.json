@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps的資料處理階段，為了在保護使用者隱私的同時，仍能從敏感資料中訓練出有效模型，下列哪種技術是特別設計來平衡這兩者需求的？",
+      "options": [
+        "資料備份與還原",
+        "嚴格的資料存取控制 (ACL)",
+        "差分隱私 (Differential Privacy) 與同態加密 (Homomorphic Encryption)",
+        "將所有敏感資料從資料集中移除"
+      ],
+      "answerIndex": 2,
+      "explanation": "差分隱私能為資料庫查詢增加隨機雜訊，在不洩露個體資訊的情況下提供統計洞察；同態加密則允許在加密資料上直接進行計算，而無需解密。這兩種技術都能在保護隱私的同時，讓資料仍能用於模型訓練。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "下列哪一種攻擊方式，是透過對機器學習模型的輸入資料進行微小但精心設計的擾動，使其對人類感知來說幾乎沒有變化，但卻能導致模型做出錯誤判斷？",
+      "options": [
+        "模型反轉攻擊 (Model Inversion Attack)",
+        "資料中毒攻擊 (Data Poisoning Attack)",
+        "對抗性攻擊 (Adversarial Attack)",
+        "模型竊取攻擊 (Model Stealing Attack)"
+      ],
+      "answerIndex": 2,
+      "explanation": "對抗性攻擊 (Adversarial Attack) 是一種透過對輸入資料進行微小但精心設計的擾動，使其對人類感知來說幾乎沒有變化，但卻能導致機器學習模型做出錯誤判斷的攻擊方式。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在MLOps的CI/CD管線中，為了確保模型和程式碼的安全性與完整性，下列哪項措施最為關鍵？",
+      "options": [
+        "將所有機密資訊直接硬編碼到程式碼中",
+        "僅使用開源函式庫而不進行任何審查",
+        "對所有程式碼和模型產物進行數位簽章，並實施依賴項漏洞掃描",
+        "完全禁止使用任何第三方套件"
+      ],
+      "answerIndex": 2,
+      "explanation": "數位簽章能驗證程式碼和模型產物的來源與完整性，防止篡改；而依賴項漏洞掃描則能及早發現並修復所使用函式庫中的已知安全漏洞，兩者都是確保CI/CD管線安全與完整性的關鍵措施。"
+    }
+  ]
+}
