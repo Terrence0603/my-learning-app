@@ -555,6 +555,12 @@
           "title": "實戰：MLOps 安全性與隱私保護實踐",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-92"
+        },
+        {
+          "day": 93,
+          "title": "實戰：MLOps 模型監控與漂移偵測",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-93"
         }
       ]
     }
