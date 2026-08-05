@@ -561,6 +561,12 @@
           "title": "實戰：MLOps 模型監控與漂移偵測",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-93"
+        },
+        {
+          "day": 94,
+          "title": "實戰：MLOps 自動化模型重訓練與持續學習",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-94"
         }
       ]
     }
