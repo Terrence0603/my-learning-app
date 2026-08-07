@@ -573,6 +573,12 @@
           "title": "實戰：MLOps 模型部署策略與A/B測試",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-95"
+        },
+        {
+          "day": 96,
+          "title": "實戰：MLOps 成本優化與資源管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-96"
         }
       ]
     }
