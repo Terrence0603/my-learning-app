@@ -1,0 +1,42 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "下列哪項最能精確描述 MLOps 工作流編排與自動化的核心目標？",
+      "options": [
+        "主要用於開發新模型演算法。",
+        "確保模型從開發到部署及監控的整個生命週期具備可重複性、可擴展性及自動化。",
+        "僅限於資料預處理階段的自動化。",
+        "專門用於快速選擇最佳的深度學習模型架構。"
+      ],
+      "answerIndex": 1,
+      "explanation": "MLOps 的核心目標是為機器學習模型的整個生命週期（從資料準備、訓練、部署到監控和再訓練）提供一個標準化、可重複、自動化和可擴展的流程，以提高效率和模型可靠性。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 工作流中，模型版本控制、元數據追蹤及模型共享通常透過哪個工具或概念來管理？",
+      "options": [
+        "資料儲存庫 (Data Repository)",
+        "模型註冊表 (Model Registry)",
+        "特徵商店 (Feature Store)",
+        "持續整合/持續部署 (CI/CD) 管線"
+      ],
+      "answerIndex": 1,
+      "explanation": "模型註冊表 (Model Registry) 是 MLOps 的關鍵組件，專門用於管理模型版本、追蹤模型的元數據（如訓練參數、指標）以及促進模型在不同環境間的共享和部署。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "當一個機器學習模型在生產環境中表現下降時，MLOps 工作流中的哪個環節最直接負責偵測此問題並觸發後續的處理（例如重新訓練）？",
+      "options": [
+        "模型訓練 (Model Training)",
+        "資料版本控制 (Data Versioning)",
+        "模型監控 (Model Monitoring)",
+        "特徵工程 (Feature Engineering)"
+      ],
+      "answerIndex": 2,
+      "explanation": "模型監控 (Model Monitoring) 是 MLOps 工作流中至關重要的一環，它負責持續追蹤生產環境中模型的性能、資料漂移或概念漂移，並在偵測到問題時發出警報或自動觸發模型再訓練流程。"
+    }
+  ]
+}
