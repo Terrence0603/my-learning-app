@@ -585,6 +585,12 @@
           "title": "實戰：MLOps 工作流編排與自動化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-97"
+        },
+        {
+          "day": 98,
+          "title": "實戰：MLOps 管線測試與驗證",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-98"
         }
       ]
     }
