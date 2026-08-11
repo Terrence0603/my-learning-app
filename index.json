@@ -597,6 +597,12 @@
           "title": "實戰：MLOps 監控與警報機制",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-99"
+        },
+        {
+          "day": 100,
+          "title": "實戰：MLOps 模型生命週期管理與迭代策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-100"
         }
       ]
     }
