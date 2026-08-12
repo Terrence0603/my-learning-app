@@ -603,6 +603,12 @@
           "title": "實戰：MLOps 模型生命週期管理與迭代策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-100"
+        },
+        {
+          "day": 101,
+          "title": "實戰：MLOps 進階部署策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-101"
         }
       ]
     }
