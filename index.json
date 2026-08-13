@@ -609,6 +609,12 @@
           "title": "實戰：MLOps 進階部署策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-101"
+        },
+        {
+          "day": 102,
+          "title": "實戰：MLOps 彈性伸縮與災難復原策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-102"
         }
       ]
     }

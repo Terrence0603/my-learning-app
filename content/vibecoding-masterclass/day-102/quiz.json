@@ -1,0 +1,41 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "在 MLOps 實踐中，為了實現模型推論服務的彈性伸縮 (Elastic Scaling)，當流量尖峰來臨時，最常見的自動化擴展機制是哪一種？",
+    "options": [
+      "手動調整伺服器資源或增加虛擬機數量。",
+      "水平 Pod 自動擴展器 (Horizontal Pod Autoscaler, HPA)。",
+      "垂直 Pod 自動擴展器 (Vertical Pod Autoscaler, VPA)。",
+      "使用固定大小的伺服器叢集，並預留足夠資源。"
+    ],
+    "answerIndex": 1,
+    "explanation": "水平 Pod 自動擴展器 (HPA) 能夠根據 CPU 使用率或其他自定義指標，自動增加或減少 Pod 副本的數量，以應對變化的負載，是實現彈性伸縮的關鍵機制。VPA 負責調整單個 Pod 的資源請求與限制，而手動調整或固定大小叢集則不具備自動彈性。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "設計 MLOps 災難復原策略時，若要評估在災難發生後，系統可以容忍的最大資料損失量，應關注哪個指標？",
+    "options": [
+      "恢復時間目標 (Recovery Time Objective, RTO)。",
+      "恢復點目標 (Recovery Point Objective, RPO)。",
+      "平均修復時間 (Mean Time To Repair, MTTR)。",
+      "服務水準協議 (Service Level Agreement, SLA)。"
+    ],
+    "answerIndex": 1,
+    "explanation": "恢復點目標 (RPO) 定義了在災難發生後，服務可接受的最大資料損失量，即系統必須恢復到的最新時間點。RTO 衡量的是恢復服務所需的最長時間，MTTR 是修復故障的平均時間，SLA 則是服務提供者與客戶之間的服務承諾。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "為確保 MLOps 系統在面對區域性故障時仍能保持高可用性及災難復原能力，最推薦的基礎設施部署策略是：",
+    "options": [
+      "將所有組件部署在單一資料中心的一個伺服器上。",
+      "將關鍵服務和資料部署到多個地理區域或可用區 (Availability Zones)。",
+      "僅依靠本地備份，並在災難發生後手動還原。",
+      "使用雲端服務提供商的單一託管服務。"
+    ],
+    "answerIndex": 1,
+    "explanation": "將 MLOps 系統的關鍵服務和資料部署到多個地理區域或可用區中，可以有效分散風險。即使一個區域或可用區發生故障，其他區域仍能繼續提供服務，從而大幅提升系統的韌性、高可用性和災難復原能力。"
+  }]
+}
