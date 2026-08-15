@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps的效能優化與資源管理中，下列哪項指標主要用於評估模型本身預測的正確性，而非運行時的系統效能？",
+      "options": ["服務響應延遲 (Latency)", "模型吞吐量 (Throughput)", "GPU利用率 (GPU Utilization)", "模型準確度 (Model Accuracy)"],
+      "answerIndex": 3,
+      "explanation": "模型準確度是衡量模型預測結果與實際值符合程度的指標，屬於模型品質範疇。而服務響應延遲、模型吞吐量和GPU利用率則屬於運行時的系統效能指標。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "為了在不大幅犧牲模型效能的前提下，有效降低部署模型的計算成本和記憶體佔用，下列哪一種優化技術最為常用且有效？",
+      "options": ["增加模型層數以提升複雜度", "將模型參數儲存為更高精度的浮點數", "模型量化 (Model Quantization)", "完全移除數據前處理步驟"],
+      "answerIndex": 2,
+      "explanation": "模型量化 (Model Quantization) 是一種將模型參數從高精度（如FP32）轉換為低精度（如INT8）的技術，能顯著減少模型的記憶體佔用和計算量，同時盡量保持模型效能。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在MLOps實戰中，哪一個工具或平台最常被用於容器編排、自動擴展 (auto-scaling) 和資源管理，以有效運行和管理機器學習工作負載？",
+      "options": ["Git", "Docker", "Kubernetes", "Prometheus"],
+      "answerIndex": 2,
+      "explanation": "Kubernetes 是一個強大的開源容器編排系統，廣泛用於自動化部署、擴展和管理容器化應用。它提供了自動擴展、負載平衡和資源隔離等功能，非常適合管理MLOps中的動態工作負載。"
+    }
+  ]
+}
