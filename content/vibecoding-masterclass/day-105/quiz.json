@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 實踐中，實施可觀測性 (Observability) 和異常偵測策略的核心目標是什麼？",
+      "options": [
+        "A) 顯著降低 ML 模型訓練所需的運算成本。",
+        "B) 確保生產環境中的 ML 模型持續維持預期的性能、穩定性與可靠性。",
+        "C) 自動化所有 ML 模型的再訓練過程，無需人工介入。",
+        "D) 消除 ML 系統對人類監督的需求。"
+      ],
+      "answerIndex": 1,
+      "explanation": "核心目標是確保模型在生產環境中的健康運行。可觀測性幫助監控模型的性能、資料品質和運行狀態，而異常偵測則用於及時發現任何可能影響模型穩定性和可靠性的偏差或問題。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "下列哪種指標對於偵測生產環境中機器學習模型的「資料漂移」(Data Drift) 最為關鍵？",
+      "options": [
+        "A) 模型預測的延遲時間 (Latency)。",
+        "B) 推理服務的 CPU 使用率。",
+        "C) 輸入資料特徵的分布變化 (Distribution Shifts)。",
+        "D) 每秒的 API 請求數量 (Throughput)。"
+      ],
+      "answerIndex": 2,
+      "explanation": "資料漂移特指輸入資料的統計特性隨時間變化的現象。因此，監控和比較生產環境中輸入資料特徵的分布與訓練時的分布，是偵測資料漂移最直接且關鍵的方法。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "對於監測模型推理延遲 (inference latency) 這類時間序列的操作指標，以下哪種異常偵測技術通常特別適用？",
+      "options": [
+        "A) One-Class SVM (單類支持向量機)。",
+        "B) Isolation Forest (孤立森林)。",
+        "C) ARIMA (自迴歸整合移動平均) 或 EWMA (指數加權移動平均)。",
+        "D) K-Means Clustering (K-均值聚類)。"
+      ],
+      "answerIndex": 2,
+      "explanation": "ARIMA 和 EWMA 是專門用於分析和預測時間序列數據的統計模型。它們能有效捕捉時間序列中的趨勢、季節性和隨機波動，從而更容易識別出偏離正常模式的異常點，非常適合處理模型推理延遲等操作指標。"
+    }
+  ]
+}

@@ -627,6 +627,12 @@
           "title": "實戰：MLOps 效能優化與資源管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-104"
+        },
+        {
+          "day": 105,
+          "title": "實戰：MLOps 可觀測性與異常偵測策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-105"
         }
       ]
     }
