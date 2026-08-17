@@ -1,0 +1,41 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "相較於傳統軟體開發的 CI/CD 流水線，MLOps CI/CD 流水線主要增加了哪些獨特的考量？",
+    "options": [
+      "模型的訓練、版本控制與註冊管理",
+      "更快的程式碼編譯速度",
+      "僅需處理單一服務的部署",
+      "更嚴格的程式碼風格檢查"
+    ],
+    "answerIndex": 0,
+    "explanation": "MLOps CI/CD 流水線除了處理程式碼變動外，更重要的獨特考量在於模型的自動化訓練、其版本的追蹤管理（如模型性能、訓練參數、資料集）以及模型的註冊與生命週期管理，這些是傳統軟體CI/CD中不常見的環節。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "在 MLOps 自動化 CI/CD 流水線中，哪一種工具主要用於實驗追蹤（Experiment Tracking）、模型管理（Model Management）和模型註冊（Model Registry）？",
+    "options": [
+      "DVC (Data Version Control)",
+      "MLflow",
+      "Docker",
+      "GitHub Actions"
+    ],
+    "answerIndex": 1,
+    "explanation": "MLflow 是 MLOps 領域中廣泛使用的開源工具，它提供了實驗追蹤（記錄參數、指標、工件）、模型管理（統一介面部署和版本控制模型）和模型註冊（管理模型生命週期）等核心功能，與 CI/CD 流水線結合能有效管理模型資產。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "在 MLOps CI/CD 流水線中，觸發模型自動重新訓練（Retraining）的常見事件是什麼？",
+    "options": [
+      "只有當資料科學家手動提交新訓練請求時",
+      "當模型訓練程式碼或輸入資料集發生變動時",
+      "前端應用程式介面（UI）發布新版本時",
+      "部署環境的作業系統進行例行性更新時"
+    ],
+    "answerIndex": 1,
+    "explanation": "MLOps 流水線的關鍵特性之一是自動化。當模型的訓練程式碼邏輯更新或用於訓練的資料集發生變化時，流水線應該自動感知這些變動並觸發重新訓練流程，以確保模型能反映最新的邏輯或數據趨勢。"
+  }
+]}
