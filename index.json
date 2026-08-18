@@ -639,6 +639,12 @@
           "title": "實戰：MLOps 自動化 CI/CD 流水線建構",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-106"
+        },
+        {
+          "day": 107,
+          "title": "實戰：MLOps 模型監控與自動再訓練策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-107"
         }
       ]
     }
