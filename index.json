@@ -657,6 +657,12 @@
           "title": "實戰：MLOps 安全性與存取控制策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-109"
+        },
+        {
+          "day": 110,
+          "title": "實戰：MLOps 效能優化與擴展性設計",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-110"
         }
       ]
     }
