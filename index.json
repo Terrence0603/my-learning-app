@@ -663,6 +663,12 @@
           "title": "實戰：MLOps 效能優化與擴展性設計",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-110"
+        },
+        {
+          "day": 111,
+          "title": "實戰：MLOps 成本優化與資源管理策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-111"
         }
       ]
     }

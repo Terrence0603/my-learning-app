@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps成本優化與資源管理策略中，哪項實踐強調將財務責任與雲端支出結合，以確保資源使用與業務價值對齊？",
+      "options": ["技術債務管理", "數據治理框架", "FinOps文化導入", "A/B測試優化"],
+      "answerIndex": 2,
+      "explanation": "FinOps (Financial Operations) 核心理念是在雲端環境中，透過跨團隊協作，提升成本透明度、可預測性並優化雲端支出，這對於將MLOps資源使用與業務價值對齊至關重要。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "對於非關鍵、具備容錯能力的ML模型訓練任務，在公有雲環境中，哪種實例採購模式通常能提供最大的成本節省潛力？",
+      "options": ["隨需實例 (On-Demand Instances)", "預留實例 (Reserved Instances)", "競價型實例 (Spot Instances)", "專用主機 (Dedicated Hosts)"],
+      "answerIndex": 2,
+      "explanation": "競價型實例利用雲端供應商未使用的容量，以大幅折扣的價格提供，但可能隨時被收回。這非常適合對中斷不敏感或可容忍中斷的訓練任務。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為優化生產環境中ML模型推論服務的成本，尤其是在高流量情境下，下列哪項MLOps實踐最直接有助於減少每個推論請求所需的資源？",
+      "options": ["建立完善的數據版本控制", "採用模型註冊中心 (Model Registry)", "實施持續整合 (Continuous Integration)", "應用模型量化與剪枝 (Model Quantization and Pruning)"],
+      "answerIndex": 3,
+      "explanation": "模型量化 (Quantization) 和模型剪枝 (Pruning) 等技術可以有效縮小模型大小、減少計算複雜度，從而降低推論時對CPU/GPU和記憶體的需求，進一步降低服務成本。"
+    }
+  ]}
