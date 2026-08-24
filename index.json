@@ -675,6 +675,12 @@
           "title": "實戰：MLOps 平台整合與自動化工作流建構",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-112"
+        },
+        {
+          "day": 113,
+          "title": "實戰：MLOps 模型監控與可觀測性建構",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-113"
         }
       ]
     }
