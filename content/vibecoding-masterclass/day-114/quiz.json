@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps模型再訓練的流程中，下列哪項通常不會被視為觸發模型自動再訓練的直接事件？",
+      "options": [
+        "定期排程 (Scheduled intervals)",
+        "生產模型性能指標顯著下降 (Significant degradation in production model performance metrics)",
+        "新數據累積達到預設閾值 (Accumulation of new data reaching a predefined threshold)",
+        "開發者手動調整模型架構或演算法 (Manual adjustment of model architecture or algorithms by developers)"
+      ],
+      "answerIndex": 3,
+      "explanation": "模型自動再訓練通常由自動化事件觸發，例如固定時間排程、模型在生產環境中的效能監測到下降、或有足夠的新數據累積。開發者手動調整模型架構或演算法屬於模型開發或重大優化的一部分，而非自動化持續部署中模型再訓練的觸發機制。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "MLOps模型持續部署 (Continuous Deployment, CD) 階段的主要效益是什麼？",
+      "options": [
+        "完全消除模型漂移 (Completely eliminate model drift)",
+        "確保模型在生產環境中的性能永不下降 (Guarantee model performance never degrades in production)",
+        "自動化且加速新模型版本的發布流程 (Automate and accelerate the release process of new model versions)",
+        "僅限於快速開發新的實驗性模型 (Limited to rapid development of new experimental models)"
+      ],
+      "answerIndex": 2,
+      "explanation": "持續部署的核心價值在於自動化並加速新模型版本的發布流程，從而減少人工操作的時間、成本與潛在錯誤。它有助於應對模型漂移，但不能完全消除；也不能保證性能永不下降，只是能更快地部署更新來修復；其範圍也不僅限於實驗性模型的開發。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在MLOps模型再訓練與持續部署的建構中，哪個階段負責判斷新訓練出的模型是否符合上線標準，並可能與當前生產模型進行A/B測試或藍綠部署？",
+      "options": [
+        "數據準備 (Data Preparation)",
+        "模型訓練 (Model Training)",
+        "模型驗證與評估 (Model Validation and Evaluation)",
+        "模型監控 (Model Monitoring)"
+      ],
+      "answerIndex": 2,
+      "explanation": "模型驗證與評估階段是關鍵，它使用獨立的數據集來衡量新訓練模型的性能，並與現有生產模型或其他基準進行比較，以確保其達到預期的品質和業務要求。這個階段的結果決定了模型是否能進入部署階段，並可能涉及A/B測試或藍綠部署的決策。數據準備和模型訓練是生成模型的步驟，模型監控則是在模型部署後進行。"
+    }
+  ]
+}

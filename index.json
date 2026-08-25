@@ -681,6 +681,12 @@
           "title": "實戰：MLOps 模型監控與可觀測性建構",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-113"
+        },
+        {
+          "day": 114,
+          "title": "實戰：MLOps 模型再訓練與持續部署建構",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-114"
         }
       ]
     }
