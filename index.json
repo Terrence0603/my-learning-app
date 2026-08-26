@@ -687,6 +687,12 @@
           "title": "實戰：MLOps 模型再訓練與持續部署建構",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-114"
+        },
+        {
+          "day": 115,
+          "title": "實戰：MLOps 安全性與風險管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-115"
         }
       ]
     }
