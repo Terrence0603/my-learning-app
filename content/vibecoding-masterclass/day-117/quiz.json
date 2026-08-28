@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 大規模部署中，若希望在生產環境中逐步釋出新版模型，並在小流量下先行監測其效能，以降低部署風險，最佳的策略是哪一種？",
+      "options": [
+        "藍綠部署 (Blue/Green Deployment)",
+        "金絲雀部署 (Canary Deployment)",
+        "滾動更新 (Rolling Update)",
+        "全量部署 (Big Bang Deployment)"
+      ],
+      "answerIndex": 1,
+      "explanation": "金絲雀部署允許將新版模型部署到一小部分流量上，並嚴密監控其表現，若無異常再逐步擴大流量，以此最大程度地降低新版模型對服務的衝擊風險，是逐步驗證新模型效能的理想選擇。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "為了實現模型服務的自動水平擴展 (Horizontal Auto-scaling)、負載平衡及容器化應用管理，在現代 MLOps 架構中，最常使用的開源平台是哪一個？",
+      "options": [
+        "Apache Spark",
+        "Apache Kafka",
+        "Kubernetes",
+        "Docker Swarm"
+      ],
+      "answerIndex": 2,
+      "explanation": "Kubernetes (K8s) 提供強大的容器編排、服務發現、負載平衡和自動水平擴展能力，是實現 MLOps 模型服務大規模部署與管理的核心平台，尤其適合處理動態且高流量的請求。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 MLOps 實踐中，為了能及時發現模型在生產環境中的效能衰退 (Model Drift)、資料漂移 (Data Drift) 或系統資源瓶頸，以下哪項環節至關重要？",
+      "options": [
+        "模型版本控制與模型註冊 (Model Versioning & Registry)",
+        "持續整合與持續交付 (CI/CD) 流程",
+        "持續監控與警報 (Continuous Monitoring & Alerting)",
+        "離線批次模型訓練 (Offline Batch Model Training)"
+      ],
+      "answerIndex": 2,
+      "explanation": "持續監控與警報機制是 MLOps 中確保模型服務健康運行的關鍵。它能追蹤模型效能指標 (如準確率、延遲、預測分布等) 和系統資源使用情況，並在偵測到異常時及時通知相關人員，從而快速應對問題，確保模型價值不受損。"
+    }
+  ]
+}

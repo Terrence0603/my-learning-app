@@ -699,6 +699,12 @@
           "title": "實戰：MLOps 系統性問題診斷與性能優化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-116"
+        },
+        {
+          "day": 117,
+          "title": "實戰：MLOps 大規模部署與服務擴展",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-117"
         }
       ]
     }
