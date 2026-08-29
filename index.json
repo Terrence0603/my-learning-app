@@ -705,6 +705,12 @@
           "title": "實戰：MLOps 大規模部署與服務擴展",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-117"
+        },
+        {
+          "day": 118,
+          "title": "實戰：MLOps 成本優化與資源管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-118"
         }
       ]
     }
