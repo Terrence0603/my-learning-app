@@ -711,6 +711,12 @@
           "title": "實戰：MLOps 成本優化與資源管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-118"
+        },
+        {
+          "day": 119,
+          "title": "實戰：MLOps 災害復原與高可用性設計",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-119"
         }
       ]
     }
