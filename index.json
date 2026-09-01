@@ -723,6 +723,12 @@
           "title": "實戰：MLOps 模型監控與預測性能評估",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-120"
+        },
+        {
+          "day": 121,
+          "title": "實戰：MLOps 資料漂移檢測與模型再訓練",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-121"
         }
       ]
     }
