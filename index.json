@@ -729,6 +729,12 @@
           "title": "實戰：MLOps 資料漂移檢測與模型再訓練",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-121"
+        },
+        {
+          "day": 122,
+          "title": "實戰：MLOps 持續整合與持續部署 (CI/CD)",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-122"
         }
       ]
     }
