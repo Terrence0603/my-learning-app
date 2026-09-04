@@ -741,6 +741,12 @@
           "title": "實戰：MLOps 工作流程編排與自動化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-123"
+        },
+        {
+          "day": 124,
+          "title": "實戰：MLOps 資源管理與成本優化",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-124"
         }
       ]
     }
