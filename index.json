@@ -747,6 +747,12 @@
           "title": "實戰：MLOps 資源管理與成本優化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-124"
+        },
+        {
+          "day": 125,
+          "title": "實戰：MLOps 安全性與存取控制",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-125"
         }
       ]
     }
