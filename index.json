@@ -753,6 +753,12 @@
           "title": "實戰：MLOps 安全性與存取控制",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-125"
+        },
+        {
+          "day": 126,
+          "title": "實戰：MLOps 監控、日誌與警報系統建置",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-126"
         }
       ]
     }

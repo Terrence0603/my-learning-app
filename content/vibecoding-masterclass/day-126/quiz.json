@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 監控系統中，以下哪一項是監控機器學習模型「效能」的最關鍵指標之一？",
+      "options": ["模型推論延遲 (Model Inference Latency)", "GPU 溫度 (GPU Temperature)", "資料庫連接數 (Database Connection Count)", "網路頻寬使用率 (Network Bandwidth Utilization)"],
+      "answerIndex": 0,
+      "explanation": "模型推論延遲直接反映了模型回應請求的速度，是評估其運行效能的關鍵指標之一。GPU 溫度、資料庫連接數和網路頻寬使用率雖然也重要，但主要屬於基礎設施或系統層面的監控，而非直接監控模型「效能」本身。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "MLOps 系統中的日誌記錄 (Logging) 機制，最主要的目的通常是什麼？",
+      "options": ["提供使用者介面數據分析 (Provide UI data analytics)", "追蹤模型推論的輸入、輸出與錯誤，以便於偵錯和審計 (Track model inference inputs, outputs, and errors for debugging and auditing)", "即時調整模型參數以優化效能 (Real-time adjustment of model parameters for performance optimization)", "自動化模型重新訓練流程 (Automate model retraining process)"],
+      "answerIndex": 1,
+      "explanation": "日誌記錄在 MLOps 中主要用於記錄詳細的系統事件、模型推論的輸入/輸出、錯誤訊息等，這對於偵錯問題、進行事後審計、理解模型行為以及滿足合規性要求至關重要。其他選項雖然可能與 MLOps 相關，但不是日誌記錄最核心且直接的目的。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為了確保 MLOps 系統的穩定性和模型表現，以下哪種情況「最應」觸發即時警報？",
+      "options": ["模型的預測準確度 (Accuracy) 連續多個小時低於預設閾值", "模型訓練資料集中的某個特徵 (Feature) 值發生輕微偏移", "新的模型版本部署成功", "每日批次推論任務成功完成"],
+      "answerIndex": 0,
+      "explanation": "模型的預測準確度連續多個小時低於預設閾值直接表明模型可能已經失效或表現嚴重下降，這將直接影響業務決策和用戶體驗，因此需要立即觸發警報並介入處理。資料特徵輕微偏移可能需要監控，但不一定立即觸發警報；模型部署成功和批次推論完成是預期中的正面事件，不需要警報。"
+    }
+  ]}
