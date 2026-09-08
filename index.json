@@ -759,6 +759,12 @@
           "title": "實戰：MLOps 監控、日誌與警報系統建置",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-126"
+        },
+        {
+          "day": 127,
+          "title": "實戰：MLOps 資料與模型漂移偵測與管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-127"
         }
       ]
     }
