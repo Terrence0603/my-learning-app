@@ -1,0 +1,42 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "整合 CI/CD 到 MLOps 工作流程中的主要目標是什麼？",
+      "options": [
+        "為了加快人工部署模型的速度。",
+        "自動化機器學習模型的整個生命週期，從開發到部署和監控。",
+        "消除數據科學家的需求。",
+        "僅追蹤模型的性能指標。"
+      ],
+      "answerIndex": 1,
+      "explanation": "MLOps CI/CD 的核心目的是透過自動化來加速和優化機器學習模型的端到端生命週期，確保模型能夠可靠、重複且快速地從開發階段進入生產環境，並進行持續監控和迭代。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps CI/CD 流程中，哪個階段負責將訓練好的模型及其依賴項打包成可部署的單元（通常是容器映像）？",
+      "options": [
+        "模型訓練（Model Training）",
+        "數據攝取（Data Ingestion）",
+        "模型打包/容器化（Model Packaging/Containerization）",
+        "模型監控（Model Monitoring）"
+      ],
+      "answerIndex": 2,
+      "explanation": "模型打包或容器化階段專注於將訓練好的模型、其推理代碼、環境依賴項打包成一個獨立、可攜帶的單元（如 Docker 容器），以便在各種環境中一致地部署和執行，這是實現自動化部署的關鍵一步。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "哪個工具常被用於管理機器學習實驗、模型註冊以及生命週期追蹤，並能與 CI/CD 系統整合，以協助 MLOps 流程的自動化？",
+      "options": [
+        "Git",
+        "Docker",
+        "MLflow",
+        "Jenkins"
+      ],
+      "answerIndex": 2,
+      "explanation": "MLflow 是一個專為機器學習生命週期設計的開源平台，提供實驗追蹤（MLflow Tracking）、模型打包（MLflow Projects）、模型註冊（MLflow Model Registry）和模型服務（MLflow Models）等功能，非常適合與 CI/CD 系統整合以實現 MLOps 自動化。Git 主要用於代碼版本控制，Docker 用於容器化，Jenkins 是一個通用的 CI/CD 自動化伺服器，但不如 MLflow 在 ML 生命週期管理方面專業。"
+    }
+  ]
+}

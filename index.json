@@ -771,6 +771,12 @@
           "title": "實戰：MLOps 模型版本控制與管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-128"
+        },
+        {
+          "day": 129,
+          "title": "實戰：MLOps CI/CD 流程建置與自動化部署",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-129"
         }
       ]
     }
