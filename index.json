@@ -777,6 +777,12 @@
           "title": "實戰：MLOps CI/CD 流程建置與自動化部署",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-129"
+        },
+        {
+          "day": 130,
+          "title": "實戰：MLOps 端到端流程整合與持續優化",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-130"
         }
       ]
     }
