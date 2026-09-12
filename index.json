@@ -783,6 +783,12 @@
           "title": "實戰：MLOps 端到端流程整合與持續優化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-130"
+        },
+        {
+          "day": 131,
+          "title": "實戰：MLOps 系統的高可用性與擴展性設計",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-131"
         }
       ]
     }
