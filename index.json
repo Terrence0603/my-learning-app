@@ -789,6 +789,12 @@
           "title": "實戰：MLOps 系統的高可用性與擴展性設計",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-131"
+        },
+        {
+          "day": 132,
+          "title": "實戰：MLOps 系統的監控、日誌與警報機制建置",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-132"
         }
       ]
     }
