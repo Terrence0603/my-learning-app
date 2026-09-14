@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 系統中，為了有效保護訓練資料中的敏感資訊，最關鍵的安全強化措施之一是什麼？",
+      "options": ["實施模型版本控制 (Model Versioning)", "執行對抗性訓練 (Adversarial Training)", "對資料進行加密和匿名化 (Data Encryption and Anonymization)", "強化 CI/CD/CT 自動化流程"],
+      "answerIndex": 2,
+      "explanation": "資料加密和匿名化是直接保護敏感訓練資料不被未授權存取或洩露的核心策略。模型版本控制主要用於追蹤模型演變，對抗性訓練是增強模型面對對抗性攻擊的韌性，而 CI/CD/CT 自動化流程的強化是關於交付管道本身的安全。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "哪一種常見的 MLOps 模型威脅，旨在透過在訓練資料中植入特定模式，使模型在遇到這些特定「觸發器」時產生惡意或錯誤的預測，但在正常情況下表現良好？",
+      "options": ["模型竊取 (Model Theft)", "資料中毒 (Data Poisoning)", "後門攻擊 (Backdoor Attack)", "對抗性攻擊 (Adversarial Attack)"],
+      "answerIndex": 2,
+      "explanation": "後門攻擊的特點是模型在正常輸入下表現正常，但在遇到預設的「觸發器」時會表現出攻擊者期望的惡意行為。資料中毒是一種更廣泛的攻擊方式，後門攻擊是其可能造成的結果之一。模型竊取是複製模型，對抗性攻擊是在推論時對輸入微小修改導致錯誤輸出。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為了強化 MLOps CI/CD/CT 管道的安全性，避免引入第三方依賴項中的已知漏洞，以下哪項措施是最直接且關鍵的？",
+      "options": ["實施網路分段 (Network Segmentation)", "部署模型監控 (Model Monitoring)", "執行依賴項掃描 (Dependency Scanning)", "對資料存取實施基於角色的存取控制 (RBAC)"],
+      "answerIndex": 2,
+      "explanation": "依賴項掃描專門用於檢測專案中使用的第三方庫和組件是否存在已知的安全漏洞，這對於保護 CI/CD/CT 管道免受供應鏈攻擊至關重要。網路分段主要針對基礎設施層面的隔離，模型監控主要是在生產環境中檢測模型性能和行為，RBAC 主要用於資料層級的存取控制。"
+    }
+  ]
+}
