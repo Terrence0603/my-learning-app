@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "下列關於模型漂移 (Model Drift) 的敘述，何者「錯誤」？",
+      "options": [
+        "模型漂移是指生產環境中的資料分佈或資料與目標變數的關係發生變化，導致模型性能下降。",
+        "資料漂移 (Data Drift) 和概念漂移 (Concept Drift) 是模型漂移的兩種主要類型。",
+        "模型漂移一旦發生，通常表示模型需要立即下線並從頭開始重新訓練，無法進行任何自動化處理。",
+        "監測模型漂移是 MLOps 持續維護模型性能的關鍵環節。"
+      ],
+      "answerIndex": 2,
+      "explanation": "模型漂移的發生並不總是需要手動介入。在 MLOps 實戰中，自動化再訓練 (Automated Retraining) 是檢測到模型漂移後常見且有效的處理機制，旨在恢復模型性能，而非直接下線並從頭手動訓練。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 實戰中，為了監測模型漂移，下列哪項技術或指標「最常用於」量化比較生產數據與訓練數據的分佈差異？",
+      "options": [
+        "Root Mean Squared Error (RMSE)",
+        "Kolmogorov-Smirnov (KS) statistic",
+        "Receiver Operating Characteristic (ROC) curve",
+        "F1-score"
+      ],
+      "answerIndex": 1,
+      "explanation": "KS-statistic (Kolmogorov-Smirnov statistic) 是一種常用的統計量，用於量化比較兩個數據分佈之間的差異。它在模型漂移監測中常用於檢測生產數據分佈與原始訓練數據分佈是否發生了顯著變化。RMSE、ROC curve 和 F1-score 則是模型性能評估指標，而非直接用於量化數據分佈差異。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "當 MLOps 系統檢測到模型漂移時，一個常見的自動化處理流程是什麼？",
+      "options": [
+        "自動向開發團隊發送電子郵件，要求他們手動檢查模型並決定下一步。",
+        "觸發一個自動化再訓練 (Automated Retraining) 流水線，使用最新數據重新訓練模型，並在驗證通過後部署新模型。",
+        "立即將現有模型下線，等待人工分析漂移原因並手動部署修復。",
+        "增加模型的推理延遲 (inference latency)，以給模型更多的時間適應新數據。"
+      ],
+      "answerIndex": 1,
+      "explanation": "在 MLOps 框架下，檢測到模型漂移後，最理想且常見的自動化處理方式是觸發自動化再訓練流水線。這允許系統使用最新的數據自動地重新訓練模型，並在驗證新模型性能達到要求後，自動部署更新的模型，從而快速響應數據變化，維持模型性能。其他選項多為手動處理或不合適的應對策略。"
+    }
+  ]
+}

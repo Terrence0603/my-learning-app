@@ -801,6 +801,12 @@
           "title": "實戰：MLOps 系統的安全強化與威脅防禦",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-133"
+        },
+        {
+          "day": 134,
+          "title": "實戰：MLOps 模型漂移監測與自動化再訓練",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-134"
         }
       ]
     }
