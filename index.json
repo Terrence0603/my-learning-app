@@ -807,6 +807,12 @@
           "title": "實戰：MLOps 模型漂移監測與自動化再訓練",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-134"
+        },
+        {
+          "day": 135,
+          "title": "實戰：MLOps 模型可解釋性與公平性分析",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-135"
         }
       ]
     }
