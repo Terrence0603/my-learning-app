@@ -813,6 +813,12 @@
           "title": "實戰：MLOps 模型可解釋性與公平性分析",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-135"
+        },
+        {
+          "day": 136,
+          "title": "實戰：MLOps 工作流程的設計、自動化與協調",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-136"
         }
       ]
     }

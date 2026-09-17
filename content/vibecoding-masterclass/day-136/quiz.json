@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 工作流程中，部署模型後，哪個階段主要負責偵測模型效能衰退、資料漂移（Data Drift）或模型漂移（Model Drift）？",
+      "options": ["資料準備", "模型訓練與驗證", "模型監控與管理", "模型部署"],
+      "answerIndex": 2,
+      "explanation": "模型監控與管理（Model Monitoring and Management）階段的核心職責是持續追蹤已部署模型的效能，並在偵測到效能下降、輸入資料分佈變化（資料漂移）或模型自身行為變化（模型漂移）時觸發警報或再訓練流程。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "MLOps 的核心目標之一，是將機器學習模型的開發與營運流程整合，這主要旨在解決什麼問題？",
+      "options": ["減少模型訓練的運算成本", "確保模型在生產環境中的可靠性、可重複性與可擴展性", "完全自動化資料科學家的工作", "僅專注於模型的解釋性（Interpretability）"],
+      "answerIndex": 1,
+      "explanation": "MLOps 旨在解決將機器學習模型從實驗室成功推向生產環境，並在生產中持續維護其性能的挑戰。這包括確保模型的可重複構建、可靠運行、易於擴展，並能快速響應真實世界的變化。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 MLOps 的自動化實踐中，CI/CD4ML (Continuous Integration / Continuous Delivery for Machine Learning) 的主要目的是什麼？",
+      "options": ["持續整合新的資料來源並持續部署新的使用者介面", "自動化機器學習模型及其相關基礎設施的建構、測試與部署流程", "持續開發新的機器學習演算法供研究使用", "手動持續記錄模型的特徵和效能指標"],
+      "answerIndex": 1,
+      "explanation": "CI/CD4ML 將傳統軟體開發中的持續整合和持續交付概念應用於機器學習領域，其核心目的是自動化模型程式碼、資料處理管道和基礎設施的建構、測試和部署，以實現更快速、可靠的模型迭代和發布。"
+    }
+  ]
+}
