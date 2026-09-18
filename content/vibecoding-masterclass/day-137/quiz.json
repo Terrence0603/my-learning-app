@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 平台中，哪個核心組件主要負責追蹤模型訓練過程中的參數、指標和產物，以確保實驗的可重複性和可追溯性？",
+      "options": ["模型註冊中心 (Model Registry)", "實驗追蹤 (Experiment Tracking)", "資料版本控制 (Data Versioning)", "模型監控 (Model Monitoring)"],
+      "answerIndex": 1,
+      "explanation": "實驗追蹤是 MLOps 的關鍵環節，它記錄了每一次模型訓練的細節，包括使用的資料、超參數、代碼版本、性能指標等，這對於理解實驗結果、比較不同模型和確保可重現性至關重要。模型註冊中心則用於管理模型的版本和部署狀態。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "當企業在選型 MLOps 平台時，以下哪個因素在「平台選型初期」通常不是最優先考慮的宏觀整合點，而是更偏向於「模型部署後的性能優化」？",
+      "options": ["與現有基礎設施的整合度", "團隊成員的技能樹與學習曲線", "平台的成本效益與預算限制", "模型在單一節點上推論的即時回應時間 (Latency)"],
+      "answerIndex": 3,
+      "explanation": "與現有基礎設施的整合度、團隊技能樹和成本效益是 MLOps 平台選型初期必須優先考慮的宏觀因素，它們直接影響平台的落地、採用和長期運營。而模型在單一節點上推論的即時回應時間 (Latency) 雖然重要，但它更多是特定模型服務部署後的性能指標，屬於模型優化和服務配置的範疇，而非平台選型時的首要宏觀考量，平台選型更關注的是能否提供支持高性能、高可用、可擴展推論服務的基礎設施。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "MLOps 流程中，以下哪個工具組合最常被推薦用於分別實現「資料與模型版本控制」和「機器學習實驗管理」這兩個核心功能？",
+      "options": ["Kubeflow 與 Airflow", "DVC (Data Version Control) 與 MLflow", "TensorFlow Extended (TFX) 與 Sagemaker", "Jenkins 與 Prometheus"],
+      "answerIndex": 1,
+      "explanation": "DVC (Data Version Control) 是一個開源工具，專注於管理機器學習專案中的資料和模型版本。MLflow 則是一個專為機器學習生命週期設計的平台，其核心功能之一是實驗追蹤 (Experiment Tracking)，用於記錄、比較和管理不同的模型訓練實驗。這兩者組合能有效涵蓋資料/模型版本控制和實驗管理的關鍵需求。"
+    }
+  ]
+}

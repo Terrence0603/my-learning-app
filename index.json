@@ -819,6 +819,12 @@
           "title": "實戰：MLOps 工作流程的設計、自動化與協調",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-136"
+        },
+        {
+          "day": 137,
+          "title": "實戰：MLOps 平台選型與工具整合",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-137"
         }
       ]
     }
