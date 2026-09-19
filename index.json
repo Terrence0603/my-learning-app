@@ -825,6 +825,12 @@
           "title": "實戰：MLOps 平台選型與工具整合",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-137"
+        },
+        {
+          "day": 138,
+          "title": "實戰：MLOps 模型部署策略與漸進式發布",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-138"
         }
       ]
     }
