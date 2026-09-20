@@ -831,6 +831,12 @@
           "title": "實戰：MLOps 模型部署策略與漸進式發布",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-138"
+        },
+        {
+          "day": 139,
+          "title": "實戰：MLOps 生產環境下的模型監控與問題診斷",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-139"
         }
       ]
     }
