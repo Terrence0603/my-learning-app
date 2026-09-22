@@ -843,6 +843,12 @@
           "title": "實戰：MLOps 模型迭代與持續優化策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-140"
+        },
+        {
+          "day": 141,
+          "title": "實戰：MLOps 基礎設施的效能優化與成本控制",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-141"
         }
       ]
     }
