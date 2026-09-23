@@ -849,6 +849,12 @@
           "title": "實戰：MLOps 基礎設施的效能優化與成本控制",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-141"
+        },
+        {
+          "day": 142,
+          "title": "實戰：MLOps 環境下的安全性與隱私保護",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-142"
         }
       ]
     }

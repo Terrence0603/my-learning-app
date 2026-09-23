@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps環境中，為了在模型訓練和部署時保護用戶隱私，同時仍能從數據中學習，哪一種技術是特別有效且常用的？",
+      "options": ["數據加密 (Data Encryption)", "模型版本控制 (Model Versioning)", "差分隱私 (Differential Privacy)", "角色基礎存取控制 (RBAC)"],
+      "answerIndex": 2,
+      "explanation": "差分隱私是一種數學方法，通過在數據查詢結果中添加噪音來保護個體隱私，同時仍允許分析數據集整體趨勢，非常適用於訓練隱私保護模型。數據加密主要保護數據在靜止或傳輸中的安全，模型版本控制管理模型迭代，RBAC則控制資源存取權限。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "MLOps環境中，哪一項是對抗性攻擊（Adversarial Attack）最精確的描述？",
+      "options": ["未經授權地修改模型程式碼。", "竊取模型訓練數據。", "輸入精心構造的數據，導致模型做出錯誤或意外的預測。", "通過網絡釣魚獲取憑證。"],
+      "answerIndex": 2,
+      "explanation": "對抗性攻擊是指攻擊者故意對輸入數據進行微小、人眼難以察覺的修改，以欺騙ML模型做出錯誤的分類或預測。這與修改程式碼、竊取數據或網絡釣魚等不同類型的安全威脅有所區分。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在MLOps管道中，確保只有授權用戶和服務能夠訪問敏感數據、模型和基礎設施資源的關鍵安全機制是什麼？",
+      "options": ["持續集成/持續部署 (CI/CD)", "端到端數據加密 (End-to-End Data Encryption)", "基於角色的存取控制 (Role-Based Access Control, RBAC)", "模型可解釋性 (Model Explainability)"],
+      "answerIndex": 2,
+      "explanation": "RBAC是一種安全策略，它根據用戶在組織中的角色來授予或限制對系統資源的存取權限，是管理MLOps環境中精細權限和訪問控制的核心機制。CI/CD是自動化部署流程，數據加密保護數據本身，模型可解釋性用於理解模型決策，這些雖重要但不是直接管理「誰能訪問什麼」的機制。"
+    }
+  ]}
