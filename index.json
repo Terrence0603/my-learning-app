@@ -879,6 +879,12 @@
           "title": "實戰：MLOps 模型迭代與持續優化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-146"
+        },
+        {
+          "day": 147,
+          "title": "實戰：MLOps 進階模型服務與 A/B 測試",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-147"
         }
       ]
     }
