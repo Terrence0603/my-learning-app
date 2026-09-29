@@ -1,0 +1,41 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "MLOps 在大規模模型部署中，最核心的目標之一是什麼？",
+    "options": [
+      "加速模型訓練過程",
+      "減少資料標註錯誤",
+      "確保模型可靠、高效地從實驗室部署到生產環境",
+      "簡化超參數調優流程"
+    ],
+    "answerIndex": 2,
+    "explanation": "MLOps 的核心價值在於透過標準化、自動化的流程，將機器學習模型從開發到部署、監控和維護的整個生命週期，確保其可靠性、可重複性和效率，特別是在大規模部署時，確保模型能從實驗室順利進入生產。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "在發布新模型版本時，為了能逐步將流量導向新版本並監控其效能與穩定性，以最小化潛在風險，通常會採用哪種部署策略？",
+    "options": [
+      "A/B Testing",
+      "藍綠部署 (Blue-Green Deployment)",
+      "金絲雀發布 (Canary Release)",
+      "影子部署 (Shadow Deployment)"
+    ],
+    "answerIndex": 2,
+    "explanation": "金絲雀發布 (Canary Release) 允許將一小部分流量導向新模型版本，並在完全切換之前監控其行為，以便在出現問題時快速回滾，從而有效降低部署風險。A/B Testing 側重於比較不同模型的業務指標，藍綠部署是一次性切換，影子部署不處理實時流量。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "為了在大規模模型部署時降低模型的記憶體佔用、加速推理時間，同時盡可能保持模型性能，哪種模型優化技術是常用且有效的？",
+    "options": [
+      "特徵工程 (Feature Engineering)",
+      "資料擴增 (Data Augmentation)",
+      "模型量化 (Model Quantization)",
+      "集成學習 (Ensemble Learning)"
+    ],
+    "answerIndex": 2,
+    "explanation": "模型量化 (Model Quantization) 是一種將模型參數從高精度（如浮點數）轉換為低精度（如整數）的技術，可以顯著減少模型大小和計算量，從而加速推理並降低記憶體消耗，這對於資源受限或需要高吞吐量的生產環境尤為重要。特徵工程和資料擴增是提升模型性能的方法，集成學習則會增加模型複雜度。"
+  }
+]}
