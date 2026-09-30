@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "MLOps 系統中導入高可用性 (High Availability) 架構的首要目標是什麼？",
+      "options": [
+        "降低模型訓練成本",
+        "確保系統在部分元件故障時仍能持續提供服務",
+        "加快模型部署速度",
+        "提高數據收集效率"
+      ],
+      "answerIndex": 1,
+      "explanation": "高可用性的核心目標是即使在部分元件發生故障的情況下，系統也能夠持續地提供服務，確保業務連續性。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 微服務架構中，哪種設計模式常用於防止單一服務故障導致整個系統的級聯失敗 (Cascading Failure)？",
+      "options": [
+        "負載平衡 (Load Balancing)",
+        "自動擴展 (Auto-scaling)",
+        "斷路器 (Circuit Breaker)",
+        "數據分片 (Data Sharding)"
+      ],
+      "answerIndex": 2,
+      "explanation": "斷路器模式能夠在下游服務響應過慢或故障時，自動阻止對該服務的請求，防止故障蔓延，保護上游服務和整個系統的穩定性。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為了在 MLOps 模型部署時最大程度地減少停機時間並提供快速回滾能力，哪種部署策略最為合適？",
+      "options": [
+        "滾動更新 (Rolling Update)",
+        "藍綠部署 (Blue-Green Deployment)",
+        "金絲雀部署 (Canary Deployment)",
+        "In-place 更新 (In-place Update)"
+      ],
+      "answerIndex": 1,
+      "explanation": "藍綠部署透過維護兩個相同的環境（藍色和綠色），在其中一個環境上部署新版本，測試無誤後，將流量一次性切換過去。這種方式可以實現幾乎零停機的部署和即時回滾，因為舊版本環境隨時可用。"
+    }
+  ]
+}
