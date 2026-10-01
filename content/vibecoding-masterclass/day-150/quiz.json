@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "相較於傳統資訊安全，MLOps 資訊安全最獨特的挑戰之一是什麼？",
+      "options": [
+        "網路防火牆配置複雜性",
+        "缺乏標準化的開發工具",
+        "資料漂移 (Data Drift) 對模型完整性的影響",
+        "員工資安意識訓練不足"
+      ],
+      "answerIndex": 2,
+      "explanation": "MLOps 獨特之處在於其對機器學習模型和資料的依賴。資料漂移會直接影響模型的準確性和可靠性，進而構成嚴重的安全與風險挑戰，這在傳統資訊安全領域較不常見。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 環境中，哪一項屬於針對「模型本身」的惡意攻擊，可能導致模型預測行為被操控或劣化？",
+      "options": [
+        "資料外洩 (Data Leakage)",
+        "基礎設施零日漏洞 (Zero-day Infrastructure Vulnerability)",
+        "模型中毒 (Model Poisoning)",
+        "身份驗證繞過 (Authentication Bypass)"
+      ],
+      "answerIndex": 2,
+      "explanation": "模型中毒 (Model Poisoning) 攻擊透過污染模型的訓練資料，導致模型學習到錯誤或惡意的模式，進而在推論時產生偏差或被操控的結果。這直接針對模型的行為和完整性。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為了有效降低 MLOps 管道中的風險，以下哪項安全措施在「持續監控和響應」方面扮演著關鍵角色？",
+      "options": [
+        "實施嚴格的程式碼審查 (Code Review)",
+        "對模型進行對抗性訓練 (Adversarial Training)",
+        "部署即時模型效能與資料完整性監控系統",
+        "將所有敏感資料加密儲存"
+      ],
+      "answerIndex": 2,
+      "explanation": "持續監控模型效能（如準確度、延遲）和資料完整性（如資料漂移、概念漂移），是及早發現異常行為、潛在攻擊或模型劣化的關鍵，使團隊能及時響應並採取緩解措施，這正是「持續監控和響應」的核心。"
+    }
+  ]
+}
