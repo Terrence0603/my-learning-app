@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps實踐負責任AI的主要目標是什麼？",
+      "options": [
+        "確保模型在整個生命週期中符合倫理、公平、透明和隱私標準。",
+        "最大化模型預測的準確性。",
+        "加速模型的部署速度。",
+        "降低模型訓練的成本。"
+      ],
+      "answerIndex": 0,
+      "explanation": "負責任AI的核心目標是確保模型在開發、部署和操作的各個階段都符合倫理原則，並在公平性、透明度、隱私保護等方面達到標準。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "下列哪個工具主要用於提供模型預測的「局部可解釋性」(Local Interpretability)，即解釋單一預測為何會得到該結果？",
+      "options": [
+        "SHAP (SHapley Additive exPlanations)",
+        "Confusion Matrix (混淆矩陣)",
+        "ROC Curve (接收者操作特徵曲線)",
+        "Global Feature Importance (全局特徵重要性)"
+      ],
+      "answerIndex": 0,
+      "explanation": "SHAP值能夠解釋模型對單一預測的決策過程，量化每個特徵對該次預測結果的貢獻，因此屬於局部可解釋性工具。混淆矩陣和ROC曲線是模型評估指標，而全局特徵重要性則顯示整體特徵影響力，非針對單一預測。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "模型可解釋性對於負責任AI實踐中的「公平性」(Fairness) 有何重要作用？",
+      "options": [
+        "幫助識別模型是否對特定群體產生偏見或歧視。",
+        "直接提高模型的預測準確性。",
+        "簡化模型部署流程。",
+        "自動優化模型效能，減少人工干預。"
+      ],
+      "answerIndex": 0,
+      "explanation": "可解釋性使我們能夠深入了解模型的決策邏輯，從而審查其在不同群體上的行為，發現潛在的偏見或不公平待遇，是確保AI系統公平性的關鍵環節。"
+    }
+  ]
+}
