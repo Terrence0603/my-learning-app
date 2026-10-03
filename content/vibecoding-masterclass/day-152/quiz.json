@@ -1,0 +1,41 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "MLOps 進階自動化與工作流編排的核心目標之一是什麼？",
+    "options": [
+      "專注於手動部署每個模型以確保最高的客製化程度。",
+      "僅限於模型訓練過程的加速，不涉及部署與監控。",
+      "實現機器學習生命週期各階段（資料處理、訓練、部署、監控）的自動化、效率與可靠性。",
+      "完全取代人類專家在模型評估與決策中的角色。"
+    ],
+    "answerIndex": 2,
+    "explanation": "MLOps 進階自動化與工作流編排旨在將資料準備、模型訓練、評估、部署及監控等機器學習生命週期中的所有環節自動化，以提高效率、確保可靠性及可擴展性，而非僅限於單一環節或取代人類決策。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "在 MLOps 工作流編排中，哪個工具常用於定義、排程和監控複雜的數據管道和機器學習工作流？",
+    "options": [
+      "Docker",
+      "MLflow",
+      "Apache Airflow",
+      "Prometheus"
+    ],
+    "answerIndex": 2,
+    "explanation": "Apache Airflow 是一個廣泛使用的開源平台，允許程式化地定義、排程和監控工作流（DAGs），非常適合用於管理 MLOps 中複雜的數據處理和模型訓練管道。Docker 用於容器化，MLflow 用於實驗追蹤和模型註冊，Prometheus 用於監控。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "MLOps 進階自動化工作流中的「模型註冊 (Model Registry)」主要負責什麼功能？",
+    "options": [
+      "自動執行模型在不同伺服器上的平行訓練。",
+      "記錄所有模型訓練實驗的原始資料與參數。",
+      "集中管理機器學習模型的版本、元數據、生命週期階段和溯源能力。",
+      "即時監控已部署模型的預測效能和數據漂移。"
+    ],
+    "answerIndex": 2,
+    "explanation": "模型註冊 (Model Registry) 是一個核心組件，用於集中管理和追蹤機器學習模型的生命週期，包括其版本控制、相關元數據、部署階段（如Staging, Production）以及確保模型的溯源性。"
+  }
+]}

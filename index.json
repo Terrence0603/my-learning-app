@@ -909,6 +909,12 @@
           "title": "實戰：MLOps 負責任 AI 與模型可解釋性",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-151"
+        },
+        {
+          "day": 152,
+          "title": "實戰：MLOps 進階自動化與工作流編排",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-152"
         }
       ]
     }
