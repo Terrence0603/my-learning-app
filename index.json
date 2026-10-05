@@ -921,6 +921,12 @@
           "title": "實戰：MLOps 模型監控與回饋循環",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-153"
+        },
+        {
+          "day": 154,
+          "title": "實戰：MLOps 模型迭代與持續改進",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-154"
         }
       ]
     }
