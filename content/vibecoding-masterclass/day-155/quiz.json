@@ -1,0 +1,26 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps部署策略中，哪一種策略能最大限度地減少停機時間，並在發生問題時提供快速且低風險的回滾機制？",
+      "options": ["藍綠部署 (Blue/Green Deployment)", "金絲雀部署 (Canary Deployment)", "滾動更新 (Rolling Update)", "A/B 測試 (A/B Testing)"],
+      "answerIndex": 0,
+      "explanation": "藍綠部署透過同時運行兩個相同但獨立的環境（藍色為舊版本，綠色為新版本），並透過切換流量實現無縫切換。若新版本出現問題，可立即將流量切回舊的藍色環境，實現快速回滾且幾乎零停機時間。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "針對複雜且需要高度擴展性的MLOps系統，哪一種架構選擇最能支援模型的獨立部署、版本控制與異構技術棧？",
+      "options": ["單體式架構 (Monolithic Architecture)", "微服務架構 (Microservices Architecture)", "無伺服器架構 (Serverless Architecture)", "事件驅動架構 (Event-Driven Architecture)"],
+      "answerIndex": 1,
+      "explanation": "微服務架構將大型應用程式拆分為一系列小型、獨立部署的服務，每個服務可以獨立開發、部署和擴展。這使得ML模型可以作為獨立服務部署，方便進行版本控制、A/B測試，並允許團隊根據特定任務選擇最適合的技術，提升彈性和可擴展性。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在MLOps實踐中，為什麼持續監控（Continuous Monitoring）對於已部署的機器學習模型至關重要？",
+      "options": ["主要為了減少模型的運算成本。", "為了確保資料模型的初始訓練準確性。", "及早發現資料漂移(Data Drift)和模型衰退(Model Decay)，維持模型性能。", "為了自動化模型的重新訓練過程。"],
+      "answerIndex": 2,
+      "explanation": "持續監控是MLOps的核心環節之一，它能幫助即時追蹤模型在生產環境中的性能表現、輸入資料的特性變化（資料漂移）以及模型預測能力的下降（模型衰退）。及早發現這些問題對於維持模型的業務價值至關重要，並能觸發模型更新或重新訓練流程。"
+    }
+  ]}

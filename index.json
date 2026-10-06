@@ -927,6 +927,12 @@
           "title": "實戰：MLOps 模型迭代與持續改進",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-154"
+        },
+        {
+          "day": 155,
+          "title": "實戰：MLOps 部署策略與架構選擇",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-155"
         }
       ]
     }
