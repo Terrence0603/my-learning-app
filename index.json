@@ -933,6 +933,12 @@
           "title": "實戰：MLOps 部署策略與架構選擇",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-155"
+        },
+        {
+          "day": 156,
+          "title": "實戰：MLOps 模型規模化與彈性架構",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-156"
         }
       ]
     }

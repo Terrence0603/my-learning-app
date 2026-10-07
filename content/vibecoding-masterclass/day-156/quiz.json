@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "MLOps 實戰中，導入「彈性架構」的主要目的是什麼？",
+      "options": [
+        "確保模型版本控制的穩定性。",
+        "根據工作負載自動調整資源，以最佳化成本和效能。",
+        "加速模型訓練時的資料前處理。",
+        "簡化模型部署後的監控流程。"
+      ],
+      "answerIndex": 1,
+      "explanation": "彈性架構的核心優勢在於能夠在需求高峰時擴展資源以維持效能，在需求低谷時縮減資源以節省成本，實現資源的最佳化利用，是成本與效能平衡的關鍵。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 模型規模化中，若要將單一模型的訓練任務分散到多個計算節點上，以下哪種技術或框架最常用於實現此目的？",
+      "options": [
+        "使用 Git 管理模型程式碼。",
+        "透過 A/B 測試進行模型評估。",
+        "採用 Horovod 或 Ray 進行分散式訓練。",
+        "將模型部署為 Serverless Functions。"
+      ],
+      "answerIndex": 2,
+      "explanation": "Horovod 和 Ray 是專為分散式機器學習訓練設計的框架，它們能有效協調多個節點共同訓練一個模型，顯著縮短訓練時間並處理大規模資料集。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "MLOps 彈性架構中，當模型預測請求量急劇增加時，以下哪項技術最能幫助模型服務端點自動擴展以應對流量高峰？",
+      "options": [
+        "手動增加伺服器數量。",
+        "實施 CI/CD 管道自動化。",
+        "結合 Kubernetes Horizontal Pod Autoscaler (HPA) 或雲端服務的自動擴展功能。",
+        "使用版本控制系統管理訓練資料集。"
+      ],
+      "answerIndex": 2,
+      "explanation": "Kubernetes 的 HPA 能夠監控 Pod 的 CPU 使用率或其他指標，並在達到預設閾值時自動增加或減少 Pod 數量。類似的自動擴展功能在各大雲端平台上也廣泛應用於應對流量波動，確保服務的穩定性與可用性。"
+    }
+  ]
+}
