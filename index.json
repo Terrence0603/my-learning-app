@@ -939,6 +939,12 @@
           "title": "實戰：MLOps 模型規模化與彈性架構",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-156"
+        },
+        {
+          "day": 157,
+          "title": "實戰：MLOps 成本管理與資源最佳化",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-157"
         }
       ]
     }
