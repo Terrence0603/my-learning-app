@@ -957,6 +957,12 @@
           "title": "實戰：MLOps 模型監控與效能管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-159"
+        },
+        {
+          "day": 160,
+          "title": "實戰：MLOps 模型迭代與持續改進",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-160"
         }
       ]
     }
