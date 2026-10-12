@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps安全性管理中，哪一種攻擊方式涉及惡意行為者透過操縱訓練資料來影響模型的行為，使其產生錯誤或預設的輸出？",
+      "options": ["模型反轉攻擊 (Model Inversion Attack)", "對抗性範例攻擊 (Adversarial Example Attack)", "資料投毒攻擊 (Data Poisoning Attack)", "模型竊取攻擊 (Model Stealing Attack)"],
+      "answerIndex": 2,
+      "explanation": "資料投毒攻擊是指攻擊者在模型訓練階段，透過污染或竄改訓練資料，使得訓練出的模型在面對特定輸入時產生錯誤或偏頗的輸出。這與模型反轉（從模型重建訓練資料）、對抗性範例（在推論階段微調輸入欺騙模型）和模型竊取（複製模型功能）不同，直接影響模型的學習過程。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "為了確保MLOps流程符合GDPR、HIPAA等法規要求，並保障個人資料隱私，以下哪項措施是最核心的基石？",
+      "options": ["建立詳細的資料沿革 (Data Lineage)", "實施嚴格的角色基於存取控制 (RBAC)", "將所有模型部署在無伺服器架構上", "定期進行壓力測試以確保模型穩定性"],
+      "answerIndex": 1,
+      "explanation": "雖然資料沿革和模型穩定性也很重要，但為了保障個人資料隱私和符合GDPR、HIPAA等法規，最核心的基石是確保只有經過授權的人員才能根據其職責存取特定的資料和模型資源。角色基於存取控制（RBAC）是實現這一目標的關鍵機制。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在MLOps安全性實踐中，為了主動識別和修復MLOPS工具鏈、模型儲存庫及部署環境中存在的潛在弱點，應定期執行哪一項工作？",
+      "options": ["資料漂移監控 (Data Drift Monitoring)", "模型公平性評估 (Model Fairness Assessment)", "漏洞掃描與滲透測試 (Vulnerability Scanning & Penetration Testing)", "特徵工程自動化 (Automated Feature Engineering)"],
+      "answerIndex": 2,
+      "explanation": "漏洞掃描與滲透測試是針對MLOps基礎設施、應用程式和系統進行的常規安全活動，旨在識別並修復潛在的安全弱點和配置錯誤，防止攻擊者利用這些弱點。其他選項則是與模型性能、倫理或開發效率相關，而非直接針對系統安全漏洞。"
+    }
+  ]
+}
