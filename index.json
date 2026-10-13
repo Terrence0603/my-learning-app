@@ -969,6 +969,12 @@
           "title": "實戰：MLOps 安全性與合規性管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-161"
+        },
+        {
+          "day": 162,
+          "title": "實戰：MLOps 端到端流程建構與整合",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-162"
         }
       ]
     }

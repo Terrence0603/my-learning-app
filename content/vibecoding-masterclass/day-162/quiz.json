@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "MLOps 端到端流程建構的核心目標是什麼？",
+      "options": [
+        "實現機器學習模型從開發、部署到監控的自動化、標準化與可重複性。",
+        "開發最先進的機器學習演算法，以達到最高的模型準確度。",
+        "將資料科學家的工作完全自動化，減少人力成本。",
+        "確保模型訓練時使用最新版本的開發框架。"
+      ],
+      "answerIndex": 0,
+      "explanation": "MLOps的核心目標在於將機器學習模型的生命週期，從資料準備、模型訓練、版本控制、部署到持續監控與再訓練，實現自動化、標準化與可重複性，以確保生產環境中模型的穩定與高效運行。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 流程中，哪個工具常被用於『實驗追蹤 (Experiment Tracking)』和『模型版本管理 (Model Registry)』？",
+      "options": [
+        "Kubernetes",
+        "MLflow",
+        "Docker",
+        "Grafana"
+      ],
+      "answerIndex": 1,
+      "explanation": "MLflow 是一個開源平台，專門用於管理機器學習生命週期，其核心功能包括實驗追蹤（記錄參數、指標、程式碼）、模型版本管理（MLflow Model Registry）和模型部署。Kubernetes用於容器編排，Docker用於容器化，Grafana用於監控視覺化。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "『模型漂移 (Model Drift)』在 MLOps 持續監控階段中指的是什麼？",
+      "options": [
+        "模型訓練時間過長，無法在預期時間內完成。",
+        "部署模型所使用的硬體資源不足，導致模型運行緩慢。",
+        "由於生產環境中輸入資料的分佈或特徵與訓練時不同，導致模型性能隨時間下降的現象。",
+        "模型無法正確地與資料庫進行連線，導致無法取得預測所需的資料。"
+      ],
+      "answerIndex": 2,
+      "explanation": "模型漂移是指在生產環境中，由於真實世界資料的特性（如資料分佈、特徵關係）隨時間發生變化，導致已部署模型的預測性能或準確度逐漸下降的現象。這是 MLOps 中模型監控的核心關注點之一。"
+    }
+  ]
+}
