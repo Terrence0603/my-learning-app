@@ -975,6 +975,12 @@
           "title": "實戰：MLOps 端到端流程建構與整合",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-162"
+        },
+        {
+          "day": 163,
+          "title": "實戰：MLOps 流程優化與效能調校",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-163"
         }
       ]
     }
