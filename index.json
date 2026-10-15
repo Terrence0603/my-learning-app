@@ -981,6 +981,12 @@
           "title": "實戰：MLOps 流程優化與效能調校",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-163"
+        },
+        {
+          "day": 164,
+          "title": "MLOps 模型的生產部署與規模化管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-164"
         }
       ]
     }
