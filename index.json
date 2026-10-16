@@ -987,6 +987,12 @@
           "title": "MLOps 模型的生產部署與規模化管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-164"
+        },
+        {
+          "day": 165,
+          "title": "MLOps 模型的性能監控與數據漂移檢測",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-165"
         }
       ]
     }
