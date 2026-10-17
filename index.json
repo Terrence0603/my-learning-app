@@ -993,6 +993,12 @@
           "title": "MLOps 模型的性能監控與數據漂移檢測",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-165"
+        },
+        {
+          "day": 166,
+          "title": "MLOps 自動化模型再訓練與部署管線建構",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-166"
         }
       ]
     }
