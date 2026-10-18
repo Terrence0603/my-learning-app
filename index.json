@@ -999,6 +999,12 @@
           "title": "MLOps 自動化模型再訓練與部署管線建構",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-166"
+        },
+        {
+          "day": 167,
+          "title": "MLOps 模型的穩定性與韌性工程",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-167"
         }
       ]
     }

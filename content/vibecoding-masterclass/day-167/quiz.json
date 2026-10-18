@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 模型的穩定性工程中，哪個現象最直接導致模型性能隨時間下降，需要被監控和處理？",
+      "options": ["訓練資料集過大，導致模型訓練時間過長。", "底層硬體資源不足，影響模型推理速度。", "資料分佈或目標變數關係發生變化（Data Drift / Concept Drift）。", "模型部署後缺乏使用者回饋機制。"],
+      "answerIndex": 2,
+      "explanation": "資料漂移 (Data Drift) 指輸入資料的統計特性隨時間變化，而概念漂移 (Concept Drift) 指輸入變數與目標變數之間的關係發生變化。這兩者都是模型性能隨時間下降的核心原因，也是穩定性工程需要重點監控和應對的挑戰。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "為提升 MLOps 系統的韌性，防止單一模型服務的故障蔓延至整個下游應用，哪個設計模式最能有效實現隔離和降級處理？",
+      "options": ["資料版本控制 (Data Versioning)。", "斷路器模式 (Circuit Breaker Pattern)。", "藍綠部署 (Blue/Green Deployment)。", "自動擴展 (Auto-Scaling)。"],
+      "answerIndex": 1,
+      "explanation": "斷路器模式（Circuit Breaker Pattern）是一種韌性設計模式，當檢測到服務持續失敗時，它會「斷開」請求，阻止進一步的呼叫，從而防止故障蔓延並給予故障服務恢復的時間，同時允許系統進行降級處理。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 MLOps 韌性工程中，為確保模型在面對惡意或異常輸入時仍能保持健壯性與穩定性，最關鍵的測試類型是什麼？",
+      "options": ["單元測試 (Unit Testing)。", "整合測試 (Integration Testing)。", "壓力測試 (Stress Testing)。", "對抗性測試 (Adversarial Testing) 或 魯棒性測試 (Robustness Testing)。"],
+      "answerIndex": 3,
+      "explanation": "對抗性測試 (Adversarial Testing) 或魯棒性測試 (Robustness Testing) 專注於探測模型在面對微小、故意設計的擾動或異常輸入時的行為。這類測試對於識別和增強模型面對非預期、甚至惡意輸入時的穩定性和韌性至關重要。"
+    }
+  ]
+}
