@@ -1029,6 +1029,12 @@
           "title": "MLOps 模型的性能監控與數據漂移偵測",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-171"
+        },
+        {
+          "day": 172,
+          "title": "MLOps 模型自動化再訓練與部署策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-172"
         }
       ]
     }
