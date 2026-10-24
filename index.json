@@ -1035,6 +1035,12 @@
           "title": "MLOps 模型自動化再訓練與部署策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-172"
+        },
+        {
+          "day": 173,
+          "title": "MLOps 工作流程編排與管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-173"
         }
       ]
     }
