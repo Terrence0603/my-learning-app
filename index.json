@@ -1041,6 +1041,12 @@
           "title": "MLOps 工作流程編排與管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-173"
+        },
+        {
+          "day": 174,
+          "title": "MLOps 基礎設施即程式碼 (IaC) 實踐",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-174"
         }
       ]
     }

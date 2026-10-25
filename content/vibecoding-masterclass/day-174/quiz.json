@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 中實施基礎設施即程式碼 (IaC) 的主要優勢為何？",
+      "options": [
+        "減少模型訓練時間。",
+        "確保 ML 模型的自動版本控制。",
+        "提升基礎設施部署的重現性、一致性與自動化。",
+        "完全消除對人類監督的需求。"
+      ],
+      "answerIndex": 2,
+      "explanation": "IaC 的核心優勢在於將基礎設施的配置和管理編碼化，從而實現自動化、保證環境的一致性，並使其易於重現，這對於 MLOps 的快速迭代和穩定性至關重要。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "下列哪一個工具最常被用於跨雲平台進行基礎設施佈建 (provisioning) 和管理，並支援聲明式配置？",
+      "options": [
+        "Git",
+        "Docker",
+        "Jenkins",
+        "Terraform"
+      ],
+      "answerIndex": 3,
+      "explanation": "Terraform 是一個業界領先的 IaC 工具，它允許開發者透過聲明式配置語言 (HCL) 來定義和管理多個雲平台（如 AWS、Azure、GCP）上的基礎設施資源，這在 MLOps 中用來佈建和管理 ML 工作流所需的各種雲服務。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "在 MLOps 的 IaC 實踐中，通常會透過程式碼管理哪些層面的基礎設施？",
+      "options": [
+        "僅限於資料標註工具。",
+        "僅限於模型程式碼的編寫。",
+        "運算資源、儲存、網路、ML 服務以及監控系統等。",
+        "僅限於前端使用者介面的開發。"
+      ],
+      "answerIndex": 2,
+      "explanation": "MLOps 中的 IaC 涵蓋了整個 ML 工作流程所需的所有基礎設施，包括但不限於運算資源（GPU/CPU 實例）、資料儲存、網路配置、專門的 ML 服務（如模型訓練和部署服務）、以及監控和日誌記錄系統，以確保整個 ML 環境的可預期性和可控性。"
+    }
+  ]
+}
