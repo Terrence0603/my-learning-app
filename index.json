@@ -1047,6 +1047,12 @@
           "title": "MLOps 基礎設施即程式碼 (IaC) 實踐",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-174"
+        },
+        {
+          "day": 175,
+          "title": "MLOps 容器化部署與 Kubernetes 實戰",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-175"
         }
       ]
     }

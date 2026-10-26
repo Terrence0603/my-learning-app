@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 工作流程中，使用容器化技術（例如 Docker）最主要的好處是什麼？",
+      "options": [
+        "確保開發、測試和生產環境的一致性與可重現性。",
+        "自動根據流量高峰擴展機器學習模型的訓練作業。",
+        "提供一個分散式的儲存解決方案來管理大型資料集。",
+        "顯著減少模型訓練所需的計算資源消耗。"
+      ],
+      "answerIndex": 0,
+      "explanation": "容器化技術的核心優勢在於將應用程式及其所有依賴項封裝在一起，確保無論在任何環境下，模型都能以相同且可預測的方式運行，這對於 MLOps 中的模型版本控制、部署和故障排除至關重要。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 Kubernetes 中，能夠包含一個或多個容器，並作為最小可部署單位的資源是什麼？",
+      "options": [
+        "Node (節點)",
+        "Deployment (部署)",
+        "Service (服務)",
+        "Pod (容器組)"
+      ],
+      "answerIndex": 3,
+      "explanation": "Pod 是 Kubernetes 中最小、最基本的部署單位。一個 Pod 代表集群中一個運行中的應用程式實例，它通常包含一個主要的容器，但也可以包含多個緊密相關、需要共享資源的容器。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為了管理並確保機器學習模型服務維持特定數量的 Pod 副本持續運行，通常會使用哪一種 Kubernetes 資源？",
+      "options": [
+        "ConfigMap (配置映射)",
+        "PersistentVolume (持久卷)",
+        "Deployment (部署)",
+        "Ingress (入口)"
+      ],
+      "answerIndex": 2,
+      "explanation": "Kubernetes 的 Deployment 資源提供了一種宣告式的方式來管理 Pod 和 ReplicaSet。它允許使用者定義應用程式的期望狀態，例如需要運行多少個特定模型服務的 Pod 副本，並且 Deployment 控制器會自動確保實際狀態與期望狀態一致，處理副本的建立、更新和自動擴縮容。"
+    }
+  ]
+}
