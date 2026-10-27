@@ -1053,6 +1053,12 @@
           "title": "MLOps 容器化部署與 Kubernetes 實戰",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-175"
+        },
+        {
+          "day": 176,
+          "title": "MLOps 部署模式與流量管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-176"
         }
       ]
     }
