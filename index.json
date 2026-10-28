@@ -1059,6 +1059,12 @@
           "title": "MLOps 部署模式與流量管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-176"
+        },
+        {
+          "day": 177,
+          "title": "MLOps 監控與日誌管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-177"
         }
       ]
     }

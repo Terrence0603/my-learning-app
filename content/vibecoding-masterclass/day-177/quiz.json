@@ -1,0 +1,42 @@
+{"questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "MLOps 監控與日誌管理最主要的目的為何？",
+      "options": [
+        "確保模型程式碼的版本控制與協同開發",
+        "即時檢測模型效能衰退、數據漂移或基礎設施問題",
+        "加速模型訓練過程以縮短開發週期",
+        "提供模型離線分析報告以優化模型演算法"
+      ],
+      "answerIndex": 1,
+      "explanation": "MLOps 監控與日誌管理的核心目的在於提供模型在生產環境中運行狀況的即時可見性，以便能快速發現並解決潛在問題，如模型效能下降、推論數據與訓練數據不一致（數據漂移），或底層基礎設施的故障，從而保證模型的穩定與可靠運行。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 監控中，哪一項指標最直接反映模型「輸入數據分佈」可能已發生顯著變化，進而影響預測結果？",
+      "options": [
+        "模型的 API 響應時間",
+        "模型服務的 CPU 使用率",
+        "數據漂移 (Data Drift) 指標",
+        "模型的準確度 (Accuracy)"
+      ],
+      "answerIndex": 2,
+      "explanation": "數據漂移 (Data Drift) 指標直接監控模型在推論時接收到的輸入數據分佈是否與模型訓練時的數據分佈發生顯著變化。這種變化往往是導致模型預測品質下降，甚至失效的主要原因之一，而準確度 (Accuracy) 則是結果，數據漂移是導致結果變化的原因。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "為了實現集中化的 MLOps 日誌收集、儲存、分析與可視化，以下哪組工具組合最為常用？",
+      "options": [
+        "Git、Jupyter Notebook、TensorFlow",
+        "Docker、Kubernetes、Helm",
+        "ELK Stack (Elasticsearch, Logstash, Kibana)",
+        "SQL 資料庫、BI 工具、Excel"
+      ],
+      "answerIndex": 2,
+      "explanation": "ELK Stack（Elasticsearch 用於儲存與索引日誌、Logstash 用於收集、處理與轉發日誌、Kibana 用於日誌的可視化與分析）是實現集中化日誌管理與分析的經典且廣泛使用的解決方案，非常適合 MLOps 環境中多個組件的日誌聚合。"
+    }
+  ]
+}
