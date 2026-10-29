@@ -1065,6 +1065,12 @@
           "title": "MLOps 監控與日誌管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-177"
+        },
+        {
+          "day": 178,
+          "title": "MLOps 安全性最佳實踐",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-178"
         }
       ]
     }
