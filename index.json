@@ -1071,6 +1071,12 @@
           "title": "MLOps 安全性最佳實踐",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-178"
+        },
+        {
+          "day": 179,
+          "title": "MLOps 工作流程自動化與編排",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-179"
         }
       ]
     }

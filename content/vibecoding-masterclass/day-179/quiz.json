@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "MLOps 工作流程自動化的主要目標是什麼？",
+      "options": [
+        "減少資料科學家在模型開發上的時間，完全取代手動操作。",
+        "加速模型從開發到生產的部署速度，確保可重複性與持續交付。",
+        "僅專注於機器學習模型的實驗追蹤，不涉及部署。",
+        "將所有機器學習任務轉移到雲端平台，以降低成本。"
+      ],
+      "answerIndex": 1,
+      "explanation": "MLOps 工作流程自動化的核心目標是透過自動化整合開發、測試、部署與監控流程，顯著縮短模型上市時間 (time-to-market)，並確保整個 ML 生命週期的效率、可重複性和可靠性，實現持續交付 (Continuous Delivery) 和持續部署 (Continuous Deployment)。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 中，用於編排複雜的端到端機器學習工作流程，特別是涉及到多個步驟（如資料預處理、模型訓練、評估與部署）時，以下哪種工具或框架是常見的選擇？",
+      "options": [
+        "Git (版本控制系統)",
+        "Docker (容器化技術)",
+        "Kubeflow Pipelines (ML 工作流程編排框架)",
+        "Jupyter Notebook (互動式開發環境)"
+      ],
+      "answerIndex": 2,
+      "explanation": "Kubeflow Pipelines 是一個專為 Kubernetes 設計的開源平台，用於構建和部署可移植、可擴展的 ML 工作流程。它允許使用者定義多個 ML 步驟為有向無環圖 (DAG)，並自動化執行這些步驟，是實現 MLOps 工作流程編排的典型工具。Git 用於版本控制，Docker 用於容器化應用，Jupyter Notebook 用於互動式開發，它們都是 MLOps 中的重要輔助工具，但並非直接用於端到端工作流程的編排。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "MLOps 工作流程自動化中，「持續訓練 (Continuous Training, CT)」的範疇主要涵蓋哪些方面？",
+      "options": [
+        "持續監控模型在生產環境中的性能表現和資料漂移。",
+        "在新的數據可用時自動重新訓練模型，並評估其性能以準備更新。",
+        "將訓練好的模型自動打包成服務供應用程式呼叫。",
+        "持續執行 A/B 測試以比較不同模型的商業效益。"
+      ],
+      "answerIndex": 1,
+      "explanation": "持續訓練 (CT) 是 MLOps CI/CD/CT 週期中的關鍵一環，它專注於當有新的資料、新的業務需求或現有模型表現下降時，能夠自動化地重新訓練機器學習模型，並對新訓練出的模型進行驗證，確保其品質達到要求後，再進入持續部署階段。選項 A 描述的是持續監控 (Continuous Monitoring)，選項 C 描述的是模型部署，選項 D 描述的是模型評估或業務監控的一部分。"
+    }
+  ]
+}
