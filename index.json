@@ -1077,6 +1077,12 @@
           "title": "MLOps 工作流程自動化與編排",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-179"
+        },
+        {
+          "day": 180,
+          "title": "MLOps 持續學習與模型迭代",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-180"
         }
       ]
     }
