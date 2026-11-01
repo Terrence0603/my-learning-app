@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "MLOps 的核心目標之一，是將機器學習模型的開發與部署過程實現高度自動化和標準化，以解決傳統機器學習專案中常見的哪些挑戰？",
+      "options": [
+        "僅專注於模型訓練階段的演算法優化",
+        "缺乏模型版本管理與部署流程的協調性",
+        "僅限於雲端環境中的模型部署",
+        "完全取代人工智慧研究員的創新工作"
+      ],
+      "answerIndex": 1,
+      "explanation": "MLOps 旨在解決傳統機器學習專案中，開發、部署、監控和維護模型時遇到的手動流程、缺乏版本控制、難以擴展和協作困難等問題。選項 B 直接點明了版本管理和部署流程協調性的重要性，這是自動化和標準化的關鍵效益之一。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "在 MLOps 系統中，哪個組件主要負責儲存、版本化、追蹤模型的元數據（如訓練參數、效能指標）以及其二進制文件，並作為模型部署前的中央儲存庫？",
+      "options": [
+        "特徵商店 (Feature Store)",
+        "模型註冊中心 (Model Registry)",
+        "資料版本控制系統 (Data Version Control System)",
+        "監控儀表板 (Monitoring Dashboard)"
+      ],
+      "answerIndex": 1,
+      "explanation": "模型註冊中心是 MLOps 工作流的核心，它提供了集中的位置來管理、版本化和追蹤機器學習模型。它不僅儲存模型二進制文件，還會記錄模型的元數據，是模型從訓練到部署的關鍵樞紐。特徵商店用於管理特徵，DVC 用於資料，監控儀表板用於部署後的模型效能。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "模型成功部署到生產環境後，MLOps 系統需要持續關注一項重要指標，以確保模型的效能不會隨時間衰減。這項指標通常被稱為？",
+      "options": [
+        "模型訓練時間 (Model Training Time)",
+        "數據漂移 (Data Drift) 或概念漂移 (Concept Drift)",
+        "開發人員程式碼提交頻率 (Developer Commit Frequency)",
+        "硬體資源利用率 (Hardware Resource Utilization)"
+      ],
+      "answerIndex": 1,
+      "explanation": "數據漂移和概念漂移是模型在生產環境中效能衰減的主要原因。MLOps 強調模型部署後的持續監控，以檢測這類漂移，並觸發模型的重新訓練或調整，確保模型在不斷變化的真實世界數據中保持準確性。其他選項雖然重要，但不是直接影響模型長期預測效能的指標。"
+    }
+  ]
+}

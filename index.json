@@ -1083,6 +1083,12 @@
           "title": "MLOps 持續學習與模型迭代",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-180"
+        },
+        {
+          "day": 181,
+          "title": "MLOps 系統設計與實戰演練",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-181"
         }
       ]
     }
