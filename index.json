@@ -1089,6 +1089,12 @@
           "title": "MLOps 系統設計與實戰演練",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-181"
+        },
+        {
+          "day": 182,
+          "title": "MLOps 規模化部署與高可用性",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-182"
         }
       ]
     }
