@@ -1095,6 +1095,12 @@
           "title": "MLOps 規模化部署與高可用性",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-182"
+        },
+        {
+          "day": 183,
+          "title": "MLOps 運行監控與效能優化",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-183"
         }
       ]
     }
