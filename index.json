@@ -1101,6 +1101,12 @@
           "title": "MLOps 運行監控與效能優化",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-183"
+        },
+        {
+          "day": 184,
+          "title": "MLOps 安全防護與資料隱私",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-184"
         }
       ]
     }

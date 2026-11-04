@@ -1,0 +1,41 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "在 MLOps 安全防護中，下列哪一種技術最直接且有效地在模型訓練過程中保護個人資料隱私，同時仍允許模型從資料中學習？",
+    "options": [
+      "差分隱私 (Differential Privacy)",
+      "資料加密 (Data Encryption)",
+      "存取控制 (Access Control)",
+      "資料去識別化 (Data De-identification)"
+    ],
+    "answerIndex": 0,
+    "explanation": "差分隱私透過在資料中加入統計雜訊，確保即使從模型輸出也無法推斷出任何單一使用者資料，從而在訓練過程中提供強大的隱私保護。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "哪種 ML 模型攻擊類型透過對模型輸入進行微小且難以察覺的修改，導致模型做出錯誤或惡意的預測？",
+    "options": [
+      "模型反演攻擊 (Model Inversion Attack)",
+      "資料投毒攻擊 (Data Poisoning Attack)",
+      "對抗性攻擊 (Adversarial Attack)",
+      "會員推斷攻擊 (Membership Inference Attack)"
+    ],
+    "answerIndex": 2,
+    "explanation": "對抗性攻擊的目標是透過在輸入資料中引入微小擾動（對人類觀察者而言幾乎無法察覺），來欺騙機器學習模型做出錯誤分類或預測。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "為了確保 MLOps 管道 (pipeline) 的完整性和安全性，防止未經授權的程式碼注入或模型版本篡改，最關鍵的實踐之一是什麼？",
+    "options": [
+      "定期模型監控 (Regular Model Monitoring)",
+      "實施安全 CI/CD 流程 (Implementing Secure CI/CD Processes)",
+      "資料脫敏處理 (Data Anonymization)",
+      "同態加密 (Homomorphic Encryption)"
+    ],
+    "answerIndex": 1,
+    "explanation": "實施安全的 CI/CD 流程包括程式碼審查、自動化安全掃描、版本控制以及嚴格的部署門檻，這些都能有效防止惡意程式碼注入和未經授權的模型修改。"
+  }
+]}
