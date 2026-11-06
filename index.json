@@ -1113,6 +1113,12 @@
           "title": "MLOps 持續交付與自動化部署策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-185"
+        },
+        {
+          "day": 186,
+          "title": "MLOps 模型版本管理與迭代策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-186"
         }
       ]
     }
