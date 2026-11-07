@@ -1119,6 +1119,12 @@
           "title": "MLOps 模型版本管理與迭代策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-186"
+        },
+        {
+          "day": 187,
+          "title": "MLOps 流程自動化與管線建置",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-187"
         }
       ]
     }
