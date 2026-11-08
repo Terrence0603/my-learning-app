@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在 MLOps 管線中，哪種排程策略最適合處理當資料湖（Data Lake）中出現新資料時，需要立即觸發模型重新訓練的情境？",
+      "options": [
+        "時間排程 (Time-based scheduling)",
+        "事件驅動排程 (Event-driven scheduling)",
+        "依賴關係排程 (Dependency-based scheduling)",
+        "手動排程 (Manual scheduling)"
+      ],
+      "answerIndex": 1,
+      "explanation": "事件驅動排程允許管線在特定事件（如新資料上傳、API 調用等）發生時立即啟動，非常適合需要即時響應或對外部輸入做出反應的場景，例如資料湖中新資料的抵達。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "為了確保 MLOps 管線中不同步驟的執行環境一致性、資源隔離，以及更有效率的資源利用，以下哪項技術扮演了核心基礎的角色？",
+      "options": [
+        "版本控制系統 (Version Control System)",
+        "容器化技術 (Containerization, 例如 Docker)",
+        "資料庫管理系統 (Database Management System)",
+        "日誌管理系統 (Log Management System)"
+      ],
+      "answerIndex": 1,
+      "explanation": "容器化技術（如 Docker）將應用程式及其所有依賴項打包成獨立、可攜帶的單元。這確保了在開發、測試和生產環境中執行的一致性，同時提供了輕量級的資源隔離，使得資源管理和部署更為高效和可靠。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "關於 MLOps 管線的資源管理與排程，以下哪一個陳述是「不正確」的？",
+      "options": [
+        "Kubernetes 常用於管理和自動化部署、擴展和操作容器化應用，在 MLOps 中提供強大的資源調度能力。",
+        "缺乏適當的資源監控與警報機制可能導致訓練任務長時間佔用資源、成本超支或性能瓶頸。",
+        "Apache Airflow 等主流排程器除了時間排程外，也能透過感測器（Sensors）或外部觸發器實現事件驅動的排程邏輯。",
+        "GPU 資源管理對於所有機器學習模型的訓練都是必須的，無論模型的複雜度或類型如何。"
+      ],
+      "answerIndex": 3,
+      "explanation": "GPU 資源對於深度學習等計算密集型模型訓練非常重要，但並非所有機器學習模型（例如簡單的線性回歸或決策樹）都必須使用 GPU。許多傳統機器學習模型在 CPU 上就能有效訓練，甚至對某些模型而言，使用 GPU 反而沒有顯著優勢或不適用。"
+    }
+  ]
+}

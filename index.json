@@ -1125,6 +1125,12 @@
           "title": "MLOps 流程自動化與管線建置",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-187"
+        },
+        {
+          "day": 188,
+          "title": "MLOps 管線排程與資源管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-188"
         }
       ]
     }
