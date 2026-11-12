@@ -1149,6 +1149,12 @@
           "title": "MLOps 模型部署策略與實踐",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-191"
+        },
+        {
+          "day": 192,
+          "title": "MLOps 模型版本管理與回溯策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-192"
         }
       ]
     }
