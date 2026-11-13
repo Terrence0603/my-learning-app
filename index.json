@@ -1155,6 +1155,12 @@
           "title": "MLOps 模型版本管理與回溯策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-192"
+        },
+        {
+          "day": 193,
+          "title": "MLOps 安全策略與實踐",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-193"
         }
       ]
     }
