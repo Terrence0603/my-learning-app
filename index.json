@@ -1161,6 +1161,12 @@
           "title": "MLOps 安全策略與實踐",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-193"
+        },
+        {
+          "day": 194,
+          "title": "MLOps 自動化管線建構與工作流程編排",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-194"
         }
       ]
     }
