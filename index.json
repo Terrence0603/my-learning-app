@@ -1167,6 +1167,12 @@
           "title": "MLOps 自動化管線建構與工作流程編排",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-194"
+        },
+        {
+          "day": 195,
+          "title": "MLOps 實時監控與智慧警報系統",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-195"
         }
       ]
     }

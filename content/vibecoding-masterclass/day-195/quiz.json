@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single_choice",
+      "question": "在MLOps實時監控與智慧警報系統中，為什麼實時數據漂移（Data Drift）監控至關重要？",
+      "options": [
+        "它主要用於優化模型的部署速度，與模型性能無直接關聯。",
+        "它能即時發現模型訓練數據與推論數據分佈的差異，預防模型性能衰退。",
+        "它只在模型重新訓練時才需要，日常監控中作用不大。",
+        "它是一種成本控制機制，用於減少計算資源的消耗。"
+      ],
+      "answerIndex": 1,
+      "explanation": "實時數據漂移監控允許系統及早發現推論時的輸入數據與模型訓練時的數據分佈之間是否存在顯著差異。這種差異是導致模型性能衰退的常見原因，及早發現可以觸發警報並促使團隊採取行動，例如數據清洗或模型再訓練。"
+    },
+    {
+      "id": "q2",
+      "type": "single_choice",
+      "question": "以下哪項工具組合最常被用於構建MLOps實時監控系統的指標收集與可視化層？",
+      "options": [
+        "Kafka, Flink, PagerDuty",
+        "Jenkins, Kubernetes, Docker",
+        "Prometheus, Grafana, Alertmanager",
+        "Jupyter Notebook, Pandas, Scikit-learn"
+      ],
+      "answerIndex": 2,
+      "explanation": "Prometheus是廣泛使用的開源監控系統，用於時間序列數據的收集和存儲；Grafana則是一個強大的數據可視化工具，能將Prometheus收集的數據以圖表形式展示；Alertmanager是Prometheus的配套工具，用於處理和發送警報。這三者常被組合使用於MLOps的監控與警報系統中。"
+    },
+    {
+      "id": "q3",
+      "type": "single_choice",
+      "question": "相較於傳統的固定閾值警報，MLOps智慧警報系統中引入異常檢測（Anomaly Detection）技術的主要優勢是什麼？",
+      "options": [
+        "異常檢測總是能完全消除誤報（False Positives）。",
+        "它能夠自動調整閾值，識別出固定閾值可能遺漏的、更微妙或動態變化的異常模式。",
+        "異常檢測的實現成本遠低於設置固定閾值。",
+        "它僅適用於模型的基礎設施監控，不適用於數據或模型性能指標。"
+      ],
+      "answerIndex": 1,
+      "explanation": "異常檢測技術能夠學習數據的正常行為模式，並在出現偏離正常模式的行為時發出警報。這使得它能夠識別出那些不遵循固定規則、更為複雜或隨時間演變的異常情況，而這些情況可能因固定閾值不夠靈活而被忽略，從而提供更靈敏、更智慧的警報機制。"
+    }
+  ]
+}
