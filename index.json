@@ -1173,6 +1173,12 @@
           "title": "MLOps 實時監控與智慧警報系統",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-195"
+        },
+        {
+          "day": 196,
+          "title": "MLOps 資源管理與成本最佳化",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-196"
         }
       ]
     }

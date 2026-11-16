@@ -1,0 +1,41 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "在MLOps資源管理中，哪項工具或方法主要用於「監控」資源使用率並「識別」潛在的浪費？",
+    "options": [
+      "CI/CD管道自動化工具",
+      "雲端供應商的計費與成本分析報告",
+      "實驗追蹤（Experiment Tracking）平台",
+      "即時資源監控儀表板（Real-time Resource Monitoring Dashboards）"
+    ],
+    "answerIndex": 3,
+    "explanation": "即時資源監控儀表板提供CPU、記憶體、網路I/O等資源的即時使用數據，是直接識別資源過度配置或利用率低下的最有效方法，進而幫助最佳化成本。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "針對雲端環境中「非關鍵、容錯性高」的機器學習模型訓練任務，哪種成本最佳化策略通常能帶來最大的成本節省？",
+    "options": [
+      "預留實例（Reserved Instances）",
+      "現貨實例（Spot Instances）",
+      "伺服器無服務化（Serverless）架構",
+      "擴展（Scaling Up）現有資源"
+    ],
+    "answerIndex": 1,
+    "explanation": "現貨實例（Spot Instances）提供顯著的折扣，但可能隨時被收回。這使其非常適合執行具備容錯能力且非即時的機器學習訓練任務，能大幅降低運算成本。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "除了基礎設施層面的調整，MLOps中哪項「實踐」對於透過減少重複實驗和提升效率來最佳化成本至關重要？",
+    "options": [
+      "集中式資料儲存",
+      "實施嚴格的程式碼審查（Code Review）流程",
+      "建立健全的實驗追蹤與元資料管理（Experiment Tracking & Metadata Management）系統",
+      "將所有模型部署為微服務架構"
+    ],
+    "answerIndex": 2,
+    "explanation": "建立健全的實驗追蹤與元資料管理系統，能夠記錄每次實驗的參數、資料、模型版本和結果，避免重複不必要的實驗，提高開發效率，從而節省運算和儲存資源。"
+  }
+]}
