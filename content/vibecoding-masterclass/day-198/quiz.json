@@ -1,0 +1,26 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "在MLOps中，模型再訓練的一個主要驅動因素，用以解決模型在實際部署後性能下降的問題，通常是什麼？",
+    "options": ["資料漂移 (Data Drift)", "模型訓練程式碼的重構", "部署環境的作業系統更新", "使用者介面設計變更"],
+    "answerIndex": 0,
+    "explanation": "資料漂移（Data Drift）指的是生產環境中的數據分佈與模型訓練時的數據分佈發生了變化，這是導致模型性能下降並觸發再訓練最常見的原因之一。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "為了確保機器學習模型的可重現性（Reproducibility），在模型版本控制中，除了模型本身，哪些關鍵組成部分也應該被妥善版本控制？",
+    "options": ["訓練資料與其前處理腳本", "模型訓練所用的原始程式碼與組態檔", "最終生成的模型二進位檔或序列化物件", "以上皆是"],
+    "answerIndex": 3,
+    "explanation": "模型的可重現性需要追蹤從原始資料、資料前處理、訓練程式碼、組態到最終模型物件的每一個環節，才能完整重現模型的訓練過程和結果。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "在MLOps實踐中，哪個工具主要被設計用於大型數據集和模型元數據的版本控制，並常與Git協同工作，以解決Git在處理大檔案時的限制？",
+    "options": ["MLflow", "Kubeflow Pipelines", "DVC (Data Version Control)", "TensorFlow Extended (TFX)"],
+    "answerIndex": 2,
+    "explanation": "DVC（Data Version Control）是一個開源工具，專為機器學習項目設計，用於對數據集和模型進行版本控制，它能很好地與Git結合，解決Git在處理大數據和大模型文件時的不足。"
+  }
+]}
