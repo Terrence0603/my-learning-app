@@ -1191,6 +1191,12 @@
           "title": "MLOps 模型再訓練與版本控制",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-198"
+        },
+        {
+          "day": 199,
+          "title": "MLOps 安全性與合規性考量",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-199"
         }
       ]
     }
