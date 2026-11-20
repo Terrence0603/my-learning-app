@@ -1197,6 +1197,12 @@
           "title": "MLOps 安全性與合規性考量",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-199"
+        },
+        {
+          "day": 200,
+          "title": "MLOps 整合實戰：從模型開發到運維",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-200"
         }
       ]
     }
