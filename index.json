@@ -1203,6 +1203,12 @@
           "title": "MLOps 整合實戰：從模型開發到運維",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-200"
+        },
+        {
+          "day": 201,
+          "title": "模型監測與數據漂移偵測",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-201"
         }
       ]
     }
