@@ -1209,6 +1209,12 @@
           "title": "模型監測與數據漂移偵測",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-201"
+        },
+        {
+          "day": 202,
+          "title": "MLOps 告警機制與事件響應策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-202"
         }
       ]
     }

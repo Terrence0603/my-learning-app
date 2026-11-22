@@ -1,0 +1,40 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "在 MLOps 中實施健全的告警機制，其首要目標是什麼？",
+    "options": [
+      "自動將模型重新訓練並部署到生產環境",
+      "確保及時偵測並響應影響模型性能或可靠性的問題",
+      "監控所有模型的使用情況，以優化雲端資源成本",
+      "自動生成詳細的技術報告供管理層審閱"
+    ],
+    "answerIndex": 1,
+    "explanation": "健全的 MLOps 告警機制主要目的是在模型或其支持系統出現問題（如模型漂移、數據質量問題、基礎設施故障等）時，能夠快速識別並通知相關人員，以便及時處理，防止對業務造成重大影響。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "下列哪種 MLOps 告警類型，主要指示模型預測能力下降，而非輸入數據或基礎設施的問題？",
+    "options": [
+      "數據模式不匹配告警 (Data Schema Mismatch Alert)",
+      "GPU 使用率飆升告警 (GPU Utilization Spike Alert)",
+      "模型準確度下降告警 (Model Accuracy Drop Alert)",
+      "推論端點延遲告警 (Inference Endpoint Latency Alert)"
+    ],
+    "answerIndex": 2,
+    "explanation": "數據模式不匹配屬於數據質量問題。GPU 使用率飆升屬於基礎設施問題。推論端點延遲可能由模型過載或基礎設施引起，但模型準確度下降直接反映了模型預測能力的退化或漂移，是核心的模型性能問題。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "在 MLOps 事件響應策略中，'操作手冊 (Runbook)' 或 '標準操作程序 (SOP)' 的主要目的是什麼？",
+    "options": [
+      "自動化模型的訓練和部署流程",
+      "為常見事件提供診斷和解決問題的逐步指南",
+      "定義不同告警的嚴重等級和通知管道",
+      "收集並分析所有監控日誌以進行長期審計"
+    ],
+    "answerIndex": 1,
+    "explanation": "操作手冊 (Runbook) 或標準操作程序 (SOP) 旨在為 MLOps 團隊提供清晰、預定義的步驟，以便在檢測到特定問題或告警時，能夠有效地進行故障排除、診斷根本原因並解決事件，確保響應的一致性和效率。"
+  }]}
