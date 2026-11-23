@@ -1215,6 +1215,12 @@
           "title": "MLOps 告警機制與事件響應策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-202"
+        },
+        {
+          "day": 203,
+          "title": "MLOps 事件復盤與持續改進",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-203"
         }
       ]
     }
