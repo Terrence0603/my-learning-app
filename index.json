@@ -1221,6 +1221,12 @@
           "title": "MLOps 事件復盤與持續改進",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-203"
+        },
+        {
+          "day": 204,
+          "title": "MLOps 自動化流程與進階 CI/CD 實踐",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-204"
         }
       ]
     }
