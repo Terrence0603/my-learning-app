@@ -1227,6 +1227,12 @@
           "title": "MLOps 自動化流程與進階 CI/CD 實踐",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-204"
+        },
+        {
+          "day": 205,
+          "title": "MLOps 雲端原生部署與彈性擴展策略",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-205"
         }
       ]
     }

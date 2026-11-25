@@ -1,0 +1,26 @@
+{"questions": [
+  {
+    "id": "q1",
+    "type": "single_choice",
+    "question": "在MLOps雲端原生部署中，哪個工具最常被用作容器編排（Container Orchestration）的標準，以實現自動化部署、彈性擴展和管理容器化應用程式？",
+    "options": ["Docker Compose", "Kubernetes", "Ansible", "Terraform"],
+    "answerIndex": 1,
+    "explanation": "Kubernetes是業界標準的容器編排平台，專為大規模自動化部署、彈性擴展和管理容器化應用程式而設計，特別適合MLOps的複雜工作負載和微服務架構。"
+  },
+  {
+    "id": "q2",
+    "type": "single_choice",
+    "question": "為了實現ML模型服務的彈性擴展，除了基於CPU或記憶體使用率外，哪個Kubernetes組件或擴展允許根據自定義指標（如Kafka隊列長度、HTTP請求數或GPU使用率）進行Pod的自動擴展？",
+    "options": ["Horizontal Pod Autoscaler (HPA)", "Vertical Pod Autoscaler (VPA)", "Cluster Autoscaler (CA)", "KEDA (Kubernetes Event-driven Autoscaling)"],
+    "answerIndex": 3,
+    "explanation": "KEDA允許Kubernetes工作負載根據事件驅動的指標進行自動擴展，例如消息隊列的深度、HTTP請求的數量、或者其他自定義指標。這對於處理ML推論服務中波動性很大的請求或異步任務非常有用，它補充了HPA主要基於資源利用率的能力。"
+  },
+  {
+    "id": "q3",
+    "type": "single_choice",
+    "question": "在MLOps實踐中，若要以漸進式、受控的方式發布新的ML模型版本，並在全面推廣前先將新版本流量導向一小部分用戶進行測試和觀察，以降低潛在風險，最適合採用哪種部署策略？",
+    "options": ["Rolling Update", "Blue/Green Deployment", "Canary Deployment", "Big Bang Deployment"],
+    "answerIndex": 2,
+    "explanation": "Canary Deployment（金絲雀部署）允許將新版本的應用程式或ML模型流量逐漸導向一小部分用戶，並在全面部署前觀察其表現，從而最大程度地降低新版本引入潛在問題的風險，特別適合對模型準確性、延遲等關鍵指標敏感的ML應用。"
+  }
+]}
