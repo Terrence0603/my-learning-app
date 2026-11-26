@@ -1233,6 +1233,12 @@
           "title": "MLOps 雲端原生部署與彈性擴展策略",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-205"
+        },
+        {
+          "day": 206,
+          "title": "MLOps 成本最佳化與資源管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-206"
         }
       ]
     }
