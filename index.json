@@ -1239,6 +1239,12 @@
           "title": "MLOps 成本最佳化與資源管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-206"
+        },
+        {
+          "day": 207,
+          "title": "MLOps 安全性最佳實踐與風險管理",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-207"
         }
       ]
     }
