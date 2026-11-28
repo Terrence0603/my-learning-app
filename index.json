@@ -1245,6 +1245,12 @@
           "title": "MLOps 安全性最佳實踐與風險管理",
           "generated": true,
           "path": "content/vibecoding-masterclass/day-207"
+        },
+        {
+          "day": 208,
+          "title": "MLOps 監控與可觀測性實戰",
+          "generated": true,
+          "path": "content/vibecoding-masterclass/day-208"
         }
       ]
     }
